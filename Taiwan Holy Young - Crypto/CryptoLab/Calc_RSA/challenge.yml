@@ -1,0 +1,17 @@
+name: Calc_RSA
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{zE1Vu2nKcM4xtptdrwyzNXZkRLAXBS}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30026
+extra:
+  port: 30026
+  docker_group: Calc_RSA

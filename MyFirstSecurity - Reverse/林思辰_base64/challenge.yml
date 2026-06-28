@@ -1,0 +1,14 @@
+name: 林思辰_base64
+author: ''
+category: MyFirstSecurity - Reverse
+description: "欸 H0w 哥，base64 是什麼壓   \n\n哼 阿明，你連貝斯 64 都不知道 就讓我來教教你吧   \n\n喔白癡喔，不是那個貝斯啦   \n\n好啦其實我知道就是這個"
+value: 100
+type: standard
+flags:
+- MyFirstCTF{Y0U_FlnD_m4G1c_StRinG!!!}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/base64
+hints: []

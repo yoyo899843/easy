@@ -1,0 +1,17 @@
+name: you-cant-see-me
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{You_saw!!!}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/you-cant-see-me
+extra:
+  port: 20044
+  docker_group: you-cant-see-me

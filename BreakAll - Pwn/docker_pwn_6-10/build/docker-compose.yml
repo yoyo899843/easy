@@ -1,0 +1,35 @@
+version: '2'
+services:
+  lab1:
+    build: ./lab1/
+    ports:
+    - 10001:2116
+    networks:
+    - ctf_chals_network
+  lab2:
+    build: ./lab2/
+    ports:
+    - 10002:2117
+    networks:
+    - ctf_chals_network
+  lab3:
+    build: ./lab3/
+    ports:
+    - 10003:2118
+    networks:
+    - ctf_chals_network
+  lab4:
+    build: ./lab4/
+    ports:
+    - 10004:2119
+    networks:
+    - ctf_chals_network
+  lab5:
+    build: ./lab5/
+    ports:
+    - 10005:2120
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

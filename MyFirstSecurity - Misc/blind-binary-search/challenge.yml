@@ -1,0 +1,32 @@
+name: blind binary search
+author: ''
+category: MyFirstSecurity - Misc
+description: '試著猜我的號碼。
+
+
+  不要擔心你的號碼被一些駭客竊取，你可以用AES加密發送號碼。
+
+
+  前幾天我給了你鑰匙，對嗎？
+
+
+  或者我沒有？沒關係，我想你會想東西了。
+
+
+
+
+  `nc 120.114.62.214 5121`'
+value: 200
+type: standard
+flags:
+- MyFirstCTF{RXnrTr0tiSSsq33IGw6C}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/server.py-69ea0baf6d714dffb14251d37402846f2830d5b5
+hints: []
+connection_info: nc {{NC_HOST}} 30012
+extra:
+  port: 30012
+  docker_group: blind-binary-search

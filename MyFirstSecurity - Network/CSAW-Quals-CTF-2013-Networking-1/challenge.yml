@@ -1,0 +1,14 @@
+name: 'CSAW Quals CTF 2013: Networking 1'
+author: ''
+category: MyFirstSecurity - Network
+description: ''
+value: 30
+type: standard
+flags:
+- flag{d316759c281bf925d600be698a4973d5}
+tags:
+- CSAW CTF
+- easy
+files:
+- dist/networkingOK.pcap
+hints: []

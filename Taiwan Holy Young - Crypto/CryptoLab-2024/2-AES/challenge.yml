@@ -1,0 +1,17 @@
+name: 2-AES
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{PyCrypt...}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30020
+extra:
+  port: 30020
+  docker_group: 2-AES

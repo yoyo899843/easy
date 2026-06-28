@@ -1,0 +1,17 @@
+name: lightning
+author: ''
+category: BreakAll - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{302_redirect_cool}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/lightning
+extra:
+  port: 20002
+  docker_group: docker_SerializationtoSSTI

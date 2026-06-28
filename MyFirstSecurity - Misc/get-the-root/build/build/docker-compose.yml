@@ -1,0 +1,13 @@
+version: '2.2'
+services:
+  ctf:
+    image: oalieno/ctf-python:sage
+    network_mode: bridge
+    volumes:
+    - ./share:/home/ctf/
+    - ./xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+    - 40001:9999
+    expose:
+    - '9999'
+    restart: always

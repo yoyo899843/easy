@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Ping Tool</h2>
+<form id="pingForm" method="POST">
+    <div class="form-group">
+        <label for="ip">Enter IP address or hostname:</label>
+        <input type="text" name="ip" id="ip" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary" id="pingButton">Ping</button>
+</form>
+<div class="container">
+    <div id="pingResult" class="margin-top 20px"></div>
+</div>
+
+<script>
+    document.getElementById('pingForm').onsubmit = function(event) {
+        event.preventDefault();
+        const ipInput = document.getElementById('ip');
+        const pingButton = document.getElementById('pingButton');
+        const resultDiv = document.getElementById('pingResult');
+
+        // Disable the submit button
+        pingButton.disabled = true;
+
+        // Reset the input field style and result div
+        ipInput.classList.remove('is-invalid');
+        resultDiv.classList.remove('alert', 'alert-danger');
+        resultDiv.innerText = '';
+
+        const ip = ipInput.value;
+
+        fetch('/ping_tool', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ ip: ip })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                resultDiv.innerText = data.error;
+                // Highlight the input field in red if there's an error
+                ipInput.classList.add('is-invalid');
+                resultDiv.classList.add('alert', 'alert-danger'); // Add alert classes
+            } else {
+                resultDiv.innerText = data.output;
+                resultDiv.classList.remove('alert', 'alert-danger'); // Remove alert classes if no error
+                resultDiv.classList.add('alert', 'alert-info');
+            }
+        })
+        .finally(() => {
+            // Re-enable the submit button after response
+            pingButton.disabled = false;
+        });
+    };
+</script>
+{% endblock %}

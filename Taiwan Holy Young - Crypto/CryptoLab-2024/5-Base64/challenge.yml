@@ -1,0 +1,17 @@
+name: 5-Base64
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Base64_is_more_often_used_in_reality}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30014
+extra:
+  port: 30014
+  docker_group: 5-Base64

@@ -1,0 +1,8 @@
+{
+    "WAN": {
+        "Mode": "Manual"
+    },
+    "LAN": {
+        "DHCP_Server": "Enabled"
+    }
+}

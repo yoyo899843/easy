@@ -1,0 +1,15 @@
+name: Playground
+author: ''
+category: BreakAll - Crypto
+description: "剛剛我在對某個加密演算法進行 Meet in the middle 的攻擊   \n\n現在是最後一步了，拿到 Key 我們就能自由加解密了!!   \n\n剩下的可以交給你嗎 > <"
+value: 100
+type: standard
+flags:
+- BreakAll{Wow!!Y0U_F1nD_7h3_key_for_Th15_r4nDomB0x...Go0D_J0b_xD}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/output.txt
+- dist/task.py
+hints: []

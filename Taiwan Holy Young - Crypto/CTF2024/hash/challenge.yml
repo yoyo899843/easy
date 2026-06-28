@@ -1,0 +1,17 @@
+name: hash
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- flag{hash}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30009
+extra:
+  port: 30009
+  docker_group: hash

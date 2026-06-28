@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>WAN Setup</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="mode">Mode:</label>
+        <select class="form-control" name="mode" id="mode">
+            <option value="DHCP" {% if settings['Mode'] == 'DHCP' %}selected{% endif %}>DHCP</option>
+            <option value="Manual" {% if settings['Mode'] == 'Manual' %}selected{% endif %}>Manual</option>
+            <option value="PPPoE" {% if settings['Mode'] == 'PPPoE' %}selected{% endif %}>PPPoE</option>
+            <option value="Static" {% if settings['Mode'] == 'Static' %}selected{% endif %}>Static</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}

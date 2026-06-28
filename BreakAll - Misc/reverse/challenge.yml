@@ -1,0 +1,14 @@
+name: reverse
+author: ''
+category: BreakAll - Misc
+description: '1'
+value: 1
+type: standard
+flags:
+- '-'
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/reverse
+hints: []

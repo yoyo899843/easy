@@ -1,0 +1,17 @@
+name: my-new-router-level 1
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{c0mm4nd_inj_ping_340ud}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/my-new-router-level-1
+extra:
+  port: 20050
+  docker_group: my-new-router-level-1

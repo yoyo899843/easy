@@ -1,0 +1,19 @@
+name: Linux CTF 8
+author: ''
+category: BreakAll - Misc
+description: "你知道如何在Linux下載並解壓縮ForYou檔案嗎?\n\n\n\n下載連結:   \n\n\n\n    \n\n\n\n\n- - - - - - - - - - - - - - - - - - - - - -\n\
+  \n如使用以下連線，需在 /tmp 目錄底下建立自己的目錄才能下載檔案\n\n如: /tmp/404040\n\n\n\nSSH 資訊   \n\nIP  : 120.114.62.214   \n\nPort: 5500\n\n\n\n\
+  帳號 : lab   \n\n密碼 : lab   \n\n- - - - - - - - - - - - - - - - - - - - - -"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{U6TLCzQsk73HwcW7rqAW}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30008
+extra:
+  port: 30008
+  docker_group: ssh_lab

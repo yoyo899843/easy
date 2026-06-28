@@ -1,0 +1,19 @@
+name: compileC
+author: ''
+category: BreakAll - Reverse
+description: 'flag 格式為 FLAG{...}
+
+
+
+
+  你會把 C 程式編譯起來執行嗎?'
+value: 25
+type: standard
+flags:
+- FLAG{HELLO_WORLD_OF_C!}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/compilec.c
+hints: []

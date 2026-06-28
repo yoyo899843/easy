@@ -1,0 +1,17 @@
+name: Welcome
+author: ''
+category: BreakAll - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{submit_this_to_the_platform}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/welcome
+extra:
+  port: 20018
+  docker_group: summer_web

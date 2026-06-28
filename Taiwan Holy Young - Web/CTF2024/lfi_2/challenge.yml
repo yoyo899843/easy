@@ -1,0 +1,17 @@
+name: 'lfi_2 '
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- flag{sh4re_pr0ce55_2_y0ur_fr1end}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/lfi_2
+extra:
+  port: 20036
+  docker_group: lfi_2

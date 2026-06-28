@@ -1,0 +1,17 @@
+name: 4-Chinese_To_Hex_String
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{e8b9a6e8b9a6e782b8e5bd88}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30013
+extra:
+  port: 30013
+  docker_group: 4-Chinese_To_Hex_String

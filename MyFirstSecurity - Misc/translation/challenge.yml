@@ -1,0 +1,17 @@
+name: translation
+author: ''
+category: MyFirstSecurity - Misc
+description: '`nc 120.114.62.214 5125`'
+value: 200
+type: standard
+flags:
+- MyFirstCTF{stAr m4rVel VII - thE F0rCe AWakeNs}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40004
+extra:
+  port: 40004
+  docker_group: translation

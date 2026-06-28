@@ -1,0 +1,17 @@
+name: cp
+author: ''
+category: BreakAll - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- breakall{caesar_kk}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30004
+extra:
+  port: 30004
+  docker_group: cp

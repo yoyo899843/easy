@@ -1,0 +1,14 @@
+name: Lottery
+author: ''
+category: BreakAll - Reverse
+description: ''
+value: 10
+type: standard
+flags:
+- FLAG{OMG_Y0u_GoT_Lottery!}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/Lottery.exe
+hints: []

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - ISIP 部落格管理系統面板</title>
+    <link href="static/assets/bootstrap@5.3.2_dist_css_bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header class="bg-dark text-white py-3 text-center">
+        <div class="container d-flex justify-content-between align-items-center">
+        <h1>ISIP 部落格管理系統面板</h1>
+        <p> </p>
+        </div>
+    </header>
+    <main class="container my-5">
+        <div class="alert alert-danger" role="alert">
+            您不是 Edward 本人，要能夠存取這個資源，{{message | safe}}
+          </div>
+    </main>
+    <footer class="bg-dark text-white py-3 text-center">
+        <div class="container">
+            &copy; 2024 ISIP 部落格系統. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="static/assets/bootstrap@5.3.2_dist_js_bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

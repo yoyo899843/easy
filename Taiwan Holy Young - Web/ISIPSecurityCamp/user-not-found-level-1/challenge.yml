@@ -1,0 +1,17 @@
+name: user-not-found-level 1
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{ssti_inj_23une5kd}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/user-not-found-level-1
+extra:
+  port: 20051
+  docker_group: user-not-found-level-1

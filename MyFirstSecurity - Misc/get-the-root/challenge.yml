@@ -1,0 +1,17 @@
+name: get-the-root
+author: ''
+category: MyFirstSecurity - Misc
+description: '`nc 120.114.62.214 5122`'
+value: 200
+type: standard
+flags:
+- MyFirstCTF{RoOt w4rs VIII - th3 L4sT j3dI}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40001
+extra:
+  port: 40001
+  docker_group: get-the-root

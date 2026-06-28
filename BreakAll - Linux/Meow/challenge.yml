@@ -1,0 +1,14 @@
+name: Meow
+author: ''
+category: BreakAll - Linux
+description: 隔壁的貓貓⼜在叫了，你知道他到底在說什麼嗎？
+value: 50
+type: standard
+flags:
+- FLAG{Meow_meow_meow_>_<}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/meow
+hints: []

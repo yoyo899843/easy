@@ -1,0 +1,14 @@
+name: invisible-revenge
+author: ''
+category: BreakAll - Reverse
+description: No print no leak!
+value: 100
+type: standard
+flags:
+- FLAG{well_no_print_no_leak_right?_I_guess_so}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/invisible-revenge
+hints: []

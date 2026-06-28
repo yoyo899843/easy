@@ -1,0 +1,20 @@
+name: Programmer's Assemble
+author: ''
+category: BreakAll - Reverse
+description: 'Figure out the initial value of eax (from XXXXXX) that can lead to the good end, and send it as a flag in hex
+  mode!
+
+
+
+
+  For example, if the value of eax was 5 (decimal), then the flag would be 0x5.'
+value: 100
+type: standard
+flags:
+- '0x16F2'
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/assembly.s
+hints: []

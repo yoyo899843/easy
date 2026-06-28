@@ -1,0 +1,41 @@
+name: Vigenère cipher
+author: ''
+category: MyFirstSecurity - Network
+description: 'Crack the cipher: vhixoieemksktorywzvhxzijqni
+
+
+
+
+  Your clue is:
+
+
+
+
+  "caesar is everything. But he took it to the next level."
+
+
+
+
+  Vigenère cipher
+
+
+
+
+  https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
+
+
+
+
+  參考看看:
+
+
+  https://www.guballa.de/vigenere-solver'
+value: 100
+type: standard
+flags:
+- theforceisstrongwiththisone
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []

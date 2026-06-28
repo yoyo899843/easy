@@ -1,0 +1,20 @@
+name: 'alexctf-2017: CR1: Ultracoded'
+author: ''
+category: Other - Misc
+description: 'Fady didn''t understand well the difference between encryption and encoding, so instead of encrypting some secret
+  message to pass to his friend, he encoded it!
+
+
+
+
+  Hint: Fady''s encoding doens''t handly any special character'
+value: 50
+type: standard
+flags:
+- ALEXCTF{TH15_1S_5UP3R_5ECR3T_TXT}
+tags:
+- alexCTF
+- easy
+files:
+- dist/zero_one.txt
+hints: []

@@ -1,0 +1,17 @@
+name: b85
+author: ''
+category: BreakAll - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- breakall{u_such_encoding_master}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30003
+extra:
+  port: 30003
+  docker_group: b85

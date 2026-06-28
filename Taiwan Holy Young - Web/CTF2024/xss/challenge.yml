@@ -1,0 +1,17 @@
+name: xss
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- flag{i_hate_calculus}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/xss
+extra:
+  port: 20037
+  docker_group: xss

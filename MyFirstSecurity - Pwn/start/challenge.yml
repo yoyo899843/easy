@@ -1,0 +1,25 @@
+name: start
+author: ''
+category: MyFirstSecurity - Pwn
+description: 'Billy 不小心把鑰匙掉在一間鎖住的房間了
+
+
+
+
+  可是 Billy 忘記進入房間的 token 了
+
+
+
+
+  你知道他的 key 是什麼嗎?'
+value: 140
+type: standard
+flags:
+- MyFirstCTF{xtnntfhzflpttvxvzzbfjfnxbjvrzxdfvzlvhpt}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/start
+- dist/start.c
+hints: []

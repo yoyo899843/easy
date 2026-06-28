@@ -1,0 +1,14 @@
+name: EasyCTF_hexedit
+author: ''
+category: Other - Linux
+description: flag 格式為 easyctf{...}
+value: 25
+type: standard
+flags:
+- easyctf{eb04fadf}
+tags:
+- EasyCTF
+- easy
+files:
+- dist/hexedit
+hints: []

@@ -1,0 +1,17 @@
+name: 4-AES_ECB_Mode
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Check_plain's_length_before_AES_ECB_Encrypt~}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30022
+extra:
+  port: 30022
+  docker_group: 4-AES_ECB_Mode

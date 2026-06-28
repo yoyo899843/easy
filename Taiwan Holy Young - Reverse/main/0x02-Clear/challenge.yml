@@ -1,0 +1,17 @@
+name: 0x02-Clear
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'This program will print the flag.
+
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{tr1cky_mov3}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/main_2
+hints: []

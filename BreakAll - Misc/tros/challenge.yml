@@ -1,0 +1,17 @@
+name: tros
+author: ''
+category: BreakAll - Misc
+description: '`nc 120.114.62.214 2409`'
+value: 50
+type: standard
+flags:
+- CTF{YOuaRESOrTINGm4st3R}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40016
+extra:
+  port: 40016
+  docker_group: tros

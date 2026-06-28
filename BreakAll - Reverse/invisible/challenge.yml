@@ -1,0 +1,14 @@
+name: invisible
+author: ''
+category: BreakAll - Reverse
+description: Did you see the flag?
+value: 100
+type: standard
+flags:
+- FLAG{strings_a_binary_and_get_strings}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/invisible
+hints: []

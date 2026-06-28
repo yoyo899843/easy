@@ -1,0 +1,14 @@
+name: treasure
+author: ''
+category: BreakAll - Misc
+description: 聽說檔案迷宮裡藏有⼀個寶藏，到底要走哪條路才會通到寶藏？
+value: 50
+type: standard
+flags:
+- FLAG{Toooooo_many_routes!!!!_It's_exhaustedQQ}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/treasure.tar.gz
+hints: []

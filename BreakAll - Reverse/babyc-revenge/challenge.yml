@@ -1,0 +1,17 @@
+name: babyc-revenge
+author: ''
+category: BreakAll - Reverse
+description: 'Oh so the problem is the source code right?
+
+
+  Huh, this time should be fine!'
+value: 100
+type: standard
+flags:
+- FLAG{NO_WAY__AAAAAA_how_could_you_find_out_my_secret}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/babyc-revenge
+hints: []

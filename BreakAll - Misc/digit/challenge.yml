@@ -1,0 +1,22 @@
+name: digit
+author: ''
+category: BreakAll - Misc
+description: '你辨識的出這些數字嗎?
+
+
+
+
+  `nc 120.114.62.214 2404`'
+value: 50
+type: standard
+flags:
+- CTF{n0WYouc4nSee}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30024
+extra:
+  port: 30024
+  docker_group: digit

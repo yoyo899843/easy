@@ -1,0 +1,17 @@
+name: Hurry
+author: ''
+category: BreakAll - Web
+description: ''
+value: 70
+type: standard
+flags:
+- FLAG{your hands are so fast}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/hurry
+extra:
+  port: 20022
+  docker_group: summer_web

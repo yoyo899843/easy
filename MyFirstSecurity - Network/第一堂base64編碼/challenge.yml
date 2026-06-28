@@ -1,0 +1,18 @@
+name: 第一堂base64編碼
+author: ''
+category: MyFirstSecurity - Network
+description: '請問底下字串的base64編碼為何?
+
+
+
+
+  BreakallCTF{happyhackinghighhaaha}'
+value: 20
+type: standard
+flags:
+- QnJlYWthbGxDVEZ7aGFwcHloYWNraW5naGlnaGhhYWhhfQ==
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []

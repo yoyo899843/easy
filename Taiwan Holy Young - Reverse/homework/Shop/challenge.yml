@@ -1,0 +1,17 @@
+name: Shop
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'Buy me a flag pls.
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{y0uRsoR1ch!}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/shop.c
+- dist/shop
+hints: []

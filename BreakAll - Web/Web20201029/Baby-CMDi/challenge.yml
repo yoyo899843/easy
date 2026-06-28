@@ -1,0 +1,17 @@
+name: Baby CMDi
+author: ''
+category: BreakAll - Web
+description: ''
+value: 100
+type: standard
+flags:
+- FLAG{C00001_U_Are_Talent_0f_She11111}
+tags:
+- BreakALL CTF
+- hard
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/baby-cmdi
+extra:
+  port: 20017
+  docker_group: Web20201029

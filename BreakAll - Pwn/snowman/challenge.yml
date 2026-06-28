@@ -1,0 +1,16 @@
+name: snowman
+author: ''
+category: BreakAll - Pwn
+description: Do you want to build a snowman?
+value: 50
+type: standard
+flags:
+- flag{0laf}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/snowman.c
+- dist/snowman
+- dist/snowman.py
+hints: []

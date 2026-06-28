@@ -1,0 +1,17 @@
+name: 0x01-Execute
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'How to execute a ELF file?
+
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{begins_with_a_small_step}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/main_1
+hints: []

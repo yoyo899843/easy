@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>LAN Setup</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="dhcp_server">DHCP Server:</label>
+        <select class="form-control" name="dhcp_server" id="dhcp_server">
+            <option value="Enabled" {% if settings['DHCP_Server'] == 'Enabled' %}selected{% endif %}>Enabled</option>
+            <option value="Disabled" {% if settings['DHCP_Server'] == 'Disabled' %}selected{% endif %}>Disabled</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}

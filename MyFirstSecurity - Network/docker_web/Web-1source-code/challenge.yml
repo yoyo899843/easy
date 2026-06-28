@@ -1,0 +1,18 @@
+name: Web-1:source code
+author: ''
+category: MyFirstSecurity - Network
+description: "網站有許多漏洞，從底下的登入網址，你認為有幾種方式可以入侵? \n\n \n\n提示1 : 如何看到網站的原始碼?    \n\n提示2 : 如何從網站的原始碼看到你所需要的資訊?   \n\n提示3 : 答案格式\
+  \ BreakALLCTF{xxxxxxxxxxx}    \n\n\n\n請連結以下網址:"
+value: 20
+type: standard
+flags:
+- BreakALLCTF{3xjVYR8dMetWQbwzYsLJ}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30001
+extra:
+  port: 30001
+  docker_group: docker_web

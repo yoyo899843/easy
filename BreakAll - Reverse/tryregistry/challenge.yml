@@ -1,0 +1,14 @@
+name: tryregistry
+author: ''
+category: BreakAll - Reverse
+description: ''
+value: 10
+type: standard
+flags:
+- FLAG{IFEO_H1JaCk}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/tryregistry.exe
+hints: []

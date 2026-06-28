@@ -1,0 +1,14 @@
+name: SendMsg
+author: ''
+category: BreakAll - Reverse
+description: ''
+value: 10
+type: standard
+flags:
+- FLAG{N0ticE___ThAnk_U_for_UR_Not1C3}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/SendMsg.exe
+hints: []

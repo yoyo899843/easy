@@ -1,0 +1,68 @@
+services:
+  burp-suite-2:
+    build: ./burp-suite-2
+    ports:
+      - "20003:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+  local-file-inclusion:
+    build: ./local-file-inclusion
+    ports:
+      - "20007:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+  xss:
+    build: ./xss
+    ports:
+      - "20008:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+  md5-collision:
+    build: ./md5-collision
+    ports:
+      - "20009:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+  download:
+    build: ./download
+    ports:
+      - "20010:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+  web-1source-code:
+    build: ./web-1source-code
+    ports:
+      - "20027:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+  web-3robots-txt:
+    build: ./web-3robots-txt
+    ports:
+      - "20029:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+  web-5http-method:
+    build: ./web-5http-method
+    ports:
+      - "20030:80"
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+
+networks:
+  ctf_chals_network:
+    external: true

@@ -1,0 +1,18 @@
+name: Linux CTF 4
+author: ''
+category: BreakAll - Misc
+description: "你知道如何在Linux上做base64 解碼嗎?\n\n\n\nSSH 資訊   \n\nIP  : 120.114.62.214   \n\nPort: 5500\n\n\n\n帳號 : lab   \n\n密碼\
+  \ : lab\n\n\n\n提示 : 檔案位置 /home/lab/base64.txt"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{XvXeVX5Ae9FwnYmDV2jU}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30004
+extra:
+  port: 30004
+  docker_group: ssh_lab

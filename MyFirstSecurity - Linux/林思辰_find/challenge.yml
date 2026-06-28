@@ -1,0 +1,34 @@
+name: 林思辰_find
+author: ''
+category: MyFirstSecurity - Linux
+description: '阿明，你看看我撿到的神祕檔案
+
+
+  滾啦
+
+
+  嗚嗚...嗚...
+
+
+  傷心的 H0w 哥獨自一人打開了檔案
+
+
+  突然有一個聲音說道
+
+
+  找出 flag 吧！ H0w 哥
+
+
+
+
+  strings 是個好用的工具'
+value: 50
+type: standard
+flags:
+- MyFirstCTF{Y0U_gOt_th3_flag_bY_sTr1ngS}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/find
+hints: []

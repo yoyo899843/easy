@@ -1,0 +1,17 @@
+name: PHPisBest
+author: ''
+category: BreakAll - Web
+description: ''
+value: 100
+type: standard
+flags:
+- FLAG{As_U_kn0w_PHP_15_the_Best_Language}
+tags:
+- BreakALL CTF
+- medium
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/phpisbest
+extra:
+  port: 20013
+  docker_group: Web20201029

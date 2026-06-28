@@ -1,0 +1,22 @@
+name: count
+author: ''
+category: BreakAll - Misc
+description: '你會數⼀到一百嗎?
+
+
+
+
+  `nc 120.114.62.214 2403`'
+value: 50
+type: standard
+flags:
+- CTF{gOOD4tMatHYOUarE}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40011
+extra:
+  port: 40011
+  docker_group: count

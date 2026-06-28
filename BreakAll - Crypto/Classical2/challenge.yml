@@ -1,0 +1,17 @@
+name: Classical2
+author: ''
+category: BreakAll - Crypto
+description: 'ROT 是什麼？
+
+
+  跟凱薩有什麼差別？'
+value: 10
+type: standard
+flags:
+- BreakAll{R0T13_D0nt_N33d_the_KEY!!3_3}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/cipher
+hints: []

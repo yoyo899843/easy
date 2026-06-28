@@ -1,0 +1,15 @@
+name: babyc
+author: ''
+category: BreakAll - Reverse
+description: Can you guess the flag?
+value: 100
+type: standard
+flags:
+- FLAG{Simple_C_Chall}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/babyc.c
+- dist/babyc
+hints: []

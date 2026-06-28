@@ -1,0 +1,12 @@
+.flag {
+    display: inline-block;
+    font-family: monospace;
+    padding: 5px;
+    color: red;
+    background-color: #efefef;
+    N3: 9457;
+}
+
+body {
+    margin: 20px;
+}

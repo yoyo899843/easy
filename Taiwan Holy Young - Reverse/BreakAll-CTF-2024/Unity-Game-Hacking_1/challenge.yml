@@ -1,0 +1,20 @@
+name: Unity-Game-Hacking_1
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'Someone stole my GoldenBall, can you get it for me?
+
+
+  Hint: Cheat Engine
+
+
+  Author: Flydragon'
+value: 50
+type: standard
+flags:
+- flag{->DandaDan<-}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/GoldenBall.zip
+hints: []

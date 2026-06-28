@@ -1,0 +1,14 @@
+name: Password_Checker
+author: ''
+category: BreakAll - Reverse
+description: ''
+value: 10
+type: standard
+flags:
+- FLAG{Why_Y0u_kn0w_My_passwoRd}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/Password_Checker.exe
+hints: []

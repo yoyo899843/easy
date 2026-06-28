@@ -1,0 +1,17 @@
+name: Admin
+author: ''
+category: BreakAll - Web
+description: ''
+value: 10
+type: standard
+flags:
+- FLAG{congratz_here_is_your_flag!}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/admin
+extra:
+  port: 20031
+  docker_group: Admin

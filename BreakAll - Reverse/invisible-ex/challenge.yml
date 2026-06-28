@@ -1,0 +1,14 @@
+name: invisible-ex
+author: ''
+category: BreakAll - Reverse
+description: Can you see the flag this time? hehe
+value: 100
+type: standard
+flags:
+- FLAG{cannot_see_strings_from_data?_use_dynamic_analysis~!!}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/invisible-ex
+hints: []

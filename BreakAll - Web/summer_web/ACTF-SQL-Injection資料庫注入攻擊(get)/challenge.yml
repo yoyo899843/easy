@@ -1,0 +1,17 @@
+name: ACTF-SQL Injection資料庫注入攻擊(get)
+author: ''
+category: BreakAll - Web
+description: ''
+value: 50
+type: standard
+flags:
+- ACTF{XeoxAoQWRIEdnIHcecw1}
+tags:
+- ACTF
+- medium
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/actf-sql-injection-get
+extra:
+  port: 20005
+  docker_group: summer_web

@@ -1,0 +1,18 @@
+name: 張元_Pwn-8
+author: ''
+category: BreakAll - Pwn
+description: ''
+value: 50
+type: standard
+flags:
+- BreakAllCTF{G00d_j0000000000b:)}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/return
+hints: []
+connection_info: nc {{NC_HOST}} 10004
+extra:
+  port: 10004
+  docker_group: docker_pwn_6-10

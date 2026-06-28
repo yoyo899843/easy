@@ -1,0 +1,14 @@
+name: EasyCTF_LuckyGuess
+author: ''
+category: Other - Reverse
+description: flag 格式為 easyctf{...}
+value: 25
+type: standard
+flags:
+- easyctf{aaA_tOucH_0f_luccK_47ca4e}
+tags:
+- EasyCTF
+- easy
+files:
+- dist/LuckyGuess
+hints: []

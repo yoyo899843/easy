@@ -1,0 +1,22 @@
+name: pi
+author: ''
+category: BreakAll - Misc
+description: '幫我算算圓周率
+
+
+
+
+  `nc 120.114.62.214 5130`'
+value: 200
+type: standard
+flags:
+- CTF{THE HUngeR GAMES - moCKINGJAY}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40007
+extra:
+  port: 40007
+  docker_group: pi

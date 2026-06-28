@@ -1,0 +1,14 @@
+name: AIS3_Pre_exam_2015-Crypto2
+author: ''
+category: AIS3 - Crypto
+description: ''
+value: 100
+type: standard
+flags:
+- AIS3{rsaaaaaaaaA_orz}
+tags:
+- AIS3 Pre Exam
+- easy
+files:
+- dist/crypto2.tgz
+hints: []

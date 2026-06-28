@@ -1,0 +1,17 @@
+name: pwntools
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- flag{ju5t_a_pract1ce}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30007
+extra:
+  port: 30007
+  docker_group: pwntools

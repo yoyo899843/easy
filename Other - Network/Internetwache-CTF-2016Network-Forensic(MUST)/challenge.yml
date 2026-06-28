@@ -1,0 +1,23 @@
+name: Internetwache-CTF-2016:Network Forensic(MUST)
+author: ''
+category: Other - Network
+description: 'The shark won''t bite you. Don''t worry, it''s wired!
+
+
+
+
+  flag:
+
+
+  IW{xxxxxxxxxxxxxxx}'
+value: 80
+type: standard
+flags:
+- IW{HTTP_BASIC_AUTH_IS_EASY}
+tags:
+- Internetwache CTF
+- easy
+files:
+- dist/dump.pcap
+- dist/flag.zip
+hints: []

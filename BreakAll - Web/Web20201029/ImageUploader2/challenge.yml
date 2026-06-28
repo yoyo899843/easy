@@ -1,0 +1,17 @@
+name: ImageUploader2
+author: ''
+category: BreakAll - Web
+description: ''
+value: 200
+type: standard
+flags:
+- FLAG{U_R_Rea11y_G00D_4t_Craft_1m4ge}
+tags:
+- BreakALL CTF
+- hard
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/imageuploader2
+extra:
+  port: 20015
+  docker_group: Web20201029

@@ -1,0 +1,17 @@
+name: 3-Hex_String
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{I_know_the_answer_is_`bytes.fromhex`...}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30012
+extra:
+  port: 30012
+  docker_group: 3-Hex_String

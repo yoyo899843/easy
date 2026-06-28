@@ -1,0 +1,14 @@
+name: ABCTF2016:gz-30
+author: ''
+category: Other - Network
+description: We shot a flag into this file but some things got messed up on the way...
+value: 60
+type: standard
+flags:
+- ABCTF{broken_zipper}
+tags:
+- ABCTF
+- easy
+files:
+- dist/flag
+hints: []

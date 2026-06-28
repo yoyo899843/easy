@@ -1,0 +1,17 @@
+name: point-shop
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{BrokenAccessControl_STEP1_Parameter}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/point-shop
+extra:
+  port: 20043
+  docker_group: point-shop

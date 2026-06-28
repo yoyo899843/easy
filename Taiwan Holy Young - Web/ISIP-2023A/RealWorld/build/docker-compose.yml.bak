@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  # Database
+  realword-wpdb:
+    #image: mysql:5.7
+    build: ./
+    volumes:
+      - real_world_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password@root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress_Admin
+    networks:
+      - wpsite
+  # phpmyadmin
+  phpmyadmin:
+    depends_on:
+      - realword-wpdb
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8380:80'
+    environment:
+      PMA_HOST: realword-wpdb
+      MYSQL_ROOT_PASSWORD: password 
+    networks:
+      - wpsite
+  # Wordpress
+  wordpress:
+    depends_on:
+      - realword-wpdb
+    image: wordpress:latest
+    ports:
+      - '8300:80'
+    restart: always
+    volumes: ['./:/var/www/html']
+    environment:
+      WORDPRESS_DB_HOST: realword-wpdb:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress_Admin
+    networks:
+      - wpsite
+networks:
+  wpsite:
+volumes:
+  real_world_data: {}

@@ -1,0 +1,17 @@
+name: HTTP Method
+author: ''
+category: BreakAll - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Y0U_Know_h0w2requestHTTP_N0W}
+tags:
+- BreakALL CTF
+- medium
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/http-method
+extra:
+  port: 20016
+  docker_group: Web20201029

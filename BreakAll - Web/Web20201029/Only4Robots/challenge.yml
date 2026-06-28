@@ -1,0 +1,17 @@
+name: Only4Robots
+author: ''
+category: BreakAll - Web
+description: ''
+value: 100
+type: standard
+flags:
+- FLAG{How_dare_you_access_Here}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/only4robots
+extra:
+  port: 20012
+  docker_group: Web20201029

@@ -1,0 +1,16 @@
+name: 林思辰_read-asm
+author: ''
+category: MyFirstSecurity - Reverse
+description: "欸阿明，你在幹嘛   \n\n喔我在讀組合語言壓   \n\n齁那個又不會考讀X喔   \n\n可...可是自從我讀了之後考試都考 100 分欸   \n\n像是老師出的這題   \n\n「在 _start 中 call\
+  \ foo (line 32) 後 rax 的值為何？」   \n\n花了我 0.0001 秒就答完惹，然後帥氣地轉身離開了呢   \n\n\n\nNote: 將解出的字串放入 MyFirstCTF{} 中，若為數字則以十六進制表示 0x\
+  \ 開頭   \n\n\n\n可以試著編譯完再用 gdb 觀察"
+value: 50
+type: standard
+flags:
+- MyFirstCTF{0x375f00}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/read-asm.asm
+hints: []

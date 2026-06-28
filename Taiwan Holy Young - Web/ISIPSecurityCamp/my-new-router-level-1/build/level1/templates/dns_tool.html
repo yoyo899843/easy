@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>DNS Tool</h2>
+<form id="dnsForm" method="POST">
+    <div class="form-group">
+        <label for="hostname">Enter hostname:</label>
+        <input type="text" name="hostname" id="hostname" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary" id="dnsButton">Resolve</button>
+</form>
+<div class="container">
+    <div id="dnsResult"></div>
+</div>
+
+<script>
+    document.getElementById('dnsForm').onsubmit = function(event) {
+        event.preventDefault();
+        const hostnameInput = document.getElementById('hostname');
+        const dnsButton = document.getElementById('dnsButton');
+        const resultDiv = document.getElementById('dnsResult');
+
+        // Disable the submit button
+        dnsButton.disabled = true;
+
+        // Reset the input field style and result div
+        hostnameInput.classList.remove('is-invalid');
+        resultDiv.classList.remove('alert', 'alert-danger');
+        resultDiv.innerText = '';
+
+        const hostname = hostnameInput.value;
+
+        fetch('/dns_tool', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ hostname: hostname })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                resultDiv.innerText = data.error;
+                // Highlight the input field in red if there's an error
+                hostnameInput.classList.add('is-invalid');
+                resultDiv.classList.add('alert', 'alert-danger'); // Add alert classes
+            } else {
+                resultDiv.innerText = data.output;
+                resultDiv.classList.remove('alert', 'alert-danger'); // Remove alert classes if no error
+                resultDiv.classList.add('alert', 'alert-info'); // Add alert classes
+            }
+        })
+        .finally(() => {
+            // Re-enable the submit button after response
+            dnsButton.disabled = false;
+        });
+    };
+</script>
+{% endblock %}

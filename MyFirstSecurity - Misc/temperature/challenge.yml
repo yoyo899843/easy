@@ -1,0 +1,22 @@
+name: temperature
+author: ''
+category: MyFirstSecurity - Misc
+description: '我需要你幫忙把華氏轉攝氏
+
+
+
+
+  `nc 120.114.62.214 5127`'
+value: 200
+type: standard
+flags:
+- MyFirstCTF{h4rRy potTer anD tHe phiL0sOph3r's TeMper4tuRe}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40005
+extra:
+  port: 40005
+  docker_group: temperature

@@ -1,0 +1,17 @@
+name: Hash Encrypt
+author: ''
+category: BreakAll - Crypto
+description: '雜湊函數拿來加密是什麼東西？
+
+
+  聽起來很厲害耶'
+value: 100
+type: standard
+flags:
+- BreakAll{H4sH_Enc0d....?Wh47?!En6rypt!?}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/task.py
+hints: []

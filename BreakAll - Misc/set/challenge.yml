@@ -1,0 +1,27 @@
+name: set
+author: ''
+category: BreakAll - Misc
+description: '你會求兩個集合的聯集嗎?
+
+
+
+
+  輸出從⼩到⼤排序
+
+
+
+
+  `nc 120.114.62.214 2408`'
+value: 50
+type: standard
+flags:
+- CTF{F4Nt4sTICjoBOnUnIOniNgtHEs3seT}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40015
+extra:
+  port: 40015
+  docker_group: set

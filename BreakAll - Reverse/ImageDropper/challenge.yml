@@ -1,0 +1,14 @@
+name: ImageDropper
+author: ''
+category: BreakAll - Reverse
+description: 請運行在 Linux 環境中
+value: 10
+type: standard
+flags:
+- FLAG{IMAGINATION}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/ImageDropper
+hints: []

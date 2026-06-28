@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log me in</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div class="max-w w-full bg-white py-10 px-6 rounded-lg shadow-md">
+            <h1 class="text-2xl text-center mb-8">Admin Panel</h1>
+            {% if failed %}
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-6">
+                登入失敗 oWo
+            </div>
+            {% endif %}
+            <form method="POST" action="/login" id="form">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="username" name="username" type="text" placeholder="Username">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="password" name="password" type="password" placeholder="Password">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                        Login
+                    </button>
+                </div>
+            </form>
+            <hr class="my-8">
+            <a id="magic" class="text-blue-500 hover:underline cursor-pointer">Magic</a>
+            <article class="message mt-8 hidden" id="hint">
+                <div class="bg-blue-100 border border-blue-400 text-blue-700 px-6 py-4 text-xl rounded">
+                    SELECT * FROM admin WHERE (username='<span class="text-red-700" id="usernamemagic"></span>')
+                    AND (password='<span class="text-red-700" id="passwordmagic"></span>')
+                </div>
+            </article>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const magic = document.getElementById("magic");
+        const hint = document.getElementById("hint");
+        const form = document.getElementById("form");
+        const username = document.getElementById("usernamemagic");
+        const password = document.getElementById("passwordmagic");
+
+        magic.addEventListener('click', () => {
+            hint.classList.toggle("hidden");
+        });
+
+        form.addEventListener('input', () => {
+            username.textContent = form.username.value;
+            password.textContent = form.password.value;
+        });
+    });
+</script>
+</body>
+
+</html>
+

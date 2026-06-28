@@ -1,0 +1,22 @@
+name: alphabet
+author: ''
+category: BreakAll - Misc
+description: '可以幫我數一下有幾個英文字母嗎 ?
+
+
+
+
+  `nc 120.114.62.214 5128`'
+value: 200
+type: standard
+flags:
+- CTF{m4rvel AGeNts 0F ShIE1d - 41pHab3t CouNter}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40006
+extra:
+  port: 40006
+  docker_group: alphabet

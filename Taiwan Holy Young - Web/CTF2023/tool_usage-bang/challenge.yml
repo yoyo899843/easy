@@ -1,0 +1,17 @@
+name: tool_usage / bang
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- flag{tool3}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/tool_usage-bang
+extra:
+  port: 20055
+  docker_group: tool_usage-bang

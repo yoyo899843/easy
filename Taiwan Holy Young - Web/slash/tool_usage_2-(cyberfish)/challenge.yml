@@ -1,0 +1,17 @@
+name: tool_usage_2 (cyberfish)
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- flag{tool2}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/tool_usage_2-cyberfish
+extra:
+  port: 20033
+  docker_group: tool_usage_2-(cyberfish)

@@ -1,0 +1,17 @@
+name: bitwise
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'flag format: FLAG{a+b+c+d} (decimal)
+
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{13}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/bitwise.txt
+hints: []

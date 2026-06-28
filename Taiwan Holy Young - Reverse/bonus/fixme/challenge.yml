@@ -1,0 +1,17 @@
+name: fixme
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'Fix this C program and execute it.
+
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{Written_in_C}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/fixme.c
+hints: []

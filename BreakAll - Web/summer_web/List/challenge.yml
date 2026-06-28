@@ -1,0 +1,17 @@
+name: List
+author: ''
+category: BreakAll - Web
+description: ''
+value: 70
+type: standard
+flags:
+- FLAG{simple command injection}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/list
+extra:
+  port: 20023
+  docker_group: summer_web

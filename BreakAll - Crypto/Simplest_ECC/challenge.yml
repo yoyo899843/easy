@@ -1,0 +1,36 @@
+name: Simplest_ECC
+author: ''
+category: BreakAll - Crypto
+description: '你有聽過橢圓曲線加密法(ECC)嗎? 如現在比特幣也是使用橢圓曲線作為其加密法
+
+
+
+
+  而 ECC 的安全性是建立在給你:
+
+
+  1. 橢圓曲線 Ep
+
+
+  2. 曲線上的一個基點 G
+
+
+  3. d倍的G
+
+
+
+
+  然後請你求出 d 是多少很難的情況下，而我們稱 d 是私鑰，dG 是公鑰
+
+
+  這裡讓你練習最簡單計算 ECC'
+value: 50
+type: standard
+flags:
+- BreakALLCTF{8f596ea80bc484606a4a7ce6bb49ed24}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/problem.txt
+hints: []

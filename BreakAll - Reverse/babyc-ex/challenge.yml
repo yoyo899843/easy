@@ -1,0 +1,15 @@
+name: babyc-ex
+author: ''
+category: BreakAll - Reverse
+description: I've upgraded my system, no way you can get the flag now!
+value: 100
+type: standard
+flags:
+- FLAG{Just_a_simple_test_to_know_if_you_know_C_programming!}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/babyc-ex
+- dist/babyc-ex.c
+hints: []

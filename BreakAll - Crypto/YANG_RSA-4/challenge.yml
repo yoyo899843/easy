@@ -1,0 +1,17 @@
+name: YANG_RSA-4
+author: ''
+category: BreakAll - Crypto
+description: "如有一家公司用RSA作為加密訊息使用，其先產生兩個非常大的 p 和 q ，然後算出 n 後，以 n 生成很多不同的公鑰-私鑰給員工，從這裡可以看到 n \n\n\n\n重複使用下，就有可能出現共模攻擊，本身也是一種廣播攻擊。\n\
+  \n\n\n請利用共模攻擊解密附件。\n\n\n\n提示1 : 可以參考此篇文章說明\n\nhttps://crypto.stackexchange.com/questions/16283/how-to-use-common-modulus-attack\n\
+  \n\n\n提示2 : 也可以參考此篇簡報第34頁的函數\n\nhttps://www.slideshare.net/ssuseraba268/rsa-in-ctf"
+value: 100
+type: standard
+flags:
+- BreakALLCTF{Broadcast_!s_$o_b@d_in_rsA...QQ?}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/RSA-4-code.py
+- dist/RSA-4-output.txt
+hints: []

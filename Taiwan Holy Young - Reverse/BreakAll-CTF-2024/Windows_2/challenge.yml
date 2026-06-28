@@ -1,0 +1,20 @@
+name: Windows_2
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'I just downloaded a green version CyberMunk2088, this must be safe right?
+
+
+  P.S.: The binary is not malicious but recommend to run in a VM.
+
+
+  Author: Flydragon'
+value: 50
+type: standard
+flags:
+- flag{DLL_create_/sc_DAILY_/st_07:00}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/VERSION.dll
+hints: []

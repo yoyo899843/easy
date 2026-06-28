@@ -1,0 +1,17 @@
+name: address
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'Flag format: FLAG{0x??????} (start address)
+
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{0x401136}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/address
+hints: []

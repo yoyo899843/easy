@@ -1,0 +1,100 @@
+version: '3'
+services:
+  00_welcome:
+    image: nginx:1.18.0
+    ports:
+    - 20018:80
+    volumes:
+    - ./00_welcome:/usr/share/nginx/html:ro
+    networks:
+    - ctf_chals_network
+  01_web:
+    image: php:7-apache
+    ports:
+    - 20005:80
+    volumes:
+    - ./01_web:/var/www/html:ro
+    networks:
+    - ctf_chals_network
+  02_robots:
+    image: nginx:1.18.0
+    ports:
+    - 20019:80
+    volumes:
+    - ./02_robots:/usr/share/nginx/html:ro
+    networks:
+    - ctf_chals_network
+  03_redirect:
+    image: php:7-apache
+    ports:
+    - 20020:80
+    volumes:
+    - ./03_redirect:/var/www/html:ro
+    networks:
+    - ctf_chals_network
+  04_form:
+    image: php:7-apache
+    ports:
+    - 20021:80
+    volumes:
+    - ./04_form:/var/www/html:ro
+    networks:
+    - ctf_chals_network
+  05_hurry:
+    image: php:7-apache
+    ports:
+    - 20022:80
+    volumes:
+    - ./05_hurry:/var/www/html:ro
+    networks:
+    - ctf_chals_network
+  06_list:
+    image: php:7-apache
+    ports:
+    - 20023:80
+    volumes:
+    - ./06_list:/var/www/html:ro
+    networks:
+    - ctf_chals_network
+  07_login:
+    image: php:7-apache
+    ports:
+    - 20034:80
+    volumes:
+    - ./07_login/html:/var/www/html:ro
+    - ./07_login/db:/db:ro
+    networks:
+    - ctf_chals_network
+  08_bypass:
+    image: php:7-apache
+    ports:
+    - 20024:80
+    volumes:
+    - ./08_bypass/index.php:/var/www/html/index.php:ro
+    - ./08_bypass/flag.txt:/flag.txt:ro
+    networks:
+    - ctf_chals_network
+  09_naked:
+    image: php:7-apache
+    ports:
+    - 20025:80
+    volumes:
+    - ./09_naked/git:/var/www/html/.git:ro
+    - ./09_naked/flag.txt:/flag.txt:ro
+    - ./09_naked/index.php:/var/www/html/index.php:ro
+    networks:
+    - ctf_chals_network
+  10_shell:
+    image: php:7-apache
+    ports:
+    - 20026:80
+    volumes:
+    - ./10_shell/flag.txt:/var/www/html/flag_1223b8c30a347321299611f873b449ad.txt:ro
+    - ./10_shell/index.php:/var/www/html/index.php:ro
+    - ./10_shell/upload.php:/var/www/html/upload.php:ro
+    - ./10_shell/mods:/var/www/html/mods:ro
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

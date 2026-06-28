@@ -1,0 +1,17 @@
+name: 3-AES_ECB_Mode
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Plain's_length_needs_to_be_multiple_of_16}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30021
+extra:
+  port: 30021
+  docker_group: 3-AES_ECB_Mode

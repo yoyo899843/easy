@@ -1,0 +1,15 @@
+name: YANG_RSA-2
+author: ''
+category: BreakAll - Crypto
+description: "RSA的加密過程是m的e次方mod n得到c。   \n\n在傳統的過程中，會習慣將e設為3或者65537，因為以平方再乘法演算法中可以進行加速。   \n\n早期大多會以e =3為主，而m又不可以大於n，如果m不夠大且e\
+  \ = 3，則有可能m的e次方小於n，造成 c = m的e次方\n\n\n\n提示1: 不用分解n太大了    \n\n提示2: 因為n太大，故直接把c開e次方根"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{WTF_!$_7h@t_BI@_N...?...MON_DO_I_KNOW_RSA...?}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/RSA-2.txt
+hints: []

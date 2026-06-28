@@ -1,0 +1,18 @@
+name: 張元_Pwn-7
+author: ''
+category: BreakAll - Pwn
+description: ''
+value: 50
+type: standard
+flags:
+- BreakAllCTF{A_g00d_h4cker_15_f4m1liar_w1th_b1n4ry_5ystem}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/binary
+hints: []
+connection_info: nc {{NC_HOST}} 10003
+extra:
+  port: 10003
+  docker_group: docker_pwn_6-10

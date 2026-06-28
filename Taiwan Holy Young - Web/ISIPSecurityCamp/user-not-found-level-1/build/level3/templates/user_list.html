@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profiles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <p> </p>
+        <h1>Profiles {{ chal_name }}</h1>
+        <h3>{{ chal_p }}</h3>
+        <hr>
+        <ul class="list-group">
+            {% for i in cat_profiles %}
+                <li class="list-group-item">
+                    <a href="/user/{{ i.id }}">{{ i.cat_name}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

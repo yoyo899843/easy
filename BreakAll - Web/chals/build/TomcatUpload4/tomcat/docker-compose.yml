@@ -1,0 +1,19 @@
+version: '2'
+services:
+  mytomcat4:
+    build: .
+    restart: always
+    volumes:
+    - ./context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
+    - ./context.xml:/usr/local/tomcat/webapps/host-manager/META-INF/context.xml
+    - ./conf-context.xml:/usr/local/tomcat/conf/context.xml
+    - ./simpleupload.war:/usr/local/tomcat/webapps/simpleupload.war
+    - ./index.jsp:/usr/local/tomcat/webapps/ROOT/index.jsp
+    - ./flag:/flag
+    ports:
+    - 8087:8080
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

@@ -1,0 +1,14 @@
+name: Errors
+author: ''
+category: BreakAll - Linux
+description: "這邊有個 Flag 機器動得很厲害   \n\n但似乎是出了點問題   \n\n除了原本應該給出的 Flag 外 還多吐出不少不相關的東西   \n\n你是否能找出正確的 Flag 呢"
+value: 50
+type: standard
+flags:
+- FLAG{This_0ne_15_Rea11111_Flag}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/errors
+hints: []

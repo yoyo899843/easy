@@ -1,0 +1,14 @@
+name: CFM_Shaco
+author: ''
+category: BreakAll - Reverse
+description: FLAG 格式為 FLAG{...}
+value: 100
+type: standard
+flags:
+- FLAG{N0w_Y0U_C_Me_n0W_U_D0nT}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/CPP_MFC2.exe
+hints: []

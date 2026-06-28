@@ -1,0 +1,19 @@
+name: 'SECCON CTF 2014: Easy Cipher'
+author: ''
+category: Other - Network
+description: '多元編碼方案
+
+
+
+
+  試著解解看吧!'
+value: 100
+type: standard
+flags:
+- SECCON{W31C0M 70 7H3 53CC0N ZOIA}
+tags:
+- SECCON CTF
+- easy
+files:
+- dist/ciphertxt.txt
+hints: []

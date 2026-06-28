@@ -1,0 +1,17 @@
+name: fa
+author: ''
+category: BreakAll - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- breakall{how_did_u_know}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30005
+extra:
+  port: 30005
+  docker_group: fa

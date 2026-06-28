@@ -1,0 +1,17 @@
+name: lambda
+author: ''
+category: MyFirstSecurity - Misc
+description: '`nc 120.114.62.214 5124`'
+value: 200
+type: standard
+flags:
+- MyFirstCTF{R0gUe on3 - A st4r wARs LamBd4}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40003
+extra:
+  port: 40003
+  docker_group: lambda

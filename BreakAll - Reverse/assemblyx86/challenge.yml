@@ -1,0 +1,19 @@
+name: assemblyx86
+author: ''
+category: BreakAll - Reverse
+description: 'flag 格式為 FLAG{...}
+
+
+
+
+  你會把 x86 assembly 程式組譯起來執行嗎?'
+value: 25
+type: standard
+flags:
+- FLAG{WRITE_U_OWN_ASSEMBLY!!}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/assemblyx86.asm
+hints: []

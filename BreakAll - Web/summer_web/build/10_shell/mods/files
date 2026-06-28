@@ -1,0 +1,25 @@
+<fieldset>
+  <legend>上傳東西</legend>
+  <p>可是這個網站還是有個上傳功能</p>
+  <form method="post" action="upload.php" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="上傳">
+  </form>
+</fieldset>
+<br>
+<fieldset>
+  <legend>看看你上傳了什麼東西</legend>
+  <?php if ($userFiles = getUserFiles()): ?>
+    <ul>
+      <?php foreach ($userFiles as $f): ?>
+        <li>
+          <a href="<?= htmlentities($f['path']) ?>">
+            <?= htmlentities($f['name']) ?>
+          </a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  <?php else: ?>
+    <b>還沒有東西</b>
+  <?php endif; ?>
+</fieldset>

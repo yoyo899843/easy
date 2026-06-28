@@ -1,0 +1,17 @@
+name: Bypass
+author: ''
+category: BreakAll - Web
+description: ''
+value: 80
+type: standard
+flags:
+- FLAG{php should be used carefully}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/bypass
+extra:
+  port: 20024
+  docker_group: summer_web

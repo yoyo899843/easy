@@ -1,0 +1,15 @@
+name: DeNoise
+author: ''
+category: BreakAll - Crypto
+description: "這裡有好幾個一樣 FLAG   \n\n不過都有不同的 noise   \n\n可以幫我消除嗎？"
+value: 100
+type: standard
+flags:
+- BreakAll{S0mE71m3s_THe_n01se_c4n_b3_S1mp1y_ReDucEd_bY_MatheM471ca1_m3th0dz}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/task.py
+- dist/noise_flag.txt
+hints: []

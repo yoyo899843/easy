@@ -1,0 +1,17 @@
+name: cmd_injection / free_test
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- flag{command_injection}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/cmd_injection-free_test
+extra:
+  port: 20052
+  docker_group: cmd_injection-free_test

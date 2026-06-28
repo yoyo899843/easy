@@ -1,0 +1,17 @@
+name: let-the-cow-moow
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Remember_2_use_escapeshellarg}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/let-the-cow-moow
+extra:
+  port: 20046
+  docker_group: let-the-cow-moow

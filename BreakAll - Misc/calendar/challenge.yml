@@ -1,0 +1,22 @@
+name: calendar
+author: ''
+category: BreakAll - Misc
+description: '可以判斷哪些年年是閏年年嗎?
+
+
+
+
+  `nc 120.114.62.214 2402`'
+value: 50
+type: standard
+flags:
+- CTF{2O20HapPY1e4pYE4r!!!}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40010
+extra:
+  port: 40010
+  docker_group: calendar

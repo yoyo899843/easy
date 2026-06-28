@@ -1,0 +1,22 @@
+name: Welcome
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'Welcome to Break-All-CTF-Reverse!
+
+  Run the binary to get further info.
+
+
+  Hint: Decompile
+
+
+  Author: Flydragon'
+value: 50
+type: standard
+flags:
+- flag{W3lc0m3}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/welcome
+hints: []

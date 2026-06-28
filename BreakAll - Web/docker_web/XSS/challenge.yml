@@ -1,0 +1,18 @@
+name: XSS
+author: ''
+category: BreakAll - Web
+description: "Cross-site scripting(跨網站指令碼攻擊)又稱XSS攻擊，通常是透過HTML或JavaScript這些不在伺服器端執行的程式進行攻擊，可用來竊取使用者的cookie，甚至於冒用使用者的身份。\n\n\
+  \n\n本題任務是使用XSS攻擊竊取cookie。   \n\n請使用Firefox瀏覽器較方便解題。\n\n\n\n提示1 : 取得cookie後請記得做URL decode\n\n\n\n\n\n請連結以下網址:"
+value: 100
+type: standard
+flags:
+- BreakALLCTF{BQmpK7Ip0IOxclRg5jex}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/xss
+extra:
+  port: 20008
+  docker_group: docker_web

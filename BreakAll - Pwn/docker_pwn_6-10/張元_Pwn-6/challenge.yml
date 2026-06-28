@@ -1,0 +1,18 @@
+name: 張元_Pwn-6
+author: ''
+category: BreakAll - Pwn
+description: ''
+value: 50
+type: standard
+flags:
+- BreakAllCTF{Scr1pting_skill_is_important_for_a_hacker}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/pwntools
+hints: []
+connection_info: nc {{NC_HOST}} 10002
+extra:
+  port: 10002
+  docker_group: docker_pwn_6-10

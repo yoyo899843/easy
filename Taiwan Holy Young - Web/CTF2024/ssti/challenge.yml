@@ -1,0 +1,17 @@
+name: ssti
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- flag{ssti}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/ssti
+extra:
+  port: 20041
+  docker_group: ssti

@@ -1,0 +1,17 @@
+name: web-5:HTTP method
+author: ''
+category: MyFirstSecurity - Network
+description: "你對HTTP Status Code及HTTP request methods了解嗎?\n\n\n\n請連結以下網址:   \n\n\n\n\n\n\nfrom:\n\nACTF"
+value: 100
+type: standard
+flags:
+- BreakALLCTF{fzfaD1jdXyQAMWvRShGC}
+tags:
+- BreakALL CTF
+- medium
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30004
+extra:
+  port: 30004
+  docker_group: docker_web

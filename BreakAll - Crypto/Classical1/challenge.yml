@@ -1,0 +1,14 @@
+name: Classical1
+author: ''
+category: BreakAll - Crypto
+description: 這就是凱薩加密？！
+value: 10
+type: standard
+flags:
+- BreakAll{Et tu, Brute?}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/cipher
+hints: []

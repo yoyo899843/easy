@@ -1,0 +1,31 @@
+<% title="Easy ERB System" %>
+<!doctype html>
+<html lang="en">
+<head>
+ <title><%= title %></title>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <!-- ggininder -->
+</head>
+<body>
+ <header>
+ <h1><%= title %></h1>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <div class="collapse navbar-collapse">
+ <ul class="navbar-nav mr-auto">
+ <li class="nav-item"><a class="nav-link" href="/" title="Home">Home</a></li>
+ <li class="nav-item"><a class="nav-link" href="/about" title="About">About</a></li>
+ <li class="nav-item"><a class="nav-link" href="/article/1" title="Article">Article</a></li>
+ <!--<li class="nav-item"><a class="nav-link" href="/source" title="Source">Source</a></li>-->
+</ul> 
+</div>
+</nav>
+ </header>
+ <section>
+ <div class="jumbotron">
+<%= yield %>
+ </div>
+ </section>
+</body>
+</html>

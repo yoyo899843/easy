@@ -1,0 +1,14 @@
+name: 林思辰_mutate
+author: ''
+category: MyFirstSecurity - Reverse
+description: "H0w 哥，你知道邏輯設計嗎   \n\n喔喔我知道阿 就那個 and or not 還有一個什麼的 我忘了   \n\n哈哈不知道齁 笑你   \n\n\n\n試著找出 mutate 字串的方法"
+value: 100
+type: standard
+flags:
+- MyFirstCTF{r3VerSe_X0r_1S_v3RY_e4sy_FoR_m3}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/mutate
+hints: []

@@ -1,0 +1,14 @@
+name: TsaiBro
+author: ''
+category: AIS3 - Reverse
+description: ''
+value: 50
+type: standard
+flags:
+- AIS3{y0u_4re_a_b1g_f4n_0f_tsaibro_n0w}
+tags:
+- AIS3 Pre Exam
+- easy
+files:
+- dist/TsaiBro.zip
+hints: []

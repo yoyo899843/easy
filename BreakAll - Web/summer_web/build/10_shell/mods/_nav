@@ -1,0 +1,10 @@
+<div>
+  [
+  <a href="?page=home">首頁</a>
+  |
+  <a href="?page=about">關於</a>
+  |
+  <a href="?page=files">上傳檔案</a>
+  ]
+</div>
+<br>

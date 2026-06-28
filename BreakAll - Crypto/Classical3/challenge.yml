@@ -1,0 +1,17 @@
+name: Classical3
+author: ''
+category: BreakAll - Crypto
+description: '這次是 Vigenere？！
+
+
+  Flag 為 BreakAll{...}'
+value: 15
+type: standard
+flags:
+- BreakAll{Vig3n3r3_is_c00l!!?}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/cipher
+hints: []

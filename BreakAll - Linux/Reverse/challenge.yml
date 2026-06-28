@@ -1,0 +1,15 @@
+name: Reverse
+author: ''
+category: BreakAll - Linux
+description: "程式開發是許多資訊人員必備的技術，但開發安全的程式更是極度欠缺高階程式師。 一般程式可能被逆向工程技術破解，請利用你所知道的逆向工程技術破解以下程式。 \n\n\n\n提示1:此題有多種方法破解，你可以嘗試看看 \n\
+  \n提示2:可利用一般debugger工具輕鬆找出flag"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{4U49uY7OJCrJL0vtbXjd}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/reverse
+hints: []

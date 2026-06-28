@@ -1,0 +1,14 @@
+name: AIS3_Pre_exam_2016-Binary1
+author: ''
+category: AIS3 - Reverse
+description: ''
+value: 150
+type: standard
+flags:
+- ais3{readING_ASSemblY_4_FUN!}
+tags:
+- AIS3 Pre Exam
+- easy
+files:
+- dist/binary1
+hints: []

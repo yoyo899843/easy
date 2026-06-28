@@ -1,0 +1,17 @@
+name: encode
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- flag{encode}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30008
+extra:
+  port: 30008
+  docker_group: encode

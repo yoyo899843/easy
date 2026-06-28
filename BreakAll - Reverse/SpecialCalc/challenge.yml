@@ -1,0 +1,14 @@
+name: SpecialCalc
+author: ''
+category: BreakAll - Reverse
+description: ''
+value: 10
+type: standard
+flags:
+- FLAG{Hello_CommandLine}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/SpecialCalc.exe
+hints: []

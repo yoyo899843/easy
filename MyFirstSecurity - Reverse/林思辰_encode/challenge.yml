@@ -1,0 +1,15 @@
+name: 林思辰_encode
+author: ''
+category: MyFirstSecurity - Reverse
+description: "欸阿明，你知道怎麼把英文字母轉成數字嗎   \n\n就是把 ABC 變成 123 壓   \n\n喔喔很簡單啊   \n\n\n\n難道阿明知道 flag ????!!!!   \n\nNote: 將解出的字串放入\
+  \ MyFirstCTF{} 中，若為數字則以十六進制表示 0x 開頭   \n\n\n\n試著找出編碼的方法"
+value: 100
+type: standard
+flags:
+- MyFirstCTF{MAKECHRTOINT}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/encode
+hints: []

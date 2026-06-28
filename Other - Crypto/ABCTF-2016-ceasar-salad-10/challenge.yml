@@ -1,0 +1,15 @@
+name: 'ABCTF 2016 : ceasar-salad-10'
+author: ''
+category: Other - Crypto
+description: "Most definitely the best salad around.    \n\nCan you decrypt this for us?    \n\nxyzqc{t3_qelrdeq_t3_k33a3a_lk3_lc_qe3p3}\n\
+  \n\n\n凱撒密碼:維基百科   \n\nhttps://en.wikipedia.org/wiki/Caesar_cipher   \n\nhttps://zh.wikipedia.org/wiki/凱撒密碼   \n\n \n\n線上解題需特別注意有那些沒有被處理\
+  \   \n\n你可以試試看看有沒不同   \n\nhttps://planetcalc.com/1434/   \n\nhttp://md5decrypt.net/en/Caesar/   \n\nhttps://www.xarg.org/tools/caesar-cipher/"
+value: 10
+type: standard
+flags:
+- abctf{w3_thought_w3_n33d3d_on3_of_th3s3}
+tags:
+- ABCTF
+- easy
+files: []
+hints: []

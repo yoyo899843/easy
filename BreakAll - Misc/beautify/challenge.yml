@@ -1,0 +1,32 @@
+name: beautify
+author: ''
+category: BreakAll - Misc
+description: '幫我美化一下這句子
+
+
+
+
+  規則1 : 把所有 '' -_'' 換成 '' ''
+
+
+
+
+  規則2 : 把所有英⽂文字母換成小寫
+
+
+
+
+  `nc 120.114.62.214 2401`'
+value: 50
+type: standard
+flags:
+- CTF{NoWYoUKNoWhOWt0STRinG}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40009
+extra:
+  port: 40009
+  docker_group: beautify

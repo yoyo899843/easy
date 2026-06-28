@@ -1,0 +1,17 @@
+name: pwn_2
+author: ''
+category: Taiwan Holy Young - Pwn
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{0v3rf1oW!}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 10009
+extra:
+  port: 10009
+  docker_group: pwn_2

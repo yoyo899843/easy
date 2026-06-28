@@ -1,0 +1,17 @@
+name: 6-Base64_Hex_String
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{`bytes`_&_`str`_are_different_in_Python}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30015
+extra:
+  port: 30015
+  docker_group: 6-Base64_Hex_String

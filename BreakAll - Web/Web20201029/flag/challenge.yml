@@ -1,0 +1,17 @@
+name: flag
+author: ''
+category: BreakAll - Web
+description: ''
+value: 50
+type: standard
+flags:
+- BreakALLCTF{dwExjJly8xU1O8NNZBhG}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/flag
+extra:
+  port: 20006
+  docker_group: Web20201029

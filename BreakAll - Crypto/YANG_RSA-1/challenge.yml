@@ -1,0 +1,15 @@
+name: YANG_RSA-1
+author: ''
+category: BreakAll - Crypto
+description: "RSA加密演算法是一種非對稱加密演算法，在公開金鑰加密和電子商業中RSA加密被廣泛使用。\n\n\n\nRSA的安全性是建立在大數分解的困難上，如果n不夠大就無法保證其安全性，對一極大整數做因數分解愈困難，RSA演算法愈可靠。\n\
+  \n\n\n你了解RSA的基本加解密了嗎?    \n\n請解密附件檔案 \n\n\n\n提示1 : n很小可以使用 http://factordb.com/ 先分解出p和q質數    \n\n提示2 : 分解出p和q質數後算出d，用d去解c"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{R$A_!s_so_e@sy_r!ght?....}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/RSA-1.txt
+hints: []

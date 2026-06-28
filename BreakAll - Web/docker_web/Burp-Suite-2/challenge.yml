@@ -1,0 +1,19 @@
+name: Burp Suite-2
+author: ''
+category: BreakAll - Web
+description: "網站登入權限控管是程式設計人員需特別留意的地方，要做到謹慎的權限控管需要小心設計，因為設計不良的網站，常會使駭客攔截封包後修改並送出，進而造成網站機敏內容外洩。\n\n\n\n你知道如何使用非登入身分在設計不良的網站取得登入權限嗎?\n\
+  \n\n\n本題任務是請你完成上述使命?\n\n\n\n提示1: 你知道如何攔截並修改封包嗎?   \n\n提示2: 你可以使用Burp Suite等工具，也可以使用Google Chrome 開發者模式輕鬆解題。\n\n\n\n\n\n\
+  請連結以下網址:"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{An41YF4o68wjzq4xjYK9}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/burp-suite-2
+extra:
+  port: 20003
+  docker_group: docker_web

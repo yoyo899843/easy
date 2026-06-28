@@ -1,0 +1,19 @@
+name: 0x08-Z3
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'I know you love math.
+
+  flag format: FLAG{x*y}
+
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{1760000}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/main_8.txt
+hints: []

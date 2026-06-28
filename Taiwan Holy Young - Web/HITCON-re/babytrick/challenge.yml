@@ -1,0 +1,17 @@
+name: babytrick
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- HITCON{php 4nd mysq1 are s0 mag1c, isn't it?}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/babytrick
+extra:
+  port: 20048
+  docker_group: babytrick

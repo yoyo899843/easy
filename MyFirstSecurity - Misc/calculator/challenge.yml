@@ -1,0 +1,22 @@
+name: calculator
+author: ''
+category: MyFirstSecurity - Misc
+description: '你能幫我解一些方程式嗎？
+
+
+
+
+  `nc 120.114.62.214 5119`'
+value: 200
+type: standard
+flags:
+- MyFirstCTF{QLwxhEsyUfKQrYxyEeFe}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30011
+extra:
+  port: 30011
+  docker_group: calculator

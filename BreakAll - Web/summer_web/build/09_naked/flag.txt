@@ -1,0 +1,1 @@
+FLAG{a website is naked when the git directory is exposed}

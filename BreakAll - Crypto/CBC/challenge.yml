@@ -1,0 +1,18 @@
+name: CBC
+author: ''
+category: BreakAll - Crypto
+description: 來練習一下 CBC bit-flipping 吧
+value: 100
+type: standard
+flags:
+- CTF{cBC g4dgeTs}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/server.py
+hints: []
+connection_info: nc {{NC_HOST}} 30001
+extra:
+  port: 30001
+  docker_group: CBC

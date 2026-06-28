@@ -1,0 +1,17 @@
+name: 9-AES_CBC_Mode
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{It's_better_to_know_to_use_Python_to_encrypt/decrypt}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30023
+extra:
+  port: 30023
+  docker_group: 9-AES_CBC_Mode

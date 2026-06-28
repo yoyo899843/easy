@@ -1,0 +1,17 @@
+name: money
+author: ''
+category: BreakAll - Misc
+description: '`nc 120.114.62.214 2407`'
+value: 50
+type: standard
+flags:
+- CTF{mAk3kAohsIUNgFoRTuN3}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40014
+extra:
+  port: 40014
+  docker_group: money

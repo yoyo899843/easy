@@ -1,0 +1,18 @@
+name: Md5 collision
+author: ''
+category: BreakAll - Web
+description: "MD5加密是一種被近年被廣泛使用的密碼雜湊函式，可以產生出一個128位元的雜湊值(hash)，用於確保資訊傳輸完整一致，甚至做為密碼加密用途。\n\n\n\n但MD5加密真的安全嗎?近年已發現MD5碰撞(md5 collision)問題。\
+  \   \n\n本題任務請你使用md5 collision技術登入取得flag。\n\n\n\n請連結以下網址:"
+value: 100
+type: standard
+flags:
+- BreakALLCTF{CH82GiBlijFZbLqd1Y6V}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/md5-collision
+extra:
+  port: 20009
+  docker_group: docker_web

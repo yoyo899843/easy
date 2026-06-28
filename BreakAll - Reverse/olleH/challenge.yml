@@ -1,0 +1,19 @@
+name: olleH
+author: ''
+category: BreakAll - Reverse
+description: '這支程式會寫入一個神祕檔案, 檔案內容由 "A-Z a-z 0-9 空格 逗號 句號" 組成
+
+
+
+
+  Flag 格式請輸入 FLAG{檔案內容}'
+value: 50
+type: standard
+flags:
+- FLAG{Evil Cat Boy, Your nightmare tonight.}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/hello.exe
+hints: []

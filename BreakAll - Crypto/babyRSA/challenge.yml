@@ -1,0 +1,16 @@
+name: babyRSA
+author: ''
+category: BreakAll - Crypto
+description: "本題給你一個公鑰 pub.pem 和要解密的密文 flag.enc\n\n\n\n請嘗試使用最基本的 rsa 攻擊 – 質因數分解來練習\n\n\n\nhint1: n 很小所以可以直接分解   \n\nhint2:\
+  \ 推薦 factordb.com ，想要本地跑也可以用 yafu"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{b@$RSA}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/pub.pem
+- dist/flag.enc
+hints: []

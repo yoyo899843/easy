@@ -1,0 +1,19 @@
+name: helloc
+author: ''
+category: BreakAll - Reverse
+description: 'flag 格式為 FLAG{...}
+
+
+
+
+  你懂 C, C 就會幫你'
+value: 25
+type: standard
+flags:
+- FLAG{No_C_N0_L1vE}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/helloc.c
+hints: []

@@ -1,0 +1,17 @@
+name: 0x03-Static
+author: ''
+category: Taiwan Holy Young - Reverse
+description: 'Where is the password?
+
+
+  Author: FlyDragon'
+value: 50
+type: standard
+flags:
+- FLAG{h0w_d1d_y0u_g3t_p4sswd}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files:
+- dist/main_3
+hints: []

@@ -1,0 +1,14 @@
+name: EasyCTF_adder
+author: ''
+category: Other - Linux
+description: ﬂag 格式為 easyctf{...}
+value: 25
+type: standard
+flags:
+- easyctf{y0u_added_thr33_nums!}
+tags:
+- EasyCTF
+- easy
+files:
+- dist/adder
+hints: []

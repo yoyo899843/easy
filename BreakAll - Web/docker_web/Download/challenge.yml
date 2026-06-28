@@ -1,0 +1,18 @@
+name: Download
+author: ''
+category: BreakAll - Web
+description: "網站如開放使用下載功能需特別留意，因為設計不良的下載功能，常會使駭客透過下載功能竊取網站原始碼，進而造成網站機敏內容外洩。\n\n\n\n提示1 :請問你對Base64編碼與解碼的技術了解嗎?   \n\n提示2 :你知道如何透過設計不良的網站下載功能取得網站原始碼嗎?\n\
+  \n\n\n請連結以下網址:"
+value: 100
+type: standard
+flags:
+- BreakALLCTF{CvyBO1GEhqiPpoBD3UE3}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/download
+extra:
+  port: 20010
+  docker_group: docker_web

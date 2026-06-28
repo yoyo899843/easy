@@ -1,0 +1,17 @@
+name: 9-Substitution_Cipher
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{799ff92f4a72f5092492e29edc8f40be782aa7a7653778b70fa06f9899318855}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30018
+extra:
+  port: 30018
+  docker_group: 9-Substitution_Cipher

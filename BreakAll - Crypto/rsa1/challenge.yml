@@ -1,0 +1,17 @@
+name: rsa1
+author: ''
+category: BreakAll - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- breakall{eassssy_for_y}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30006
+extra:
+  port: 30006
+  docker_group: rsa1

@@ -1,0 +1,17 @@
+name: papapa-ubuntu
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Now_u_F0un6_myh05t}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/papapa-ubuntu
+extra:
+  port: 20049
+  docker_group: papapa-ubuntu

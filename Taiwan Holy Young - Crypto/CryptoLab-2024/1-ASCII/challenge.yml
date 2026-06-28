@@ -1,0 +1,17 @@
+name: 1-ASCII
+author: ''
+category: Taiwan Holy Young - Crypto
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{Just_some_conversion~~~}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30010
+extra:
+  port: 30010
+  docker_group: 1-ASCII

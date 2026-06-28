@@ -1,0 +1,26 @@
+version: '2'
+services:
+  web-1source-code:
+    build: ./docker_BreakALLCTF_2017-01/web-1
+    ports:
+    - 30001:80
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  web-3robots-txt:
+    build: ./docker_BreakALLWebCTF_2017-02/web-1
+    ports:
+    - 30003:80
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  web-5http-method:
+    build: ./docker_BreakALLWebCTF_2017-03/web-1
+    ports:
+    - 30004:80
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

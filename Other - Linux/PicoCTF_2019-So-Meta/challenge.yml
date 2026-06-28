@@ -1,0 +1,15 @@
+name: PicoCTF_2019-So Meta
+author: ''
+category: Other - Linux
+description: "Find the flag in this picture.\n\n\n\n提示：   \n\nWhat does meta mean in the context of files?   \n\nEver hear\
+  \ of metadata?"
+value: 100
+type: standard
+flags:
+- picoCTF{s0_m3ta_368a0341}
+tags:
+- PicoCTF
+- easy
+files:
+- dist/img.png
+hints: []

@@ -1,0 +1,19 @@
+name: Linux CTF 10
+author: ''
+category: BreakAll - Misc
+description: "在Linux上只有執行檔你如何顯示重要資訊?\n\n\n\n下載連結:   \n\n\n\n\n- - - - - - - - - - - - - - - - - - - - - -\n\n如使用以下連線，需在 /tmp\
+  \ 目錄底下建立自己的目錄才能下載檔案 \n\n如: /tmp/404040\n\n\n\nSSH 資訊   \n\nIP  : 120.114.62.214   \n\nPort: 5500\n\n\n\n帳號 : lab   \n\n\
+  密碼 : lab   \n\n- - - - - - - - - - - - - - - - - - - - - -"
+value: 50
+type: standard
+flags:
+- BreakALLCTF{VLJekKONoWld7ari6HHJ}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 30010
+extra:
+  port: 30010
+  docker_group: ssh_lab

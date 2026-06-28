@@ -1,0 +1,17 @@
+name: ImageUploader
+author: ''
+category: BreakAll - Web
+description: ''
+value: 150
+type: standard
+flags:
+- FLAG{U_can_Up10ad_More_than_1m4ge}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/imageuploader
+extra:
+  port: 20014
+  docker_group: Web20201029

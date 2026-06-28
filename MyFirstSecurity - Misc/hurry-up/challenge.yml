@@ -1,0 +1,17 @@
+name: hurry-up
+author: ''
+category: MyFirstSecurity - Misc
+description: '`nc 120.114.62.214 5123`'
+value: 200
+type: standard
+flags:
+- MyFirstCTF{sTaR w4rs VI - RetUrn 0f thE jOn SNoW}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40002
+extra:
+  port: 40002
+  docker_group: hurry-up

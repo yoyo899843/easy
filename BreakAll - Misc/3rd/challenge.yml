@@ -1,0 +1,22 @@
+name: 3rd
+author: ''
+category: BreakAll - Misc
+description: '可以幫我找出第三大的數字嗎?
+
+
+
+
+  `nc 120.114.62.214 2400`'
+value: 50
+type: standard
+flags:
+- CTF{yoUaReInth33RdpL4c3}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 40008
+extra:
+  port: 40008
+  docker_group: 3rd

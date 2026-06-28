@@ -1,0 +1,17 @@
+name: practice_1
+author: ''
+category: Taiwan Holy Young - Pwn
+description: ''
+value: 50
+type: standard
+flags:
+- FLAG{la7e_thr0w}
+tags:
+- Taiwan Holy Young CTF
+- easy
+files: []
+hints: []
+connection_info: nc {{NC_HOST}} 10010
+extra:
+  port: 10010
+  docker_group: practice_1
