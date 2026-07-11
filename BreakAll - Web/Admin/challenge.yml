@@ -2,7 +2,7 @@ name: Admin
 author: ''
 category: BreakAll - Web
 description: ''
-value: 10
+value: 100
 type: standard
 flags:
 - FLAG{congratz_here_is_your_flag!}

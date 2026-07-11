@@ -2,7 +2,7 @@ name: ImageUploader
 author: ''
 category: BreakAll - Web
 description: ''
-value: 150
+value: 100
 type: standard
 flags:
 - FLAG{U_can_Up10ad_More_than_1m4ge}

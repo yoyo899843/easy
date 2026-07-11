@@ -1,0 +1,12 @@
+version: '2'
+services:
+  oob2:
+    build: .
+    ports:
+    - 10013:3112
+    restart: always
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

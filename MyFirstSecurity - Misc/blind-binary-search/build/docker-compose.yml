@@ -1,0 +1,16 @@
+version: '2.2'
+services:
+  blind-binary-search:
+    image: oalieno/ctf-python:sage
+    network_mode: bridge
+    volumes:
+    - ./share:/home/ctf/
+    - ./xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+    - 40030:9999
+    expose:
+    - '9999'
+    restart: always
+networks:
+  ctf_chals_network:
+    external: true

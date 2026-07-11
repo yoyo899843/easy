@@ -30,7 +30,7 @@ if(isset($_GET['msg']))
 <input type="password" name="pass" placeholder="password"><br><br>
 <input type="submit">
 </form>
-<a href="/index.php">< back</a>
+<a href="index.php">< back</a>
 <center>
 </body>
 <?php

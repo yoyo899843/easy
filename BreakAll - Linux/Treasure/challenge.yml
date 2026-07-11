@@ -2,7 +2,7 @@ name: Treasure
 author: ''
 category: BreakAll - Linux
 description: 聽說檔案迷宮裡藏有⼀個寶藏，到底要走哪條路才會通到寶藏？
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{Toooooo_many_routes!!!!_It's_exhaustedQQ}

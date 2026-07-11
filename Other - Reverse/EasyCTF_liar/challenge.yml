@@ -2,7 +2,7 @@ name: EasyCTF_liar
 author: ''
 category: Other - Reverse
 description: flag 格式為 easyctf{...}
-value: 25
+value: 100
 type: standard
 flags:
 - easyctf{still_wasn't_too_bad,_right?}

@@ -7,7 +7,7 @@ description: '可以判斷哪些年年是閏年年嗎?
 
 
   `nc 120.114.62.214 2402`'
-value: 50
+value: 100
 type: standard
 flags:
 - CTF{2O20HapPY1e4pYE4r!!!}

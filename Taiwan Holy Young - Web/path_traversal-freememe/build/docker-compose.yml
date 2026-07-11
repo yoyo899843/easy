@@ -1,0 +1,12 @@
+version: '3'
+services:
+  path_traversal-freememe:
+    build: ./freememe
+    ports:
+    - 20066:80
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

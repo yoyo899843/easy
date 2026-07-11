@@ -2,7 +2,7 @@ name: 林思辰_run-asm
 author: ''
 category: MyFirstSecurity - Reverse
 description: "跑跑跑向前跑   \n\n阿...阿呃   \n\nH0w 哥你怎麼了   \n\n我...我...我快不行了，   \n\n跑完 asm 這項重責大任就交給你了\n\n\n\n編譯 asm 檔案並執行"
-value: 50
+value: 100
 type: standard
 flags:
 - MyFirstCTF{C0mpi1e_aSm_4nd_RuN!}

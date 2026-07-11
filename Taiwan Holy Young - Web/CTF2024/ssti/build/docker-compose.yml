@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  ssti:
     build: ./trash_generator
     ports:
     - 20041:80

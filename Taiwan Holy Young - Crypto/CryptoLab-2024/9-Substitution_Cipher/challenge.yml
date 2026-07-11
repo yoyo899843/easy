@@ -2,7 +2,7 @@ name: 9-Substitution_Cipher
 author: ''
 category: Taiwan Holy Young - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{799ff92f4a72f5092492e29edc8f40be782aa7a7653778b70fa06f9899318855}

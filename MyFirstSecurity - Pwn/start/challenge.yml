@@ -12,7 +12,7 @@ description: 'Billy 不小心把鑰匙掉在一間鎖住的房間了
 
 
   你知道他的 key 是什麼嗎?'
-value: 140
+value: 100
 type: standard
 flags:
 - MyFirstCTF{xtnntfhzflpttvxvzzbfjfnxbjvrzxdfvzlvhpt}

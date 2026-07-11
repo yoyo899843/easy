@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  admin:
     build: .
     ports:
     - 20031:80

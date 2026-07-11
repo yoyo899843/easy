@@ -1,0 +1,14 @@
+name: 'angstromCTF2016: artifact-20'
+author: ''
+category: Other - Network
+description: "While exploring ancient ruins, a strange message was found. \n\n\n\nCan you crack the message?"
+value: 100
+type: standard
+flags:
+- classics_are_always_in_style
+tags:
+- angstromCTF
+- easy
+files:
+- dist/ciphertext.txt
+hints: []

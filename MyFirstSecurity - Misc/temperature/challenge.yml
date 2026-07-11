@@ -7,7 +7,7 @@ description: '我需要你幫忙把華氏轉攝氏
 
 
   `nc 120.114.62.214 5127`'
-value: 200
+value: 100
 type: standard
 flags:
 - MyFirstCTF{h4rRy potTer anD tHe phiL0sOph3r's TeMper4tuRe}

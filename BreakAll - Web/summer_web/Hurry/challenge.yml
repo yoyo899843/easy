@@ -2,7 +2,7 @@ name: Hurry
 author: ''
 category: BreakAll - Web
 description: ''
-value: 70
+value: 100
 type: standard
 flags:
 - FLAG{your hands are so fast}

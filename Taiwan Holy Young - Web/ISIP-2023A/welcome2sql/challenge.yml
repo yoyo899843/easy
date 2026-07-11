@@ -2,7 +2,7 @@ name: welcome2sql
 author: ''
 category: Taiwan Holy Young - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{W31c0me_2_SQLi}

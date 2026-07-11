@@ -6,13 +6,13 @@
     <title>Router Settings</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 <!-- Image and text -->
 
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href=".">
       My New Router
     </a>
   </nav>
@@ -25,13 +25,13 @@
                 <div class="position-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('wan_setup') }}">WAN Setup</a>
+                            <a class="nav-link" href="wan_setup">WAN Setup</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('lan_setup') }}">LAN Setup</a>
+                            <a class="nav-link" href="lan_setup">LAN Setup</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('ping_tool_page') }}">Ping Tool</a>
+                            <a class="nav-link" href="ping_tool">Ping Tool</a>
                         </li>
                     </ul>
                 </div>

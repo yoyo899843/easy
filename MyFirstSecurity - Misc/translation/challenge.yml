@@ -2,7 +2,7 @@ name: translation
 author: ''
 category: MyFirstSecurity - Misc
 description: '`nc 120.114.62.214 5125`'
-value: 200
+value: 100
 type: standard
 flags:
 - MyFirstCTF{stAr m4rVel VII - thE F0rCe AWakeNs}

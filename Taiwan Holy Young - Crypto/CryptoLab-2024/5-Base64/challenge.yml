@@ -2,7 +2,7 @@ name: 5-Base64
 author: ''
 category: Taiwan Holy Young - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{Base64_is_more_often_used_in_reality}

@@ -3,7 +3,7 @@ author: ''
 category: MyFirstSecurity - Reverse
 description: "阿明，你看看我撿到的神祕檔案   \n\n滾啦   \n\n嗚嗚...嗚...   \n\n傷心的 H0w 哥獨自一人打開了檔案   \n\n突然有一個聲音說道   \n\n找出 flag 吧！ H0w 哥   \n\
   \n\n\nstrings 是個好用的工具"
-value: 50
+value: 100
 type: standard
 flags:
 - MyFirstCTF{Y0U_gOt_th3_flag_bY_sTr1ngS}

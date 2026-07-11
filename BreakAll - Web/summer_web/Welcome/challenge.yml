@@ -2,7 +2,7 @@ name: Welcome
 author: ''
 category: BreakAll - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{submit_this_to_the_platform}

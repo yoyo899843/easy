@@ -1,0 +1,11 @@
+services:
+  angelboy-pwn-1:
+    build: .
+    ports:
+      - 10025:2111
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

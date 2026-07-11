@@ -8,7 +8,7 @@ description: 'Fady didn''t understand well the difference between encryption and
 
 
   Hint: Fady''s encoding doens''t handly any special character'
-value: 50
+value: 100
 type: standard
 flags:
 - ALEXCTF{TH15_1S_5UP3R_5ECR3T_TXT}

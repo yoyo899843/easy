@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  information-leakage:
     build: ./maintenance
     ports:
     - 20059:80

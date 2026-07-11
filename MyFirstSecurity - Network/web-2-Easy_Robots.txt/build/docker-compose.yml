@@ -1,9 +1,9 @@
 version: '3'
 services:
-  ctf:
+  web-2-easy-robots-txt:
     build: .
     ports:
-    - 30002:80
+    - 40032:80
     restart: unless-stopped
     networks:
     - ctf_chals_network

@@ -1,0 +1,18 @@
+name: Angelboy_Pwn-1
+author: ''
+category: Other - Pwn
+description: ''
+value: 100
+type: standard
+flags:
+- AngelboyCTF{YodbgBUFJp6ypXRqkKjI}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/bofe4sy
+hints: []
+connection_info: nc {{NC_HOST}} 10025
+extra:
+  port: 10025
+  docker_group: docker_Angelboy-CTF

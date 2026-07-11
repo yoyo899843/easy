@@ -1,0 +1,9 @@
+<html>
+<body>
+<script>
+  var path = window.location.pathname;
+  if (path.charAt(path.length - 1) !== '/') path += '/';
+  window.location.replace(path + 'index.php');
+</script>
+</body>
+</html>

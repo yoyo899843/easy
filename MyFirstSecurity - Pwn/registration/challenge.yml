@@ -1,0 +1,18 @@
+name: registration
+author: ''
+category: MyFirstSecurity - Pwn
+description: 請輸入一段字串
+value: 100
+type: standard
+flags:
+- MyFirstCTF{B3_c4r3FuL_0f_l0cAl_V4rI4b13_0N_sT4ck_OwO}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/registration
+- dist/registration.c
+hints: []
+connection_info: ''
+extra:
+  docker_group: docker_MyfirstCTF_pwn

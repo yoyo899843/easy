@@ -10,7 +10,7 @@ Choose a JPEG to upload:<br/>
 <input name="uploadedfile" type="file" /><br />
 <input type="submit" value="Upload File" />
 </form> 
-<div id="viewsource"><a href="/?action=source">View sourcecode</a></div>
+<div id="viewsource"><a href="?action=source">View sourcecode</a></div>
 <? 
 	if($_GET['action'] === 'source'){
 		highlight_file(__FILE__);

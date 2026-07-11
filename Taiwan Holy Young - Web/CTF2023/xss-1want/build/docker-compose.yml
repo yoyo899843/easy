@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  xss-1want:
     build: ./1want
     ports:
     - 20057:80

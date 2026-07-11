@@ -2,7 +2,7 @@ name: encode
 author: ''
 category: Taiwan Holy Young - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - flag{encode}

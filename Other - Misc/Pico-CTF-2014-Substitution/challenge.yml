@@ -1,0 +1,15 @@
+name: 'Pico CTF 2014 : Substitution'
+author: ''
+category: Other - Misc
+description: "There's an authorization code for some Thyrin Labs information here, along with someone's favorite song.   \
+  \ \n\nBut it's been encrypted! Find the authorization code.    \n\nencrypted.txt\n\n\n\nHint:\n\n\n\nYou may want to look\
+  \ at what the relative frequencies of letters in english text are.\n\n\n\n\n\n\n\n底下網站有用:   \n\nhttp://quipqiup.com/index.php"
+value: 100
+type: standard
+flags:
+- awholenewworld
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []

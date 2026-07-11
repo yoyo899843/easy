@@ -2,7 +2,7 @@ name: lambda
 author: ''
 category: MyFirstSecurity - Misc
 description: '`nc 120.114.62.214 5124`'
-value: 200
+value: 100
 type: standard
 flags:
 - MyFirstCTF{R0gUe on3 - A st4r wARs LamBd4}

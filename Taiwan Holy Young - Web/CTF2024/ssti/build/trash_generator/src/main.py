@@ -44,7 +44,7 @@ def index():
                     <h1 class="title">廢文產生器</h1>
                     <h1 class="subtitle"></h1>
                     <br>
-                    <form action="/" method="POST">
+                    <form action="" method="POST">
                         <div class="field">
                             <div class="control">
                               <input class="input" type="text" name="msg" placeholder="e.x 貓咪">

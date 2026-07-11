@@ -2,7 +2,7 @@ name: lightning
 author: ''
 category: BreakAll - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{302_redirect_cool}

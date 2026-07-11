@@ -7,7 +7,7 @@ description: '可以幫我找出第三大的數字嗎?
 
 
   `nc 120.114.62.214 2400`'
-value: 50
+value: 100
 type: standard
 flags:
 - CTF{yoUaReInth33RdpL4c3}

@@ -7,7 +7,7 @@ description: 'flag 格式為 FLAG{...}
 
 
   從頭開始逆向之前, 你有更快的方式可以大概知道程式在做什麼歐'
-value: 25
+value: 100
 type: standard
 flags:
 - FLAG{HARDCODING_GG}

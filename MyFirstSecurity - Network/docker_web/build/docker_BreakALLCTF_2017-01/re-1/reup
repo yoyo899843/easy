@@ -1,4 +1,0 @@
-gcc re-1.c -m32 -fno-stack-protector -o reverse
-
-strings reverse | grep -i BreakALLCTF
-python -c 'print "A"*65' | ./reverse

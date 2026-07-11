@@ -1,0 +1,12 @@
+version: '2'
+services:
+  sql-injection:
+    build: ./sql_injection
+    ports:
+    - 20004:80
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

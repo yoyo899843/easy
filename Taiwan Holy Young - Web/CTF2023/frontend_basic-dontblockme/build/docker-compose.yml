@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  frontend-basic-dontblockme:
     build: ./dontblockme
     ports:
     - 20053:80

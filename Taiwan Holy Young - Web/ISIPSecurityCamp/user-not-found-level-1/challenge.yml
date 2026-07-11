@@ -2,7 +2,7 @@ name: user-not-found-level 1
 author: ''
 category: Taiwan Holy Young - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{ssti_inj_23une5kd}

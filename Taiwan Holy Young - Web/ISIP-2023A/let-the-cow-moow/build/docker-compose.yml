@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  let-the-cow-moow:
     build: .
     ports:
     - 20046:80

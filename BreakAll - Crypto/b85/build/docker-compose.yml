@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  b85:
     build: .
     ports:
     - 30003:80

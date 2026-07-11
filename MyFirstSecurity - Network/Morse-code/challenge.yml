@@ -3,7 +3,7 @@ author: ''
 category: MyFirstSecurity - Network
 description: "先看看維基百科Wikipedia的說明   \n\nhttps://en.wikipedia.org/wiki/Morse_code\n\n\n\n你可以善用線上許多摩斯編碼   \n\nhttps://morsecode.scphillips.com/translator.html\n\
   \n\n\n來解解底下的題目吧\n\n\n\n.. -. ..-. --- ... . -.-. ..-. .-.. .- --. .. ... -- --- .-. ... .. -. --."
-value: 20
+value: 100
 type: standard
 flags:
 - INFOSECFLAGISMORSING

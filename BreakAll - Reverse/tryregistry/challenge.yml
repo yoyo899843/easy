@@ -2,7 +2,7 @@ name: tryregistry
 author: ''
 category: BreakAll - Reverse
 description: ''
-value: 10
+value: 100
 type: standard
 flags:
 - FLAG{IFEO_H1JaCk}

@@ -1,0 +1,18 @@
+version: '2.2'
+services:
+  temperature:
+    image: oalieno/ctf-python:base
+    networks:
+    - ctf_chals_network
+    volumes:
+    - ./share:/home/ctf/:ro
+    - ./xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+    - 40005:9999
+    expose:
+    - '9999'
+    restart: always
+
+networks:
+  ctf_chals_network:
+    external: true

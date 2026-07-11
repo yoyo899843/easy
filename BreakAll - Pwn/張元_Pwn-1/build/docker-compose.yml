@@ -1,0 +1,12 @@
+version: '2'
+services:
+  zhang_yuan_pwn_1:
+    build: .
+    ports:
+    - 10011:2111
+    restart: always
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

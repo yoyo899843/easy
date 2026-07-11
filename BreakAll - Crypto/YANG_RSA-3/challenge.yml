@@ -4,7 +4,7 @@ category: BreakAll - Crypto
 description: "孿生質數(Twin prime)指假設 p 是質數且 p + 2 也是質數    \n\n如 (3,5), (17,19), (41,43) …\n\n\n\n在RSA中，如果有兩把公鑰其符合 n1 = p * q\
   \ n2 = (p+2) * (q+2)    \n\n則可以在不用分解 n 的情況下得到 phi 來進行解密。\n\n\n\n提示1 : 可以參考此篇簡報第8頁   \n\nhttps://www.slideshare.net/ssuseraba268/rsa-in-ctf\
   \ \n\n\n\n提示2 : 也可以參考其它CTF write up   \n\nhttps://ctftime.org/task/2731"
-value: 50
+value: 100
 type: standard
 flags:
 - BreakALLCTF{twin_is_Soooooooooooo_Easy_in_RSaaaaaaaaaaaaaa}

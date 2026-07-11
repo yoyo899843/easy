@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<div id="viewsource"><a href="/?action=source">View sourcecode</a></div>
+<div id="viewsource"><a href="?action=source">View sourcecode</a></div>
 
 <?php
 if($_GET['action'] === 'source')

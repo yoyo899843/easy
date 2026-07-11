@@ -2,7 +2,7 @@ name: point-shop
 author: ''
 category: Taiwan Holy Young - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{BrokenAccessControl_STEP1_Parameter}

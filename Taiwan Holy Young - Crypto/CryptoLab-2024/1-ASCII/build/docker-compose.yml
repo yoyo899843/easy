@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  1-ascii:
     build: ./chal
     ports:
     - 30010:80

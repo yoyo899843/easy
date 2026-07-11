@@ -2,7 +2,7 @@ name: pwn_1
 author: ''
 category: Taiwan Holy Young - Pwn
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{pwwwwntooool!}

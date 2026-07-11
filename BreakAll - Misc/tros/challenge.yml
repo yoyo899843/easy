@@ -2,7 +2,7 @@ name: tros
 author: ''
 category: BreakAll - Misc
 description: '`nc 120.114.62.214 2409`'
-value: 50
+value: 100
 type: standard
 flags:
 - CTF{YOuaRESOrTINGm4st3R}

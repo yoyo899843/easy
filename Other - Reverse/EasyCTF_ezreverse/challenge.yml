@@ -1,0 +1,14 @@
+name: EasyCTF_ezreverse
+author: ''
+category: Other - Reverse
+description: 將得到的答案放進 MyFirstCTF{} 中
+value: 100
+type: standard
+flags:
+- MyFirstCTF{10453125111114}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/ezreverse
+hints: []

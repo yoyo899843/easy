@@ -1,0 +1,17 @@
+name: KAIBRO BUY
+author: ''
+category: BreakAll - Web
+description: ''
+value: 100
+type: standard
+flags:
+- FLAG{baby_money_bypass!}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/kaibro-buy
+extra:
+  port: 20062
+  docker_group: AdvancedWeb-kaibro0218

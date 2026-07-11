@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  calc-rsa:
     build: .
     ports:
     - 30026:80

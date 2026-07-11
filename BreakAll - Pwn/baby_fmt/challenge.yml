@@ -1,0 +1,18 @@
+name: baby_fmt
+author: ''
+category: BreakAll - Pwn
+description: ''
+value: 100
+type: standard
+flags:
+- FLAG{7he_f14g_0n_th3_st4ck!!!!!!}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/baby_fmt
+hints: []
+connection_info: nc {{NC_HOST}} 10001
+extra:
+  port: 10001
+  docker_group: docker_Angelboy-CTF

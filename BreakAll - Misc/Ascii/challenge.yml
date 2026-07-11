@@ -5,7 +5,7 @@ description: "編碼與解碼是資訊領域日常都在使用的技術，如Asc
   \n\n\n請問你對Ascii編碼與解碼的技術了解嗎?   \n\n你知道如何解碼下列資料嗎:   \n\n```\n\n66 114 101 97 107 65 76 76 67 84 70 123 65 109 118 48 117 68\
   \ 121 101 114 118 80 116 109 86 114 57 83 83 83 75 125\n\n```\n\n\n\n\n\n看看維基百科的說明,來自我學習一下:   \n\nhttps://zh.wikipedia.org/wiki/ASCII\n\
   \n\n\n善用網路線上資源   \n\n試著用Google查察 ascii decoder"
-value: 20
+value: 100
 type: standard
 flags:
 - BreakALLCTF{Amv0uDyervPtmVr9SSSK}

@@ -2,7 +2,7 @@ name: 張元_Pwn-6
 author: ''
 category: BreakAll - Pwn
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - BreakAllCTF{Scr1pting_skill_is_important_for_a_hacker}

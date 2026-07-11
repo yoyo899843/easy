@@ -2,7 +2,7 @@ name: List
 author: ''
 category: BreakAll - Web
 description: ''
-value: 70
+value: 100
 type: standard
 flags:
 - FLAG{simple command injection}

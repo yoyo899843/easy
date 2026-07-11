@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  sql-injection-1:
     build: ./dogsecret
     ports:
     - 20038:80

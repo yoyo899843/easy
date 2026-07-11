@@ -1,0 +1,15 @@
+services:
+  baby_fmt:
+    build: .
+    ports:
+      - "10001:4597"
+    restart: unless-stopped
+    volumes:
+      - ./share:/home/baby_fmt/:ro
+      - ./xinetd:/etc/xinetd.d/baby_fmt:ro
+    networks:
+      - ctf_chals_network
+
+networks:
+  ctf_chals_network:
+    external: true

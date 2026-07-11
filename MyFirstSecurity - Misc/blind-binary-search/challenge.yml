@@ -16,7 +16,7 @@ description: '試著猜我的號碼。
 
 
   `nc 120.114.62.214 5121`'
-value: 200
+value: 100
 type: standard
 flags:
 - MyFirstCTF{RXnrTr0tiSSsq33IGw6C}
@@ -26,7 +26,7 @@ tags:
 files:
 - dist/server.py-69ea0baf6d714dffb14251d37402846f2830d5b5
 hints: []
-connection_info: nc {{NC_HOST}} 30012
+connection_info: nc {{NC_HOST}} 40030
 extra:
-  port: 30012
+  port: 40030
   docker_group: blind-binary-search

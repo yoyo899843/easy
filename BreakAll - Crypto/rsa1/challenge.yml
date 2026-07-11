@@ -2,7 +2,7 @@ name: rsa1
 author: ''
 category: BreakAll - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - breakall{eassssy_for_y}

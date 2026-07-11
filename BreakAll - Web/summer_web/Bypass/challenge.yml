@@ -2,7 +2,7 @@ name: Bypass
 author: ''
 category: BreakAll - Web
 description: ''
-value: 80
+value: 100
 type: standard
 flags:
 - FLAG{php should be used carefully}

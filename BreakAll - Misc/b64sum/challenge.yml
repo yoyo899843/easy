@@ -2,7 +2,7 @@ name: b64sum
 author: ''
 category: BreakAll - Misc
 description: "你知道什麼是 checksum 嗎？ \n\n\n\n請算出附件檔案的 md5sum ，接著將 md5sum ⽤ base64 編碼後，放入 FLAG{…} 中\n\n\n\nEx. FLAG{YWJjZAo=}"
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{ZjgyNGM4ODUwNmNkMjAzMWNkYWEzMGNiZjY2OTY5ODYK}

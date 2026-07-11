@@ -1,0 +1,24 @@
+name: pass
+author: ''
+category: MyFirstSecurity - Pwn
+description: 'Billy 想起他的鑰匙了，但他還是想進到房間裡確認
+
+
+
+
+  你可以幫他打開門嗎？'
+value: 100
+type: standard
+flags:
+- MyFirstCTF{L0c41_vARiaBl3_0n_Th3_sT4cK?!}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/pass
+- dist/pass.c
+hints: []
+connection_info: nc {{NC_HOST}} 10026
+extra:
+  port: 10026
+  docker_group: pass

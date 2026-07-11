@@ -2,7 +2,7 @@ name: Robots
 author: ''
 category: BreakAll - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{Read robots.txt first OK?}

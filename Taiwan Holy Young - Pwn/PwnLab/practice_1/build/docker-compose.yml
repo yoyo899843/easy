@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  practice-1:
     build: .
     ports:
     - 10010:9999

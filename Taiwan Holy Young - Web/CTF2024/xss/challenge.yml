@@ -2,7 +2,7 @@ name: xss
 author: ''
 category: Taiwan Holy Young - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - flag{i_hate_calculus}
@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/xss
+connection_info: http://{{WEB_HOST}}/xss-2024
 extra:
   port: 20037
   docker_group: xss

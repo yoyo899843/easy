@@ -5,7 +5,7 @@ description: '這次是 Vigenere？！
 
 
   Flag 為 BreakAll{...}'
-value: 15
+value: 100
 type: standard
 flags:
 - BreakAll{Vig3n3r3_is_c00l!!?}

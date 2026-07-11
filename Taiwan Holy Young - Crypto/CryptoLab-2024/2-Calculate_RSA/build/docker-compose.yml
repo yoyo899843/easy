@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  2-calculate-rsa:
     build: .
     ports:
     - 30025:80

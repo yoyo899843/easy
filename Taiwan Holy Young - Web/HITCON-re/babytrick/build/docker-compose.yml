@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  babytrick:
     build: ./php
     ports:
     - 20048:80

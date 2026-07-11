@@ -2,7 +2,7 @@ name: Counter
 author: ''
 category: BreakAll - Reverse
 description: 'ZIP Password: passwd'
-value: 10
+value: 100
 type: standard
 flags:
 - FLAG{No_WAy_tO_Click_1000000_TimeS}

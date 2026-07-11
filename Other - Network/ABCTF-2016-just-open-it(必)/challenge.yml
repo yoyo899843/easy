@@ -3,7 +3,7 @@ author: ''
 category: Other - Network
 description: "I'm almost positive we put a flag in this file. \n\n\n\nCan you find it for me? \n\n\n\n[HINT] So many editors\
   \ out there!"
-value: 50
+value: 100
 type: standard
 flags:
 - ABCTF{forensics_1_tooo_easy?}

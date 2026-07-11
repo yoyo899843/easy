@@ -1,8 +1,9 @@
 version: '2.2'
 services:
-  ctf:
+  hello-world:
     build: ./image
-    network_mode: bridge
+    networks:
+    - ctf_chals_network
     volumes:
     - ./share:/home/ctf/:ro
     ports:
@@ -14,3 +15,7 @@ services:
     - socat
     - TCP-LISTEN:9999,fork
     - EXEC:/home/ctf/run.sh
+
+networks:
+  ctf_chals_network:
+    external: true

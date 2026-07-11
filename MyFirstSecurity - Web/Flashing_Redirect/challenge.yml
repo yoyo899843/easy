@@ -1,0 +1,36 @@
+name: Flashing_Redirect
+author: ''
+category: MyFirstSecurity - Web
+description: '快閃式的重導向(Redirect)總是讓你眼花!
+
+
+
+
+  捉住稍縱即逝的機會是你人生必修課題，參加競賽的你已經踏出第一步!恭喜恭喜!
+
+
+
+
+  接著你要學習捉住稍縱即逝的網頁，請連結以下網址:
+
+
+
+
+
+  提示1: Curl會對你有所幫助,請參閱維基百科說明
+
+
+  https://en.wikipedia.org/wiki/CURL'
+value: 100
+type: standard
+flags:
+- MyFirstCTF{KmsFwo5ZNcbVS2fZgL0w}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/flashing_redirect
+extra:
+  port: 20065
+  docker_group: docker_MyfirstCTF

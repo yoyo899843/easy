@@ -1,0 +1,20 @@
+name: sha1 collision
+author: ''
+category: MyFirstSecurity - Web
+description: "2017年2月23日google在底下網址宣稱已經成功攻破sha1\n\nhttps://security.googleblog.com/2017/02/announcing-first-sha1-collision.html\n\
+  \n\n\n你知道這會有甚麼問題嗎？\n\n\n\n題目網址中顯示PHP原始碼使用SHA1函示對使用者輸入的密碼進行hash，請你使用根據sha1 collision原理登入以下網址取得flag:\n\n\n\n請連結以下網址:   \n\n\
+  \n\n\n提示1:SHA1為美國國家安全局（National Security Agency，NSA）所設計並於1995年發表的加密雜湊函數，隨後亦成為美國聯邦資料處理標準。有關SHA1加密雜湊函數，請參看維基百科的說明:   \n\n\
+  https://zh.wikipedia.org/wiki/SHA-1   \n\n提示2:SHAttered attack的資料請參看   \n\nhttps://shattered.io/"
+value: 100
+type: standard
+flags:
+- MyFirstCTF{TkGmox1lPqfFzAclbCF2}
+tags:
+- MyFirstSecurity
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/sha1-collision
+extra:
+  port: 20026
+  docker_group: docker_MyfirstCTF

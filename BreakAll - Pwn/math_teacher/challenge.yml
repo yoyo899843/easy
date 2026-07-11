@@ -1,0 +1,18 @@
+name: math_teacher
+author: ''
+category: BreakAll - Pwn
+description: ''
+value: 100
+type: standard
+flags:
+- flag{y0u_93t_l0o_!n_m4th5}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/math_teacher.py
+hints: []
+connection_info: nc {{NC_HOST}} 10023
+extra:
+  port: 10023
+  docker_group: math_teacher

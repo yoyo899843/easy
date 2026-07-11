@@ -5,7 +5,7 @@ description: 'How to execute a ELF file?
 
 
   Author: FlyDragon'
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{begins_with_a_small_step}

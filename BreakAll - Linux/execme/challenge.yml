@@ -2,7 +2,7 @@ name: execme
 author: ''
 category: BreakAll - Linux
 description: 這裡有個神秘的檔案，你能從裡⾯找到 flag 嗎？
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{Permission_denied?!What's_going_on????}

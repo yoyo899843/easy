@@ -7,7 +7,7 @@ description: '你連的到伺服器嗎?
 
 
   `nc 120.114.62.214 2405`'
-value: 50
+value: 100
 type: standard
 flags:
 - CTF{Hel10WorLD123}

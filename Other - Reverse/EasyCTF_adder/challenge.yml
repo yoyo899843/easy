@@ -2,7 +2,7 @@ name: EasyCTF_adder
 author: ''
 category: Other - Reverse
 description: ﬂag 格式為 easyctf{...}
-value: 25
+value: 100
 type: standard
 flags:
 - easyctf{y0u_added_thr33_nums!}

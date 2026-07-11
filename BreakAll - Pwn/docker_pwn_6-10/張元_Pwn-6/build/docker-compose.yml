@@ -1,0 +1,11 @@
+services:
+  pwn-6:
+    build: .
+    ports:
+      - 10002:2117
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

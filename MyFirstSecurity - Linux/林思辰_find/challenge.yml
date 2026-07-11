@@ -22,7 +22,7 @@ description: '阿明，你看看我撿到的神祕檔案
 
 
   strings 是個好用的工具'
-value: 50
+value: 100
 type: standard
 flags:
 - MyFirstCTF{Y0U_gOt_th3_flag_bY_sTr1ngS}

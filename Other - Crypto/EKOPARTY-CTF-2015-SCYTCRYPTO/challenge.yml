@@ -1,0 +1,13 @@
+name: 'EKOPARTY CTF 2015: SCYTCRYPTO'
+author: ''
+category: Other - Crypto
+description: 'Decrypt this strange word: ERTKSOOTCMCHYRAFYLIPL'
+value: 100
+type: standard
+flags:
+- EKOMYFIRSTCRYPTOCHALL
+tags:
+- EKOPARTY CTF
+- easy
+files: []
+hints: []

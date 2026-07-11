@@ -2,7 +2,7 @@ name: lfi / process
 author: ''
 category: Taiwan Holy Young - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - flag{process_is_much_better}

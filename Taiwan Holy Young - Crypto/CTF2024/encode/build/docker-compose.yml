@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  encode:
     build: .
     ports:
     - 30008:80

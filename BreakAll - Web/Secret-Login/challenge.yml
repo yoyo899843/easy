@@ -1,0 +1,17 @@
+name: Secret Login
+author: ''
+category: BreakAll - Web
+description: ''
+value: 100
+type: standard
+flags:
+- FLAG{php_is_s0_fun_XD}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/secret-login
+extra:
+  port: 20063
+  docker_group: docker_ACTF

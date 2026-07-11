@@ -2,7 +2,7 @@ name: PicoCTF_2018-caesar cipher 2
 author: ''
 category: Other - Misc
 description: "Can you help us decrypt this file message?    \n\nWe believe it is a form of a caesar cipher."
-value: 80
+value: 100
 type: standard
 flags:
 - picoCTF{cAesaR_CiPhErS_juST_aREnT_sEcUrE}

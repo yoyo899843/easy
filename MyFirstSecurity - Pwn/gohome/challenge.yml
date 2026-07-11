@@ -1,0 +1,24 @@
+name: gohome
+author: ''
+category: MyFirstSecurity - Pwn
+description: 'Billy 正打算要回家了
+
+
+
+
+  你知道 Billy 家的地址是哪裡嗎？'
+value: 100
+type: standard
+flags:
+- MyFirstCTF{r3tURn_t0_3h3rev3R_U_w4nT_tO_g0_XD}
+tags:
+- MyFirstSecurity
+- easy
+files:
+- dist/gohome
+- dist/gohome.c
+hints: []
+connection_info: nc {{NC_HOST}} 10024
+extra:
+  port: 10024
+  docker_group: gohome

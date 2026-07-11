@@ -2,7 +2,7 @@ name: How2decompyle
 author: ''
 category: Other - Reverse
 description: What is the file and how to reverse it?
-value: 50
+value: 100
 type: standard
 flags:
 - BambooFox{You_Know_Decompyle_And_Do_Reverse}

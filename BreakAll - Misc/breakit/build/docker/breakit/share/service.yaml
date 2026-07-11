@@ -1,4 +1,0 @@
-command: /home/ctf/breakit
-port: 5678
-timeout: 30000
-user: ctf

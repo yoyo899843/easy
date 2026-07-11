@@ -1,0 +1,14 @@
+services:
+  bypass:
+    image: php:7-apache
+    ports:
+      - 20024:80
+    volumes:
+      - ./index.php:/var/www/html/index.php:ro
+      - ./flag.txt:/flag.txt:ro
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

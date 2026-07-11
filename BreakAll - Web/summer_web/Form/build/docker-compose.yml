@@ -1,0 +1,13 @@
+services:
+  form:
+    image: php:7-apache
+    ports:
+      - 20021:80
+    volumes:
+      - ./:/var/www/html:ro
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

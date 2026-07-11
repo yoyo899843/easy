@@ -34,7 +34,7 @@ def reset_data():
         session['money'] = 65536
     if 'stuff' in session:
         session['stuff'] = []
-    return f"<script>alert(`成功重置資料`); location='/'</script>"
+    return f"<script>alert(`成功重置資料`); location='.'</script>"
 
 
 @app.route("/item/<int:item_id>")
@@ -47,10 +47,10 @@ def buy_item():
     cost = float(request.form.get("cost"))
     item_id = int(request.form.get("item_id"))
     if cost > session['money']:
-        return "<script>alert(`你沒有足夠的摳摳 Q_Q`); location.href='/';</script>"
+        return "<script>alert(`你沒有足夠的摳摳 Q_Q`); location.href='.';</script>"
     session['money'] -= cost
     session['stuff'].append(items[item_id])
-    return f"<script>alert(`成功購買 {items[item_id][0]} 一個!`); location='/'</script>"
+    return f"<script>alert(`成功購買 {items[item_id][0]} 一個!`); location='.'</script>"
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  cmd-injection-free-test:
     build: ./free_test2
     ports:
     - 20052:80

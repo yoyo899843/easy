@@ -2,7 +2,7 @@ name: get-the-root
 author: ''
 category: MyFirstSecurity - Misc
 description: '`nc 120.114.62.214 5122`'
-value: 200
+value: 100
 type: standard
 flags:
 - MyFirstCTF{RoOt w4rs VIII - th3 L4sT j3dI}

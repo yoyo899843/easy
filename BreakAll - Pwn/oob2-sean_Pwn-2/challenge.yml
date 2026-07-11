@@ -1,0 +1,18 @@
+name: oob2-sean_Pwn-2
+author: ''
+category: BreakAll - Pwn
+description: ''
+value: 100
+type: standard
+flags:
+- BreakALLCTF{DJPD61GTBQIqqL7sWEvF}
+tags:
+- BreakALL CTF
+- easy
+files:
+- dist/oob2
+hints: []
+connection_info: nc {{NC_HOST}} 10013
+extra:
+  port: 10013
+  docker_group: docker_sean_pwn

@@ -2,7 +2,7 @@ name: 3-Hex_String
 author: ''
 category: Taiwan Holy Young - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{I_know_the_answer_is_`bytes.fromhex`...}

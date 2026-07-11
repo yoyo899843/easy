@@ -2,7 +2,7 @@ name: Low exponent
 author: ''
 category: BreakAll - Crypto
 description: 次方數有點Ｄ欸
-value: 10
+value: 100
 type: standard
 flags:
 - BreakAll{TO0O0o00Oo0o0O0_low}

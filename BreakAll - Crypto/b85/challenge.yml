@@ -2,7 +2,7 @@ name: b85
 author: ''
 category: BreakAll - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - breakall{u_such_encoding_master}

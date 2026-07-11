@@ -2,7 +2,7 @@ name: 1-Calculate_RSA
 author: ''
 category: Taiwan Holy Young - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{w->www}

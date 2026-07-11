@@ -2,7 +2,7 @@ name: my-new-router-level 1
 author: ''
 category: Taiwan Holy Young - Web
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{c0mm4nd_inj_ping_340ud}

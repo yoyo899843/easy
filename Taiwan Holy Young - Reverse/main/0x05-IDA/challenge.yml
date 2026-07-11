@@ -5,7 +5,7 @@ description: 'I made a flag checker, I don''t need CTFd anymore!
 
 
   Author: FlyDragon'
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{v3ry_5eCure_cHeckeR}

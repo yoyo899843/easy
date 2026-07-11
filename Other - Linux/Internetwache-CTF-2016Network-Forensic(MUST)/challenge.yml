@@ -10,7 +10,7 @@ description: 'The shark won''t bite you. Don''t worry, it''s wired!
 
 
   IW{xxxxxxxxxxxxxxx}'
-value: 80
+value: 100
 type: standard
 flags:
 - IW{HTTP_BASIC_AUTH_IS_EASY}

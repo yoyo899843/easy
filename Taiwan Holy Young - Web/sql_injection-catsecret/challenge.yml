@@ -1,0 +1,17 @@
+name: sql_injection / catsecret
+author: ''
+category: Taiwan Holy Young - Web
+description: ''
+value: 100
+type: standard
+flags:
+- flag{sql_injection1}
+tags:
+- Taiwan Holy Young CTF
+- medium
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/sql_injection-catsecret
+extra:
+  port: 20067
+  docker_group: sql_injection-catsecret

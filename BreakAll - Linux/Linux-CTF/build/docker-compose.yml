@@ -1,0 +1,95 @@
+version: '2'
+services:
+  linux-ctf-1:
+    build: .
+    ports:
+    - 40018:22
+    environment:
+    - FLAG=BreakALLCTF{Sobkjgd14VuIFBUtgVts}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-2:
+    build: .
+    ports:
+    - 40019:22
+    environment:
+    - FLAG=BreakALLCTF{WucLSg4cxPNYuXFF5XxJ}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-3:
+    build: .
+    ports:
+    - 40020:22
+    environment:
+    - FLAG=BreakALLCTF{GIUWO1rpMhJCJpACvVwr}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-4:
+    build: .
+    ports:
+    - 40021:22
+    environment:
+    - FLAG=BreakALLCTF{XvXeVX5Ae9FwnYmDV2jU}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-5:
+    build: .
+    ports:
+    - 40022:22
+    environment:
+    - FLAG=BreakALLCTF{TPLGKbWxmutGtecSSpo1}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-6:
+    build: .
+    ports:
+    - 40023:22
+    environment:
+    - FLAG=BreakALLCTF{YUA7D5D0k4elbQ1XqH14}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-7:
+    build: .
+    ports:
+    - 40024:22
+    environment:
+    - FLAG=BreakALLCTF{Ef94iSQPRI66Ws4ECqV9}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-8:
+    build: .
+    ports:
+    - 40025:22
+    environment:
+    - FLAG=BreakALLCTF{U6TLCzQsk73HwcW7rqAW}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-9:
+    build: .
+    ports:
+    - 40026:22
+    environment:
+    - FLAG=BreakALLCTF{UvB3IUqxCCiTVxeOuWrL}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+  linux-ctf-10:
+    build: .
+    ports:
+    - 40027:22
+    environment:
+    - FLAG=BreakALLCTF{VLJekKONoWld7ari6HHJ}
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

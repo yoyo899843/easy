@@ -7,7 +7,7 @@ description: '我找不到我的籃⼦，籃⼦裡⾯有⼀個蘋果，你可以
 
 
   請創建⼀個檔案名叫 basket 並在裡⾯寫入 apple'
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{Wow!!!You_found_my_apple!!I'm_so_hungry_now!Thanks}

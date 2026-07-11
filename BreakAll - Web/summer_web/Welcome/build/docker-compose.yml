@@ -1,0 +1,13 @@
+services:
+  welcome:
+    image: nginx:1.18.0
+    ports:
+      - 20018:80
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

@@ -1,0 +1,11 @@
+services:
+  download:
+    build: .
+    ports:
+      - 20010:80
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

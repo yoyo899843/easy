@@ -30,10 +30,10 @@ a {
     </thead>
    <tbody>
   <tr>
-    <td><a href="/login.php"> Login </a></td>
+    <td><a href="login.php"> Login </a></td>
   </tr>
   <tr>
-    <td><a href="/admin.php"> Admin </a></td>
+    <td><a href="admin.php"> Admin </a></td>
   </tr>
   </tbody>
 </table>

@@ -1,0 +1,11 @@
+services:
+  pwn-9:
+    build: .
+    ports:
+      - 10005:2120
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

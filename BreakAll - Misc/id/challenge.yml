@@ -3,7 +3,7 @@ author: ''
 category: BreakAll - Misc
 description: "可以幫我辨識這些 id 嗎\n\n\n\n規則⼀ : 開頭會是⼤寫的英⽂文字⺟ A-Z \n\n\n\n規則⼆ : 後面接著 9 個數字\n\n\n\n規則三 : 9 個數字的總和要是 3 的倍數\n\n\n\n`nc\
   \ 120.114.62.214 2406`"
-value: 50
+value: 100
 type: standard
 flags:
 - CTF{tHeSEcrEtoFID}

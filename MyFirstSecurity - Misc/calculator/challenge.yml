@@ -7,7 +7,7 @@ description: '你能幫我解一些方程式嗎？
 
 
   `nc 120.114.62.214 5119`'
-value: 200
+value: 100
 type: standard
 flags:
 - MyFirstCTF{QLwxhEsyUfKQrYxyEeFe}
@@ -16,7 +16,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: nc {{NC_HOST}} 30011
+connection_info: nc {{NC_HOST}} 40029
 extra:
-  port: 30011
+  port: 40029
   docker_group: calculator

@@ -1,0 +1,11 @@
+services:
+  only4robots:
+    build: .
+    ports:
+      - 20012:80
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

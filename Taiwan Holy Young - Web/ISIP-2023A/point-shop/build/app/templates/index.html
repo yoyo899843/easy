@@ -15,13 +15,13 @@
                 <div class="container">
                     <div id="navbarMenuHeroA" class="navbar-menu">
                         <div class="navbar-end">
-                            <a href="/" class="navbar-item is-5">
+                            <a href="." class="navbar-item is-5">
                                 Home
                             </a>
-                            <a href="/orders" class="navbar-item is-5">
+                            <a href="orders" class="navbar-item is-5">
                                 My Order
                             </a>
-                            <a href="/reset" class="navbar-item is-5">
+                            <a href="reset" class="navbar-item is-5">
                                 Reset My Coin
                             </a>
                         </div>
@@ -52,8 +52,8 @@
                             {% if item.0 == "FLAG Point" %}
                             <a class="button is-light" title="No longer be sold" disabled>Not Availiable</a>
                             {% else %}
-                            <a href="/item/{{id}}" class="button is-primary">Buy Now</a>
-                            <!-- <a href="/item/{{id}}" class="button is-link is-light is-fullwidth">Buy it!</a> -->
+                            <a href="item/{{id}}" class="button is-primary">Buy Now</a>
+                            <!-- <a href="item/{{id}}" class="button is-link is-light is-fullwidth">Buy it!</a> -->
                             {% endif %}
                         </div>
                     </div>

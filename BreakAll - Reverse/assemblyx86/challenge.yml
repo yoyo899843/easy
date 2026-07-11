@@ -7,7 +7,7 @@ description: 'flag 格式為 FLAG{...}
 
 
   你會把 x86 assembly 程式組譯起來執行嗎?'
-value: 25
+value: 100
 type: standard
 flags:
 - FLAG{WRITE_U_OWN_ASSEMBLY!!}

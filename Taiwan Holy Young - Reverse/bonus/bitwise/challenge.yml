@@ -5,7 +5,7 @@ description: 'flag format: FLAG{a+b+c+d} (decimal)
 
 
   Author: FlyDragon'
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{13}

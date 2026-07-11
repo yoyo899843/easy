@@ -7,7 +7,7 @@ description: '幫我算算圓周率
 
 
   `nc 120.114.62.214 5130`'
-value: 200
+value: 100
 type: standard
 flags:
 - CTF{THE HUngeR GAMES - moCKINGJAY}

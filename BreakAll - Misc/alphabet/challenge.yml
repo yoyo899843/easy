@@ -7,7 +7,7 @@ description: '可以幫我數一下有幾個英文字母嗎 ?
 
 
   `nc 120.114.62.214 5128`'
-value: 200
+value: 100
 type: standard
 flags:
 - CTF{m4rvel AGeNts 0F ShIE1d - 41pHab3t CouNter}

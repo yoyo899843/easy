@@ -2,7 +2,7 @@ name: 'BITSCTF 2017 : woodstock-1-10'
 author: ''
 category: Other - Network
 description: Someone intercepted a chat between illustris and codelec
-value: 10
+value: 100
 type: standard
 flags:
 - BITSCTF{such_s3cure_much_w0w}

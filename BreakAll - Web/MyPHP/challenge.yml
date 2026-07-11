@@ -1,0 +1,17 @@
+name: MyPHP
+author: ''
+category: BreakAll - Web
+description: ''
+value: 100
+type: standard
+flags:
+- FLAG{why_so_ez?}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/myphp
+extra:
+  port: 20064
+  docker_group: docker_kaibro

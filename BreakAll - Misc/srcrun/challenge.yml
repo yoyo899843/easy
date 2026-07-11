@@ -2,7 +2,7 @@ name: srcrun
 author: ''
 category: BreakAll - Misc
 description: 這裡有個看不懂的原始碼，你知道怎麼把它跑起來嗎？
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{RunRunRun_Can_you_run_it_all?}

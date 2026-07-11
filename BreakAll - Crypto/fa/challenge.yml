@@ -2,7 +2,7 @@ name: fa
 author: ''
 category: BreakAll - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - breakall{how_did_u_know}

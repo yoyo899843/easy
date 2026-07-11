@@ -1,0 +1,17 @@
+name: 'picoCTF2017: digital-camouflage-50'
+author: ''
+category: Other - Network
+description: "Find the location of the flag in the image: image.jpg.    \n\nNote: Latitude and longitude values are in degrees\
+  \ with no degree symbols,/direction letters, minutes, seconds, or periods.    \n\nThey should only be digits.    \n\nThe\
+  \ flag is not just a set of coordinates - if you think that, keep looking!\n\n\n\nHINTS\n\n\n\nHow can images store location\
+  \ data?    \n\nPerhaps search for GPS info on photos."
+value: 100
+type: standard
+flags:
+- 8PFEo0ttHQ
+tags:
+- PicoCTF
+- easy
+files:
+- dist/data.pcap
+hints: []

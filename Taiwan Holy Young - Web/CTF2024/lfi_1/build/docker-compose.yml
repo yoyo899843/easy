@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  lfi-1:
     build: ./process2
     ports:
     - 20035:80

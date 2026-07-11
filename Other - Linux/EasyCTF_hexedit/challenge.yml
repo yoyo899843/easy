@@ -2,7 +2,7 @@ name: EasyCTF_hexedit
 author: ''
 category: Other - Linux
 description: flag 格式為 easyctf{...}
-value: 25
+value: 100
 type: standard
 flags:
 - easyctf{eb04fadf}

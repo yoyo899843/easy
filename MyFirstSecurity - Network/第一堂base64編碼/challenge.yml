@@ -7,7 +7,7 @@ description: '請問底下字串的base64編碼為何?
 
 
   BreakallCTF{happyhackinghighhaaha}'
-value: 20
+value: 100
 type: standard
 flags:
 - QnJlYWthbGxDVEZ7aGFwcHloYWNraW5naGlnaGhhYWhhfQ==

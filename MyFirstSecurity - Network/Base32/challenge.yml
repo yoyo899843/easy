@@ -3,7 +3,7 @@ author: ''
 category: MyFirstSecurity - Network
 description: "編碼與解碼是資訊領域日常都在使用的技術，Base32是由使用26個字母A-Z和數字0-9的編碼。 \n\n\n\n請問你對Base32編碼與解碼的技術了解嗎? \n\n\n\n你知道如何解碼下列資料嗎:     \n\
   \n```\n\nIJZGKYLLIFGEYQ2UIZ5TS6BUHA2VMUZXO5UWS5CCLJMFKVLIJVSX2===\n\n```"
-value: 20
+value: 100
 type: standard
 flags:
 - BreakALLCTF{9x485VS7wiitBZXUUhMe}

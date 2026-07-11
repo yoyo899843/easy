@@ -1,0 +1,11 @@
+services:
+  imageuploader:
+    build: .
+    ports:
+      - 20014:80
+    restart: unless-stopped
+    networks:
+      - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true

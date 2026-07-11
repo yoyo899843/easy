@@ -16,13 +16,13 @@
                 <div class="container">
                     <div id="navbarMenuHeroA" class="navbar-menu">
                         <div class="navbar-end">
-                            <a href="/" class="navbar-item is-5">
+                            <a href=".." class="navbar-item is-5">
                                 Home
                             </a>
-                            <a href="/orders" class="navbar-item is-5">
+                            <a href="../orders" class="navbar-item is-5">
                                 My Order
                             </a>
-                            <a href="/reset" class="navbar-item is-5">
+                            <a href="../reset" class="navbar-item is-5">
                                 Reset My Coin
                             </a>
                         </div>
@@ -37,7 +37,7 @@
         <div class="container">
             <div class="column is-8 is-offset-2 ">
                 <div class="box">
-                    <form method="POST" action="/buy">
+                    <form method="POST" action="../buy">
                         <p>確認下單...</p>
                         <h1 class="title">{{item.0}}</h1>
                         <p>{% if item.0 == "FLAG Point" %}<code>FLAG{BrokenAccessControl_STEP1_Parameter}</code>{% endif %}</p>
@@ -52,7 +52,7 @@
                             <button class="button is-success is-fullwidth">包軌!</button>
                         </div>
                         <div class="field">
-                            <a href="/" class="button is-danger is-fullwidth">我沒錢了啦</a>
+                            <a href=".." class="button is-danger is-fullwidth">我沒錢了啦</a>
                         </div>
                     </form>
                 </div>

@@ -2,7 +2,7 @@ name: 1-ASCII
 author: ''
 category: Taiwan Holy Young - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{Just_some_conversion~~~}

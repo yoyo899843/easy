@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  cbc:
     build: .
     ports:
     - 30001:9999

@@ -2,7 +2,7 @@ name: SendMsg
 author: ''
 category: BreakAll - Reverse
 description: ''
-value: 10
+value: 100
 type: standard
 flags:
 - FLAG{N0ticE___ThAnk_U_for_UR_Not1C3}

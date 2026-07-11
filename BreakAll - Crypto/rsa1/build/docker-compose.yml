@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  rsa1:
     build: .
     ports:
     - 30006:80

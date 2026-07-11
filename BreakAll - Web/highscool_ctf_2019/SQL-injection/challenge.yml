@@ -3,7 +3,7 @@ author: ''
 category: BreakAll - Web
 description: "SQL injection(SQL隱碼攻擊)是最最著名的網站漏洞。   \n\n你知道駭客如何使用SQL injection入侵網站嗎?    \n\n本題任務是請你使用SQL injection登入網站找到flag。\n\
   \n\n\n請特別注意:   \n\n別使用TANet IP(學術網路)進行本次解題，會被封鎖!   \n\n\n\n請連結以下網址進行解題:"
-value: 50
+value: 100
 type: standard
 flags:
 - BreakALLCTF{7kZOJ1RioM8mPbfdfU84}

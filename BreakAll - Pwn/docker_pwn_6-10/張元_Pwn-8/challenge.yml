@@ -2,7 +2,7 @@ name: 張元_Pwn-8
 author: ''
 category: BreakAll - Pwn
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - BreakAllCTF{G00d_j0000000000b:)}

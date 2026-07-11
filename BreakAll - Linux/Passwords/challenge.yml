@@ -2,7 +2,7 @@ name: Passwords
 author: ''
 category: BreakAll - Linux
 description: "附件為一個遭洩漏的密碼 Database    \n\n你是否能利用這個檔案找出前三常見的密碼呢   \n\n請將前三常見的密碼依照順序放入FLAG{}之中並用_分隔   \n\nex: FLAG{p1_p2_p3}"
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{password_123456_qwerty}

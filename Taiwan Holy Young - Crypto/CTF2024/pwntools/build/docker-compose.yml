@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  pwntools:
     build: .
     ports:
     - 30007:80

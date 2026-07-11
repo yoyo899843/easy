@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  tool-usage-cyberfish:
     build: ./cyberfish
     ports:
     - 20056:80

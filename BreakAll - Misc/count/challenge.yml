@@ -7,7 +7,7 @@ description: '你會數⼀到一百嗎?
 
 
   `nc 120.114.62.214 2403`'
-value: 50
+value: 100
 type: standard
 flags:
 - CTF{gOOD4tMatHYOUarE}

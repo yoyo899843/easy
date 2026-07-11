@@ -2,7 +2,7 @@ name: meow
 author: ''
 category: BreakAll - Misc
 description: 隔壁的貓貓⼜在叫了，你知道他到底在說什麼嗎？
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{Meow_meow_meow_>_<}

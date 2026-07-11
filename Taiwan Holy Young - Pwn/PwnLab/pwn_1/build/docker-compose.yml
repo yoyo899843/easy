@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ctf:
+  pwn-1:
     build: .
     ports:
     - 10008:9999

@@ -1,0 +1,18 @@
+name: Burp Suite-1
+author: ''
+category: BreakAll - Web
+description: "管理者的網站常是駭客最想登入的地方。 要做到權限控管需要小心設計，因為設計不良的網站，常會使駭客攔截封包後修改並送出，進而造成網站機敏內容外洩。 \n\n\n\n你知道如何使用非管理者身分在設計不良的網站取得管理者權限登入嗎?\
+  \    \n\n\n\n本題任務是請你完成上述使命?    \n\n提示1: 你知道如何攔截並修改封包嗎?    \n\n提示2: 你可以使用Burp Suite等工具 \n\n\n\n請連結以下網址進行解題:"
+value: 100
+type: standard
+flags:
+- BreakALLCTF{9a6OalBa6Hh4iRSKczHe}
+tags:
+- BreakALL CTF
+- easy
+files: []
+hints: []
+connection_info: http://{{WEB_HOST}}/burp-suite-1
+extra:
+  port: 20011
+  docker_group: docker_vtim

@@ -2,7 +2,7 @@ name: 9-AES_CBC_Mode
 author: ''
 category: Taiwan Holy Young - Crypto
 description: ''
-value: 50
+value: 100
 type: standard
 flags:
 - FLAG{It's_better_to_know_to_use_Python_to_encrypt/decrypt}
