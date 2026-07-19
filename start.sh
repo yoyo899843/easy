@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Startup script for easy CTF machine
-# 1. Start nginx reverse proxy (port 9000)
-# 2. Start all challenge containers
 
 set -uo pipefail
 
@@ -18,25 +16,24 @@ make_proj() {
     echo "$1"         | tr '[:upper:]' '[:lower:]'         | sed 's|/docker-compose\.yml||'         | tr -cs 'a-z0-9' '-'         | sed 's/^-*//;s/-*$//'         | cut -c1-63
 }
 
-echo "[0/2] Cleaning up unused networks and ensuring ctf_chals_network exists..."
+echo "[0/1] Cleaning up unused networks and ensuring ctf_chals_network exists..."
 docker network prune -f
 docker network inspect ctf_chals_network >/dev/null 2>&1 \
     || docker network create ctf_chals_network
 echo ""
 
-echo "[1/2] Starting nginx server..."
-docker compose -p "easy-nginx" -f nginx_server/docker-compose.yml up -d --no-recreate
-echo "      nginx is up on :9000"
-echo ""
+# NOTE: no reverse-proxy / cloudflared step here — this platform has never
+# had cloudflared set up and nginx_server was removed. Add that step back
+# once a routing layer exists.
 
-echo "[2/2] Starting challenge containers..."
+echo "[1/1] Starting challenge containers..."
 ERRORS=0
 
 while IFS= read -r compose_file; do
     rel="${compose_file#./}"
     proj="$(make_proj "$rel")"
     echo "  -> $rel"
-    if ! docker compose -p "$proj" -f "$compose_file" up -d; then
+    if ! docker compose -p "$proj" -f "$compose_file" up -d --build; then
         echo "  [ERROR] Failed: $rel" >&2
         ERRORS=$((ERRORS + 1))
     fi

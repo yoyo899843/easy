@@ -1,7 +1,7 @@
 version: '3'
 services:
   tool_usage_3-bang:
-    build: ./cyberfish
+    build: ./bang
     ports:
     - 20069:80
     restart: unless-stopped

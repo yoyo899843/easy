@@ -1,7 +1,7 @@
 version: '3'
 services:
   sql-injection-1:
-    build: ./dogsecret
+    build: ./catsecret
     ports:
     - 20038:80
     restart: unless-stopped

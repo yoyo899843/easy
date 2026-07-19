@@ -1,7 +1,7 @@
 version: '3'
 services:
   lfi-process:
-    build: ./process2
+    build: ./process
     ports:
     - 20054:80
     restart: unless-stopped

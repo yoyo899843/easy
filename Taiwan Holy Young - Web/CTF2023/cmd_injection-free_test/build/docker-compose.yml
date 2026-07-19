@@ -1,7 +1,7 @@
 version: '3'
 services:
   cmd-injection-free-test:
-    build: ./free_test2
+    build: ./free_test
     ports:
     - 20052:80
     restart: unless-stopped

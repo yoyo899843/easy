@@ -7,9 +7,12 @@ assumes Uptime Kuma is running on the same host and auto-detects the host's own
 IP unless --kuma-url is given. Requires: pip install uptime-kuma-api
 
 Usage:
+    # --web-host is the host's own IP (not the public domain) — HTTP monitors
+    # check http://<web-host>:<challenge-port>/ directly, bypassing
+    # nginx/cloudflared, so they reflect the backend's own health.
     python3 upload_to_uptime_kuma.py \
-        --web-host chal-easy.example.com \
-        --nc-host chal-easy.example.com \
+        --web-host 192.168.0.244 \
+        --nc-host 192.168.0.244 \
         --username admin --password 'secret'
 
     # dry run first to see what would be created/updated, without touching Kuma:
@@ -78,12 +81,14 @@ def build_targets(chals, web_host, nc_host):
             continue
         monitor_name = f"[{c['category']}] {c['name']}"
         conn = c["connection_info"]
-        if conn.startswith("http://{{WEB_HOST}}/"):
-            subpath = conn[len("http://{{WEB_HOST}}/"):].rstrip("/")
+        if conn.startswith("http://{{WEB_HOST}}/") and c["port"]:
+            # monitor the container's port directly (ip:port) instead of going
+            # through nginx/cloudflared — checks the backend itself is healthy,
+            # independent of whether the public routing layer is up
             targets.append(dict(
                 name=monitor_name,
                 type=MonitorType.HTTP,
-                url=f"http://{web_host}/{subpath}/",
+                url=f"http://{web_host}:{c['port']}/",
             ))
         elif conn.startswith("nc {{NC_HOST}}") and c["port"]:
             targets.append(dict(
@@ -104,6 +109,20 @@ def sync_to_kuma(kuma_url, username, password, group_name, targets, interval, dr
     api = UptimeKumaApi(kuma_url)
     api.login(username, password)
     try:
+        # uptime-kuma-api 1.2.1 (latest on PyPI) predates the server's
+        # "monitor conditions" feature and never sends a `conditions` value
+        # when creating a monitor, but newer Kuma servers added a NOT NULL
+        # `conditions` column with no DB-level default -> SQLITE_CONSTRAINT.
+        # Patch the low-level call to fill it in until the client catches up.
+        orig_call = api._call
+
+        def _call_with_conditions(event, data=None):
+            if event == "add" and isinstance(data, dict) and "conditions" not in data:
+                data = dict(data, conditions=[])
+            return orig_call(event, data)
+
+        api._call = _call_with_conditions
+
         existing = api.get_monitors()
         by_name = {m["name"]: m for m in existing}
 
