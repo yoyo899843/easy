@@ -26,14 +26,14 @@ import requests
 # ★ 請填入以下設定
 # ─────────────────────────────────────────────────────────────────────────────
 
-HOST     = os.environ.get('CTFD_HOST',     'https://YOUR_CTFD_HOST')  # CTFd 網址
-TOKEN    = os.environ.get('CTFD_TOKEN',    'ctfd_YOUR_TOKEN_HERE')    # Admin API token
+HOST     = os.environ.get('CTFD_HOST',     'http://192.168.0.98:8000')  # CTFd 網址
+TOKEN    = os.environ.get('CTFD_TOKEN',    'ctfd_ac0731e8657d7a647347c40cb2ce52759229a5400b7cfddcb160c39eb68f4072')    # Admin API token
 
 # Web 題 connection_info 裡 {{WEB_HOST}} 會被換成這個
-WEB_HOST = os.environ.get('CTFD_WEB_HOST', 'YOUR_WEB_HOST')           # 例: chal.myctf.com
+WEB_HOST = os.environ.get('CTFD_WEB_HOST', '192.168.0.98')           # 例: chal.myctf.com
 
 # nc/pwn 題 connection_info 裡 {{NC_HOST}} 會被換成這個
-NC_HOST  = os.environ.get('CTFD_NC_HOST',  'YOUR_NC_HOST')            # 例: 1.2.3.4 或 nc.myctf.com
+NC_HOST  = os.environ.get('CTFD_NC_HOST',  '192.168.0.98')            # 例: 1.2.3.4 或 nc.myctf.com
 
 # 上傳完後是否立刻設為 visible（否則保持 hidden 讓你先審閱）
 PUBLISH = False
