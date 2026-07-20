@@ -7,4 +7,9 @@ RUN useradd -m chal
 RUN chown -R root:root /home/chal
 RUN chmod -R 755 /home/chal
 
+COPY xinetd /etc/xinetd.d/chal
+COPY src/chal /home/chal/chal
+COPY src/run.sh /home/chal/run.sh
+RUN chmod +x /home/chal/run.sh /home/chal/chal
+
 CMD ["/usr/sbin/xinetd", "-dontfork"]
