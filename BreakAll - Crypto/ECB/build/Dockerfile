@@ -9,3 +9,8 @@ RUN apt-get update && \
     zlib1g-dev libffi-dev libbz2-dev libreadline-dev sqlite3 libsqlite3-dev libssl-dev libncurses5 libncurses5-dev libncursesw5
 
 RUN pip3 install pycryptodome
+
+COPY share/ /home/ctf/
+RUN chmod +x /home/ctf/run.sh /home/ctf/server.py
+
+CMD socat TCP-LISTEN:9999,reuseaddr,fork EXEC:/home/ctf/run.sh
