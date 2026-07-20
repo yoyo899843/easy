@@ -3,7 +3,7 @@ services:
   practice-1:
     build: .
     ports:
-    - 10010:9999
+    - 10010:20000
     restart: unless-stopped
     networks:
     - ctf_chals_network

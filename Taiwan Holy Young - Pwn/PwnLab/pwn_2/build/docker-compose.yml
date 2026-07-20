@@ -3,7 +3,7 @@ services:
   pwn-2:
     build: .
     ports:
-    - 10009:9999
+    - 10009:10001
     restart: unless-stopped
     networks:
     - ctf_chals_network
