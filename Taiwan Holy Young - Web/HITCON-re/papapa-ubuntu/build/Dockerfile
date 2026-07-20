@@ -12,6 +12,7 @@ RUN sed -i 's/<ReplaceWithSSLCertFile>/\/etc\/myssl\/fullchain.pem/g' /etc/apach
 RUN sed -i 's/<ReplaceWithSSLCertKeyFile>/\/etc\/myssl\/privkey.pem/g' /etc/apache2/sites-available/default-ssl.conf
 RUN sed -i 's/<ReplaceWithServerIP>/18.163.8.31/g' /etc/apache2/sites-available/default-ssl.conf
 #RUN sudo certbot certonly --webroot -w /var/www/html -d ${CHAL_DOMAIN} --agree-tos -m genden80@gmail.com --non-interactive
-RUN a2enmod ssl && service apache2 restart && a2enmod rewrite && a2ensite default-ssl && service apache2 restart
+RUN a2enmod ssl && a2enmod rewrite && a2ensite default-ssl
+RUN echo "Listen 30200" >> /etc/apache2/ports.conf
 EXPOSE 30200
 EXPOSE 30201

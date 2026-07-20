@@ -1,12 +1,35 @@
 version: '3'
 services:
-  realworld:
+  db:
     build: ./db
+    volumes:
+      - real_world_data:/var/lib/mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: password@root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress_Admin
+    networks:
+    - ctf_chals_network
+  realworld:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - ./src:/var/www/html
     ports:
     - 20047:80
     restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress_Admin
+      WORDPRESS_DB_NAME: wordpress
     networks:
     - ctf_chals_network
 networks:
   ctf_chals_network:
     external: true
+volumes:
+  real_world_data: {}

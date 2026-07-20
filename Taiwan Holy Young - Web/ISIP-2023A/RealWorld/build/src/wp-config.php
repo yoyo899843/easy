@@ -111,6 +111,18 @@ define( 'WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', '') );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+// realword-wpdb.sql's wp_options.siteurl/home are hardcoded to the original
+// author's dev port (127.0.0.1:8300), which breaks navigation/links on any
+// other deployment. Override from the actual incoming request instead of
+// relying on the DB value, so this works regardless of where it's hosted.
+if (isset($_SERVER['HTTP_HOST'])) {
+	$__scheme = (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+		|| (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+		? 'https' : 'http';
+	define( 'WP_HOME', $__scheme . '://' . $_SERVER['HTTP_HOST'] );
+	define( 'WP_SITEURL', WP_HOME );
+}
+
 // If we're behind a proxy server and using HTTPS, we need to alert WordPress of that fact
 // see also https://wordpress.org/support/article/administration-over-ssl/#using-a-reverse-proxy
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
