@@ -1,6 +1,5 @@
 FROM php:7.0-apache
 MAINTAINER RB363
-RUN apt update
 
 WORKDIR /var/www/html
 
