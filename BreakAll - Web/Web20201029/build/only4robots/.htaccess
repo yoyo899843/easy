@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule ^(robots.txt)$ /robots_bce7cbb93aae990d0ae6642b96eb2e8753639b8.php [L]
