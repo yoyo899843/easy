@@ -15,6 +15,11 @@ Cloudflare Tunnel only routes a single subdomain level off the zone (e.g.
 the platform (easy/medium/hard) is folded into the hostname itself as a
 suffix: <slug>-<platform>.<domain>.
 
+Also always emits two extra ingress rules for the platform's own admin
+services: ctfd-<platform>.<domain> -> CTFd (port 8000 by default, override
+with --ctfd-port / CTFD_PORT) and kuma-<platform>.<domain> -> Uptime Kuma
+(fixed at port 8001).
+
 Deployment host varies per machine, so --domain/--ip/--platform/--tunnel-id
 can come from a .env file (WEB_HOST, DOMAIN, PLATFORM, TUNNEL_ID) next to
 this script instead of being retyped every time — see .env.example.
@@ -93,12 +98,16 @@ def find_compose_ports(chal_dir):
     return real_ports
 
 
-def generate_config(challenges, domain, platform, ip, tunnel_id):
+def generate_config(challenges, domain, platform, ip, tunnel_id, ctfd_port, kuma_port):
     lines = [
         f"tunnel: {tunnel_id}",
         f"credentials-file: /etc/cloudflared/{tunnel_id}.json",
         "",
         "ingress:",
+        f"  - hostname: ctfd-{platform}.{domain}",
+        f"    service: http://{ip}:{ctfd_port}",
+        f"  - hostname: kuma-{platform}.{domain}",
+        f"    service: http://{ip}:{kuma_port}",
     ]
     for c in sorted(challenges, key=lambda c: c["port"]):
         lines.append(f"  - hostname: {c['slug']}-{platform}.{domain}")
@@ -118,6 +127,7 @@ def main():
                          "e.g. easy/medium/hard (env: PLATFORM, else basename of --root)")
     p.add_argument("--ip", default=None, help="host address the ingress service targets should point at, e.g. 127.0.0.1 (env: WEB_HOST, else prompted)")
     p.add_argument("--tunnel-id", default=None, help="cloudflared tunnel UUID (env: TUNNEL_ID, else left as <TUNNEL_ID> placeholder)")
+    p.add_argument("--ctfd-port", type=int, default=None, help="port CTFd listens on this host (env: CTFD_PORT, default: 8000)")
     p.add_argument("--out", default="config.yml", help="output file (default: config.yml)")
     args = p.parse_args()
 
@@ -126,12 +136,16 @@ def main():
     domain = args.domain or os.environ.get("DOMAIN") or input("Enter your domain name: ").strip()
     ip = args.ip or os.environ.get("WEB_HOST") or input("Enter your host IP: ").strip()
     tunnel_id = args.tunnel_id or os.environ.get("TUNNEL_ID") or "<TUNNEL_ID>"
+    ctfd_port = args.ctfd_port or int(os.environ.get("CTFD_PORT", 8000))
+    kuma_port = 8001  # Uptime Kuma's port on this host — fixed, not configurable
 
     root = os.path.abspath(args.root)
     platform = args.platform or os.environ.get("PLATFORM") or os.path.basename(root.rstrip("/")) or "ctf"
     challenges, skipped = scan_web_challenges(root)
 
     print(f"platform: {platform} (hostnames will be <slug>-{platform}.{domain})")
+    print(f"  ctfd-{platform}.{domain} -> http://{ip}:{ctfd_port}")
+    print(f"  kuma-{platform}.{domain} -> http://{ip}:{kuma_port}")
     print(f"scanned challenge.yml under {root}")
     print(f"{len(challenges)} web challenges with a subdomain connection_info + real infra -> will include\n")
 
@@ -168,7 +182,7 @@ def main():
             print(f"  - {os.path.dirname(path)}: {conn!r} ({', '.join(reason)})")
         print()
 
-    config = generate_config(challenges, domain, platform, ip, tunnel_id)
+    config = generate_config(challenges, domain, platform, ip, tunnel_id, ctfd_port, kuma_port)
     with open(args.out, "w", encoding="utf-8") as f:
         f.write(config)
 
