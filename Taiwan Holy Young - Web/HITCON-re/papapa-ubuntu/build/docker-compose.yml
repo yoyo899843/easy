@@ -4,6 +4,7 @@ services:
     build: .
     ports:
     - 20049:30200
+    - 20449:443
     restart: unless-stopped
     networks:
     - ctf_chals_network

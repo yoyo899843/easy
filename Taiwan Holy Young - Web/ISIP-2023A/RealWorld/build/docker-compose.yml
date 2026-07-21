@@ -2,6 +2,7 @@ version: '3'
 services:
   db:
     build: ./db
+    platform: linux/amd64
     volumes:
       - real_world_data:/var/lib/mysql
     restart: unless-stopped
