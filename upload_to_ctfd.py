@@ -8,7 +8,8 @@ CTFd 上架腳本 — 將此資料夾下所有 challenge.yml 上傳到 CTFd
   python3 hard/upload_to_ctfd.py
 
 設定：
-  修改下方 HOST 和 TOKEN，或透過環境變數傳入：
+  部署機器各自放一份 .env（見 .env.example，含 CTFD_HOST/CTFD_TOKEN/
+  CTFD_WEB_HOST/CTFD_NC_HOST），或透過環境變數傳入：
     CTFD_HOST=https://... CTFD_TOKEN=ctfd_... python3 ../upload_to_ctfd.py
 """
 
@@ -22,18 +23,35 @@ from pathlib import Path
 import yaml
 import requests
 
+
+def load_dotenv(path='.env'):
+    """Populate os.environ from a simple KEY=VALUE .env file, without
+    overriding variables the real environment already set."""
+    if not os.path.exists(path):
+        return
+    with open(path, encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#') or '=' not in line:
+                continue
+            key, _, value = line.partition('=')
+            os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
+load_dotenv(Path(__file__).parent / '.env')
+
 # ─────────────────────────────────────────────────────────────────────────────
-# ★ 請填入以下設定
+# ★ 請填入以下設定（優先順序：真實環境變數 > .env > 下面的佔位符）
 # ─────────────────────────────────────────────────────────────────────────────
 
-HOST     = os.environ.get('CTFD_HOST',     'http://192.168.0.98:8000')  # CTFd 網址
-TOKEN    = os.environ.get('CTFD_TOKEN',    'ctfd_ac0731e8657d7a647347c40cb2ce52759229a5400b7cfddcb160c39eb68f4072')    # Admin API token
+HOST     = os.environ.get('CTFD_HOST',     'YOUR_CTFD_HOST')  # CTFd 網址
+TOKEN    = os.environ.get('CTFD_TOKEN',    'YOUR_TOKEN_HERE')    # Admin API token
 
 # Web 題 connection_info 裡 {{WEB_HOST}} 會被換成這個
-WEB_HOST = os.environ.get('CTFD_WEB_HOST', '192.168.0.98')           # 例: chal.myctf.com
+WEB_HOST = os.environ.get('CTFD_WEB_HOST', 'YOUR_WEB_HOST')           # 例: chal.myctf.com
 
 # nc/pwn 題 connection_info 裡 {{NC_HOST}} 會被換成這個
-NC_HOST  = os.environ.get('CTFD_NC_HOST',  '192.168.0.98')            # 例: 1.2.3.4 或 nc.myctf.com
+NC_HOST  = os.environ.get('CTFD_NC_HOST',  'YOUR_NC_HOST')            # 例: 1.2.3.4 或 nc.myctf.com
 
 # 上傳完後是否立刻設為 visible（否則保持 hidden 讓你先審閱）
 PUBLISH = False

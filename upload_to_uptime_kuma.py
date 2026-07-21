@@ -6,6 +6,12 @@ Run this ON the machine that hosts a given platform (easy / medium / hard) — i
 assumes Uptime Kuma is running on the same host and auto-detects the host's own
 IP unless --kuma-url is given. Requires: pip install uptime-kuma-api
 
+Deployment host varies per machine, so --web-host/--nc-host/--username/
+--password can come from a .env file (WEB_HOST, NC_HOST, KUMA_URL,
+KUMA_USERNAME, KUMA_PASSWORD) next to this script instead of being retyped
+every time — see .env.example. Precedence: CLI flag > real env var > .env
+file > (for web/nc host) interactive prompt.
+
 Usage:
     # --web-host is the host's own IP (not the public domain) — HTTP monitors
     # check http://<web-host>:<challenge-port>/ directly, bypassing
@@ -14,6 +20,9 @@ Usage:
         --web-host 192.168.0.244 \
         --nc-host 192.168.0.244 \
         --username admin --password 'secret'
+
+    # or, with a .env file in place, just:
+    python3 upload_to_uptime_kuma.py
 
     # dry run first to see what would be created/updated, without touching Kuma:
     python3 upload_to_uptime_kuma.py --web-host 1.2.3.4 --nc-host 1.2.3.4 \
@@ -28,6 +37,20 @@ import os
 import re
 import socket
 import sys
+
+
+def load_dotenv(path=".env"):
+    """Populate os.environ from a simple KEY=VALUE .env file, without
+    overriding variables the real environment already set."""
+    if not os.path.exists(path):
+        return
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            os.environ.setdefault(key.strip(), value.strip().strip("'\""))
 
 
 def detect_local_ip():
@@ -167,26 +190,38 @@ def sync_to_kuma(kuma_url, username, password, group_name, targets, interval, dr
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--root", default=".", help="challenge repo root to scan (default: current directory)")
+    p.add_argument("--env-file", default=".env", help="path to .env file to load (default: .env)")
     p.add_argument("--platform", default=None,
                     help="label used in the monitor group name, e.g. easy/medium/hard "
-                         "(default: basename of --root)")
+                         "(env: PLATFORM, else basename of --root)")
     p.add_argument("--kuma-url", default=None,
                     help="Uptime Kuma base URL, e.g. http://1.2.3.4:3001 "
-                         "(default: auto-detect this host's IP, port 3001)")
-    p.add_argument("--username", required=True)
-    p.add_argument("--password", required=True)
-    p.add_argument("--web-host", required=True, help="real host/domain to substitute for {{WEB_HOST}}")
-    p.add_argument("--nc-host", required=True, help="real host/domain to substitute for {{NC_HOST}}")
+                         "(env: KUMA_URL, else auto-detect this host's IP, port 3001)")
+    p.add_argument("--username", default=None, help="Kuma login username (env: KUMA_USERNAME)")
+    p.add_argument("--password", default=None, help="Kuma login password (env: KUMA_PASSWORD)")
+    p.add_argument("--web-host", default=None, help="real host/domain to substitute for {{WEB_HOST}} (env: WEB_HOST)")
+    p.add_argument("--nc-host", default=None, help="real host/domain to substitute for {{NC_HOST}} (env: NC_HOST)")
     p.add_argument("--interval", type=int, default=60, help="heartbeat interval in seconds (default: 60)")
     p.add_argument("--dry-run", action="store_true", help="print what would happen, don't touch Kuma")
     args = p.parse_args()
 
+    load_dotenv(args.env_file)
+
+    username = args.username or os.environ.get("KUMA_USERNAME")
+    password = args.password or os.environ.get("KUMA_PASSWORD")
+    web_host = args.web_host or os.environ.get("WEB_HOST")
+    nc_host = args.nc_host or os.environ.get("NC_HOST")
+    missing = [n for n, v in [("--username/KUMA_USERNAME", username), ("--password/KUMA_PASSWORD", password),
+                               ("--web-host/WEB_HOST", web_host), ("--nc-host/NC_HOST", nc_host)] if not v]
+    if missing:
+        p.error(f"missing required value(s), set via flag, real env var, or {args.env_file}: {', '.join(missing)}")
+
     root = os.path.abspath(args.root)
-    platform = args.platform or os.path.basename(root.rstrip("/")) or "ctf"
-    kuma_url = args.kuma_url or f"http://{detect_local_ip()}:3001"
+    platform = args.platform or os.environ.get("PLATFORM") or os.path.basename(root.rstrip("/")) or "ctf"
+    kuma_url = args.kuma_url or os.environ.get("KUMA_URL") or f"http://{detect_local_ip()}:3001"
 
     chals = scan_challenges(root)
-    targets, skipped = build_targets(chals, args.web_host, args.nc_host)
+    targets, skipped = build_targets(chals, web_host, nc_host)
 
     print(f"platform: {platform}")
     print(f"scanned {len(chals)} challenge.yml under {root}")
@@ -201,7 +236,7 @@ def main():
         return
 
     group_name = f"CTF - {platform}"
-    sync_to_kuma(kuma_url, args.username, args.password, group_name, targets, args.interval, args.dry_run)
+    sync_to_kuma(kuma_url, username, password, group_name, targets, args.interval, args.dry_run)
 
 
 if __name__ == "__main__":
