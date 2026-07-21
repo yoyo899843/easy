@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/user-not-found-level-1
+connection_info: http://user-not-found-level-1.{{WEB_HOST}}
 extra:
   port: 20051
   docker_group: user-not-found-level-1

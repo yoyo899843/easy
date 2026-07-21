@@ -30,7 +30,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/flashing_redirect
+connection_info: http://flashing_redirect.{{WEB_HOST}}
 extra:
   port: 20065
   docker_group: docker_MyfirstCTF

@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/admin
+connection_info: http://admin.{{WEB_HOST}}
 extra:
   port: 20031
   docker_group: Admin

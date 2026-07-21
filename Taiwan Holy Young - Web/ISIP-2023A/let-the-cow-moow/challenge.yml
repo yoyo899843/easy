@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/let-the-cow-moow
+connection_info: http://let-the-cow-moow.{{WEB_HOST}}
 extra:
   port: 20046
   docker_group: let-the-cow-moow

@@ -12,7 +12,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/download
+connection_info: http://download.{{WEB_HOST}}
 extra:
   port: 20010
   docker_group: docker_web

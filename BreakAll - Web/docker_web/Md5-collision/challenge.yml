@@ -12,7 +12,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/md5-collision
+connection_info: http://md5-collision.{{WEB_HOST}}
 extra:
   port: 20009
   docker_group: docker_web

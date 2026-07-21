@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/my-new-router-level-1
+connection_info: http://my-new-router-level-1.{{WEB_HOST}}
 extra:
   port: 20050
   docker_group: my-new-router-level-1

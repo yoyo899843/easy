@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/list
+connection_info: http://list.{{WEB_HOST}}
 extra:
   port: 20023
   docker_group: summer_web

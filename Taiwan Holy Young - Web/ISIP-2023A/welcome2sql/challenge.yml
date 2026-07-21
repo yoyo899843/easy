@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/welcome2sql
+connection_info: http://welcome2sql.{{WEB_HOST}}
 extra:
   port: 20045
   docker_group: welcome2sql

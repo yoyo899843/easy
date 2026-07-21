@@ -12,7 +12,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/xss
+connection_info: http://xss.{{WEB_HOST}}
 extra:
   port: 20008
   docker_group: docker_web

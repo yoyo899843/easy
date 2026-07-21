@@ -11,9 +11,18 @@ CTFd 上架腳本 — 將此資料夾下所有 challenge.yml 上傳到 CTFd
   部署機器各自放一份 .env（見 .env.example，含 CTFD_HOST/CTFD_TOKEN/
   CTFD_WEB_HOST/CTFD_NC_HOST），或透過環境變數傳入：
     CTFD_HOST=https://... CTFD_TOKEN=ctfd_... python3 ../upload_to_ctfd.py
+
+兩種部署模式（CTFD_DEPLOY_MODE，預設 external）決定 web 題的 connection_info
+（subdomain 格式 http://<slug>.{{WEB_HOST}}）要換成什麼給玩家看：
+  external — 走 cloudflared tunnel 的公開網域：http://<slug>-<PLATFORM>.<DOMAIN>
+             （跟 cloudflared_conf_generator.py 產的 hostname 完全對齊）
+  internal — 內網/區網直連容器本身：http://<CTFD_WEB_HOST>:<challenge.yml 的 extra.port>
+             （不經過 tunnel/domain，適合對內測試或內部賽）
+nc {{NC_HOST}} 這種 pwn 題連線資訊兩種模式都一樣，只是換成 CTFD_NC_HOST。
 """
 
 import os
+import re
 import sys
 import json
 import time
@@ -53,6 +62,14 @@ WEB_HOST = os.environ.get('CTFD_WEB_HOST', 'YOUR_WEB_HOST')           # 例: cha
 # nc/pwn 題 connection_info 裡 {{NC_HOST}} 會被換成這個
 NC_HOST  = os.environ.get('CTFD_NC_HOST',  'YOUR_NC_HOST')            # 例: 1.2.3.4 或 nc.myctf.com
 
+# external（走 cloudflared 公開網域）或 internal（內網直連容器 ip:port）
+DEPLOY_MODE = os.environ.get('CTFD_DEPLOY_MODE', 'external').strip().lower()
+
+# external 模式才需要：跟 cloudflared_conf_generator.py 用同一組，
+# 拼出來的 hostname 才會一致：<slug>-<PLATFORM>.<DOMAIN>
+DOMAIN   = os.environ.get('DOMAIN',   'YOUR_DOMAIN')
+PLATFORM = os.environ.get('PLATFORM') or Path(__file__).parent.name
+
 # 上傳完後是否立刻設為 visible（否則保持 hidden 讓你先審閱）
 PUBLISH = False
 
@@ -65,12 +82,27 @@ HOST = HOST.rstrip('/')
 HEADERS = {'Authorization': f'Token {TOKEN}', 'Content-Type': 'application/json'}
 WORK_DIR = Path(__file__).parent   # 腳本所在目錄（easy/ medium/ hard/）
 
+_WEB_SUBDOMAIN_RE = re.compile(r'^http://([a-zA-Z0-9_.-]+)\.\{\{WEB_HOST\}\}/?$')
 
-def _fix_conn(conn) -> str | None:
-    """替換 connection_info 的佔位符。"""
+
+def _fix_conn(conn, ch: dict) -> str | None:
+    """替換 connection_info 的佔位符。web 題（subdomain 格式）依 DEPLOY_MODE
+    換成 external（cloudflared 公開網域）或 internal（直連 ip:port）。"""
     if not conn:
         return None
     s = str(conn)
+
+    m = _WEB_SUBDOMAIN_RE.match(s)
+    if m:
+        slug = m.group(1)
+        if DEPLOY_MODE == 'internal':
+            port = ((ch.get('extra') or {}).get('port'))
+            if not port:
+                print(f'      [WARN] {slug}: challenge.yml 缺 extra.port，internal 模式無法拼出 ip:port，改用純 host')
+                return f'http://{WEB_HOST}'
+            return f'http://{WEB_HOST}:{port}'
+        return f'http://{slug}-{PLATFORM}.{DOMAIN}'
+
     s = s.replace('{{WEB_HOST}}', WEB_HOST)
     s = s.replace('{{NC_HOST}}',  NC_HOST)
     return s or None
@@ -182,7 +214,7 @@ def process_challenge(yml_path: Path, existing: dict[str, int]) -> str:
         'category':        str(ch.get('category') or ''),
         'type':            str(ch.get('type') or 'standard'),
         'state':           'visible' if PUBLISH else 'hidden',
-        'connection_info': _fix_conn(ch.get('connection_info')),
+        'connection_info': _fix_conn(ch.get('connection_info'), ch),
     }
 
     flags = ch.get('flags') or []
@@ -220,6 +252,14 @@ def main():
     if 'YOUR_CTFD_HOST' in HOST or 'YOUR_TOKEN' in TOKEN or 'YOUR_WEB_HOST' in WEB_HOST or 'YOUR_NC_HOST' in NC_HOST:
         print('ERROR: 請先在腳本頂端填入 HOST、TOKEN、WEB_HOST、NC_HOST。')
         sys.exit(1)
+    if DEPLOY_MODE not in ('external', 'internal'):
+        print(f"ERROR: CTFD_DEPLOY_MODE 只能是 external 或 internal，目前是 {DEPLOY_MODE!r}")
+        sys.exit(1)
+    if DEPLOY_MODE == 'external' and 'YOUR_DOMAIN' in DOMAIN:
+        print('ERROR: external 模式需要填 DOMAIN（見 .env.example）。')
+        sys.exit(1)
+
+    print(f'deploy mode: {DEPLOY_MODE}' + (f' (web 題 hostname: <slug>-{PLATFORM}.{DOMAIN})' if DEPLOY_MODE == 'external' else f' (web 題連線: {WEB_HOST}:<port>)'))
 
     # Test connectivity
     try:

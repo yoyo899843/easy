@@ -13,7 +13,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/burp-suite-2
+connection_info: http://burp-suite-2.{{WEB_HOST}}
 extra:
   port: 20003
   docker_group: docker_web

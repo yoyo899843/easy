@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/redirect
+connection_info: http://redirect.{{WEB_HOST}}
 extra:
   port: 20020
   docker_group: summer_web

@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/you-cant-see-me
+connection_info: http://you-cant-see-me.{{WEB_HOST}}
 extra:
   port: 20044
   docker_group: you-cant-see-me

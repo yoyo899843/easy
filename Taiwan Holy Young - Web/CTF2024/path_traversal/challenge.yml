@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/path_traversal
+connection_info: http://path_traversal.{{WEB_HOST}}
 extra:
   port: 20060
   docker_group: path_traversal

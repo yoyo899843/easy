@@ -12,7 +12,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/sql-injection
+connection_info: http://sql-injection.{{WEB_HOST}}
 extra:
   port: 20004
   docker_group: highscool_ctf_2019

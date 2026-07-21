@@ -25,7 +25,7 @@ Usage:
     python3 cloudflared_conf_generator.py
     python3 cloudflared_conf_generator.py --domain yoyo899843.work --ip 127.0.0.1
     python3 cloudflared_conf_generator.py --domain example.com --platform medium --ip 127.0.0.1
-    python3 cloudflared_conf_generator.py --root . --out cloudflared-conf.yml
+    python3 cloudflared_conf_generator.py --root . --out config.yml
 
 Any flag left out is prompted for interactively. Cross-checks each
 challenge's declared port against its own docker-compose.yml and warns
@@ -118,7 +118,7 @@ def main():
                          "e.g. easy/medium/hard (env: PLATFORM, else basename of --root)")
     p.add_argument("--ip", default=None, help="host address the ingress service targets should point at, e.g. 127.0.0.1 (env: WEB_HOST, else prompted)")
     p.add_argument("--tunnel-id", default=None, help="cloudflared tunnel UUID (env: TUNNEL_ID, else left as <TUNNEL_ID> placeholder)")
-    p.add_argument("--out", default="cloudflared-conf.yml", help="output file (default: cloudflared-conf.yml)")
+    p.add_argument("--out", default="config.yml", help="output file (default: config.yml)")
     args = p.parse_args()
 
     load_dotenv(args.env_file)
@@ -173,6 +173,7 @@ def main():
         f.write(config)
 
     print(f"wrote {args.out} ({len(challenges)} ingress rules + 1 catch-all)")
+    print(f"\nNext step: cp {args.out} ~/.cloudflared/config.yml")
 
 
 if __name__ == "__main__":

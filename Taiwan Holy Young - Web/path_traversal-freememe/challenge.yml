@@ -11,7 +11,7 @@ tags:
 - medium
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/path_traversal-freememe
+connection_info: http://path_traversal-freememe.{{WEB_HOST}}
 extra:
   port: 20066
   docker_group: path_traversal-freememe

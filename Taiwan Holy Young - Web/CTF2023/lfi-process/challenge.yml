@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/lfi-process
+connection_info: http://lfi-process.{{WEB_HOST}}
 extra:
   port: 20054
   docker_group: lfi-process

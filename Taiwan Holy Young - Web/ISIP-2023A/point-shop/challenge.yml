@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/point-shop
+connection_info: http://point-shop.{{WEB_HOST}}
 extra:
   port: 20043
   docker_group: point-shop

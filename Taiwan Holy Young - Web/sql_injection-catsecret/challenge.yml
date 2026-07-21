@@ -11,7 +11,7 @@ tags:
 - medium
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/sql_injection-catsecret
+connection_info: http://sql_injection-catsecret.{{WEB_HOST}}
 extra:
   port: 20067
   docker_group: sql_injection-catsecret

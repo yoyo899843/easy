@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/realworld
+connection_info: http://realworld.{{WEB_HOST}}
 extra:
   port: 20047
   docker_group: RealWorld

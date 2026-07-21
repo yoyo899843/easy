@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/imageuploader
+connection_info: http://imageuploader.{{WEB_HOST}}
 extra:
   port: 20014
   docker_group: Web20201029

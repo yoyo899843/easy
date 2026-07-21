@@ -11,7 +11,7 @@ tags:
 - medium
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/ssti-trash_generator
+connection_info: http://ssti-trash_generator.{{WEB_HOST}}
 extra:
   port: 20068
   docker_group: ssti-trash_generator

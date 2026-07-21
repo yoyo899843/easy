@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/level
+connection_info: http://level.{{WEB_HOST}}
 extra:
   port: 20001
   docker_group: chals

@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/tool_usage_2-cyberfish
+connection_info: http://tool_usage_2-cyberfish.{{WEB_HOST}}
 extra:
   port: 20033
   docker_group: tool_usage_2-(cyberfish)

@@ -14,7 +14,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/sha1-collision
+connection_info: http://sha1-collision.{{WEB_HOST}}
 extra:
   port: 20026
   docker_group: docker_MyfirstCTF

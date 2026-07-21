@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/babytrick
+connection_info: http://babytrick.{{WEB_HOST}}
 extra:
   port: 20048
   docker_group: babytrick

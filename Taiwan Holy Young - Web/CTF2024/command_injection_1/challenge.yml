@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/command_injection_1
+connection_info: http://command_injection_1.{{WEB_HOST}}
 extra:
   port: 20058
   docker_group: command_injection_1

@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/form
+connection_info: http://form.{{WEB_HOST}}
 extra:
   port: 20021
   docker_group: summer_web

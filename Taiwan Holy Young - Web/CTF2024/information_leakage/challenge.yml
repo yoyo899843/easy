@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/information_leakage
+connection_info: http://information_leakage.{{WEB_HOST}}
 extra:
   port: 20059
   docker_group: information_leakage

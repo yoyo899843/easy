@@ -12,7 +12,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/web-1-source-code
+connection_info: http://web-1-source-code.{{WEB_HOST}}
 extra:
   port: 20027
   docker_group: docker_web

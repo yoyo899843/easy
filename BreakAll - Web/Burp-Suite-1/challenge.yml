@@ -12,7 +12,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/burp-suite-1
+connection_info: http://burp-suite-1.{{WEB_HOST}}
 extra:
   port: 20011
   docker_group: docker_vtim

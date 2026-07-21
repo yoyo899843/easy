@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/cmd_injection-free_test
+connection_info: http://cmd_injection-free_test.{{WEB_HOST}}
 extra:
   port: 20052
   docker_group: cmd_injection-free_test

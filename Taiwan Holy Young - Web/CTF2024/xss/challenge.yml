@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/xss-2024
+connection_info: http://xss-2024.{{WEB_HOST}}
 extra:
   port: 20037
   docker_group: xss

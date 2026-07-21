@@ -11,7 +11,7 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/ssti
+connection_info: http://ssti.{{WEB_HOST}}
 extra:
   port: 20041
   docker_group: ssti

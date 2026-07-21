@@ -11,7 +11,7 @@ tags:
 - medium
 files: []
 hints: []
-connection_info: http://{{WEB_HOST}}/tool_usage_3-bang
+connection_info: http://tool_usage_3-bang.{{WEB_HOST}}
 extra:
   port: 20069
   docker_group: tool_usage_3-(bang)
