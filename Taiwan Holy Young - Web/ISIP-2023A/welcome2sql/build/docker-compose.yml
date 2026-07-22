@@ -1,0 +1,12 @@
+version: '3'
+services:
+  welcome2sql:
+    build: .
+    ports:
+    - 20045:80
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true
