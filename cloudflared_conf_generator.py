@@ -187,7 +187,7 @@ def main():
         f.write(config)
 
     print(f"wrote {args.out} ({len(challenges)} ingress rules + 1 catch-all)")
-    print(f"\nNext step: cp {args.out} ~/.cloudflared/config.yml")
+    print(f"\nNext step: cp {args.out} /etc/cloudflared/config.yml")
 
 
 if __name__ == "__main__":
