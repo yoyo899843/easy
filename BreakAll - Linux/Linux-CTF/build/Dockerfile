@@ -21,9 +21,10 @@ RUN chmod 740 /usr/bin/passwd
 
 
 RUN adduser --disabled-password --gecos '' lab
-RUN echo 'lab:Ksu@lab' |chpasswd
+RUN echo 'lab:lab' |chpasswd
 RUN chown root.root /home/lab/.bashrc
 
+COPY lab/.hidden /home/lab/
 COPY lab/base64.txt /home/lab/
 COPY lab/hex.txt /home/lab/
 COPY lab/secret /opt/
