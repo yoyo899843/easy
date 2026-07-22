@@ -1,0 +1,12 @@
+version: '3'
+services:
+  my-new-router-level-1:
+    build: .
+    ports:
+    - 20050:80
+    restart: unless-stopped
+    networks:
+    - ctf_chals_network
+networks:
+  ctf_chals_network:
+    external: true
