@@ -2,6 +2,7 @@ version: '2'
 services:
   linux-ctf-1:
     build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40018:22
     environment:
@@ -10,7 +11,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-2:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40019:22
     environment:
@@ -19,7 +20,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-3:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40020:22
     environment:
@@ -28,7 +29,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-4:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40021:22
     environment:
@@ -37,7 +38,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-5:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40022:22
     environment:
@@ -46,7 +47,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-6:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40023:22
     environment:
@@ -55,7 +56,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-7:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40024:22
     environment:
@@ -64,7 +65,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-8:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40025:22
     environment:
@@ -73,7 +74,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-9:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40026:22
     environment:
@@ -82,7 +83,7 @@ services:
     networks:
     - ctf_chals_network
   linux-ctf-10:
-    build: .
+    image: linux-ctf-lab:latest
     ports:
     - 40027:22
     environment:
