@@ -1,9 +1,11 @@
-FROM python:3.10
+FROM python:3.10-slim
 
 WORKDIR /app
 
 COPY . .
 
-RUN apt-get update && apt-get install -y socat && pip install -r requirements.txt
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends socat \
+    && rm -rf /var/lib/apt/lists/*
 
 CMD socat TCP-LISTEN:80,fork EXEC:'python3 server.py'

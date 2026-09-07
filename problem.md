@@ -1,7 +1,7 @@
 # 有問題的題目 (Problematic Challenges)
 
 ISIP-CTF.Easy — challenges that are **blocked by a defect or a missing resource**, not
-merely unsolved-because-hard. Current progress: **234/287**.
+merely unsolved-because-hard. Current progress: **235/287**.
 
 Categories below, most actionable first:
 
@@ -75,7 +75,6 @@ The challenge needs a live `nc`/HTTP service that is currently down or unrespons
 |----|-----------|------|------|
 | 228-241 | THY-Crypto 1-AES…9-Substitution (14 challenges) | 30011-30023 | all **down**; only the client-side Crypto Playground SPA (`:30010`, flag = `FLAG{sha256(input)}`, ambiguous without a per-challenge prompt) and Calc_RSA (30024-26) are up |
 | 81 | 張元_Pwn-6 | (magic+1000-math service) | binary needs magic `0x079487ff` then 1000 math → `system("sh")`, but **no live port** hosts it |
-| 26 | fa | 30005 | connects but sends nothing; unknown protocol |
 | 158 | registration | — | `conn=None`; binary has `systemAdmin()`→shell (ret2win) but no service to hit |
 | 159 | start | — | `conn=None`; same overflow as 157 pass, but no service |
 | 251 | Shop (THY-Reverse) | — | `conn=None`; binary's `flag()` is empty |
@@ -125,7 +124,7 @@ candidates to revisit.
 - **B. Decoy/no-server:** 3 (53, 56, 73)
 - **C. Custom-flag mismatch:** 4 (184, 207, 215, 203)
 - **D. Need Windows/wine:** 9 (89, 90, 92, 96, 97, 108, 109, 110, 247)
-- **E. Service down:** 14 THY-crypto (228-241) + 81, 26, 158, 159, 251
+- **E. Service down:** 14 THY-crypto (228-241) + 81, 158, 159, 251
 - **F. Blind pwn:** 2 (244, 10005)
 - **G. Crypto variant:** 1 (23)
 - **H. Hard web (revisit):** 7 (111, 114, 119, 271, 272, 277, 279)
@@ -163,6 +162,12 @@ Repo-wide diff of `challenge.yml` flags vs the flag actually baked into `build/`
 `information_leakage` also had a **build bug**: `src/git.zip` was copied into the
 webroot as-is, so `/.git/` 404'd and only the raw zip was downloadable. Dockerfile
 now `unzip`s it at build time and deletes the archive, so the `.git` dir is the leak.
+
+**fa (26)** was another **build bug**, not "unknown protocol": `Dockerfile` ran
+`socat … EXEC:'python3 server.py'` but the script is `main.py`, so socat exec'd
+nothing and the client got an empty stream. Fixed to `main.py`; it now prints the
+substitution-cipher (frequency-analysis) challenge, flag `breakall{how_did_u_know}`
+matches `challenge.yml`.
 
 The Pwn-6..9 yml flags were shifted by one position (each held the previous
 challenge's flag); binary themes (`return` / NX-off / `plt`) confirm the deployed
