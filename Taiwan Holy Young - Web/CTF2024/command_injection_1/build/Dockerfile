@@ -1,9 +1,14 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.10
+FROM python:3.10-slim
+
+WORKDIR /app
 
 COPY src /app
-RUN chmod 444 /app/flag
-RUN apt-get update -y
-RUN apt-get install -y iputils-ping
-RUN pip3 install -r requirements.txt
 
-CMD python3 main.py
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends iputils-ping \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir -r requirements.txt gunicorn \
+    && chmod 444 /app/flag
+
+EXPOSE 80
+CMD ["gunicorn", "-b", "0.0.0.0:80", "-w", "1", "--threads", "8", "main:app"]

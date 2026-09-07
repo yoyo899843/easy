@@ -1,8 +1,12 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.8
+FROM python:3.10-slim
+
+WORKDIR /app
 
 COPY src /app
 COPY flag /
-RUN chmod 444 /flag
 
-# 安装依赖
-RUN pip3 install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt gunicorn \
+    && chmod 444 /flag
+
+EXPOSE 80
+CMD ["gunicorn", "-b", "0.0.0.0:80", "-w", "1", "--threads", "8", "main:app"]
