@@ -1,7 +1,7 @@
 # 有問題的題目 (Problematic Challenges)
 
 ISIP-CTF.Easy — challenges that are **blocked by a defect or a missing resource**, not
-merely unsolved-because-hard. Current progress: **229/287**.
+merely unsolved-because-hard. Current progress: **234/287**.
 
 Categories below, most actionable first:
 
@@ -94,19 +94,7 @@ offsets / win addresses). Not feasible without the ELF.
 
 ---
 
-## G. 需要 XSS bot (need an admin/XSS bot callback)
-
-Stored/reflected XSS that only fires when an admin bot visits; no callback host set up.
-
-| ID | Challenge | Port |
-|----|-----------|------|
-| 128 | XSS (BreakAll) | 20008 |
-| 262 | xss / 1want (THY) | 20057 |
-| 270 | xss (THY) | 20037 |
-
----
-
-## H. 加密變體 / 演算法未確定 (crypto variant undetermined)
+## G. 加密變體 / 演算法未確定 (crypto variant undetermined)
 
 | ID | Challenge | Note |
 |----|-----------|------|
@@ -114,7 +102,7 @@ Stored/reflected XSS that only fires when an admin bot visits; no callback host 
 
 ---
 
-## I. 一般困難的 Web (still-open, not obviously broken)
+## H. 一般困難的 Web (still-open, not obviously broken)
 
 Surveyed but not yet cracked; these are "hard", not confirmed-broken, and are the best
 candidates to revisit.
@@ -124,11 +112,9 @@ candidates to revisit.
 | 111 | Admin | 20031 | `login.php` (`user`/`pass`) always returns "wrong"; no SQLi/default-cred worked; no source disclosure found |
 | 114 | KAIBRO BUY | 20062 | username-only login (`user`, maxlength 8); all usernames return the login page |
 | 119 | Web-2: Easy_Robots.txt | 20028 | `/` → `echo_post.php` "SQL Injection" form (`acc`/`aa`); responses are static (1176 B) regardless of payload |
-| 265 | information_leakage | 20059 | "Site Maintenance" PHP/Apache page; no leak found via .git/backups/swap/phpinfo/headers; links a YouTube short |
 | 271 | babytrick | 20048 | HITCON Baby^H PHP-deserialization (`?data=` → `unserialize` → `__destruct` calls `login`); needs the multibyte/`utf8_general_ci` trick to log in as `orange` **and** its password — hard, double `mysql_escape_string` |
 | 272 | papapa-ubuntu | 20049 | 302 → `https://…/index.php` on every path; "find the secret behind this website (pentesting)"; dirb + XFF/XFP header bypasses found nothing |
 | 277 | you-cant-see-me | 20044 | `/user/N` lists 10 cats, no hidden ids, not SSTI (unlike its twin 280) |
-| 278 | find-method | 20042 | POST `/submit-email` echoes a decoy `FLAG{You_found_POST_body!}` (rejected); only GET(405)/POST/OPTIONS; real trigger unclear |
 | 279 | my-new-router-level 1 | 20050 | RCE achieved (`ip` param, `os.popen(f"ping -c 4 {ip}")`, blacklist only blocks the word `flag`), **but no flag file on the container** — `/root` unreadable, `find` empty; flag delivered by a build step not present at runtime |
 
 ---
@@ -141,9 +127,57 @@ candidates to revisit.
 - **D. Need Windows/wine:** 9 (89, 90, 92, 96, 97, 108, 109, 110, 247)
 - **E. Service down:** 14 THY-crypto (228-241) + 81, 26, 158, 159, 251
 - **F. Blind pwn:** 2 (244, 10005)
-- **G. Need XSS bot:** 3 (128, 262, 270)
-- **H. Crypto variant:** 1 (23)
-- **I. Hard web (revisit):** 9 (111, 114, 119, 265, 271, 272, 277, 278, 279)
+- **G. Crypto variant:** 1 (23)
+- **H. Hard web (revisit):** 7 (111, 114, 119, 271, 272, 277, 279)
 
 The highest-value follow-ups: give the organiser section **A** (likely real flag-checker
 bugs), and provide a **Windows/wine** environment to unlock section **D** (9 challenges).
+
+---
+
+## Removed
+
+- **XSS bot (128 / 262 / 270)** — not blocked. All three plant the flag in the
+  visitor's *own* cookie (`session_id()` = flag on 128; `setcookie('passwd', …)` on
+  262/270) and the XSS only needs to read `document.cookie`; no admin bot was ever part
+  of the design ("此 Demo 只會顯示來自您自己的便利貼"). Flags match `challenge.yml`
+  (`BreakALLCTF{BQmpK7Ip0IOxclRg5jex}`, `flag{i_hate_calculus}` ×2). Solved.
+
+---
+
+## challenge.yml flag 修正 (deployed ≠ yml; yml was wrong)
+
+Repo-wide diff of `challenge.yml` flags vs the flag actually baked into `build/`
+(flag file / Dockerfile `ENV FLAG` / source). Corrected to match deployment:
+
+| Challenge | old yml | new yml (= deployed) |
+|-----------|---------|----------------------|
+| 張元_Pwn-6 (`:10002`) | `BreakAllCTF{Scr1pting_skill_is_important_for_a_hacker}` | `BreakAllCTF{A_g00d_h4cker_15_f4m1liar_w1th_b1n4ry_5ystem}` |
+| 張元_Pwn-7 (`:10003`) | `…{A_g00d_h4cker_15_f4m1liar…}` | `BreakAllCTF{G00d_j0000000000b:)}` |
+| 張元_Pwn-8 (`:10004`) | `…{G00d_j0000000000b:)}` | `BreakAllCTF{NX_pr0t4ct10n_d1sab1e_1s_h4cker_fr1endly}` |
+| 張元_Pwn-9 (`:10005`) | `…{NX_pr0t4ct10n_d1sab1e…}` | `BreakAllCTF{Return_to_plt_is_p0werful:D}` |
+| THY-Web CTF2024/path_traversal | `flag{path_traversal}` | `flag{read_my_server_qwq}` (twin `path_traversal-freememe` already had this) |
+| THY-Web find-method (278, `:20042`) | `FLAG{N0w_u_k0nw_g3t_method}` | `FLAG{Now_u_k0nw_g3t_method_32rfwk}` (`Flag-From-Server` header on `GET /`) |
+| THY-Web information_leakage (265, `:20059`) | `flag{information_leakage}` | `flag{git_commit_m_meow}` (first commit of `index.php` in the exposed `.git`) |
+
+`information_leakage` also had a **build bug**: `src/git.zip` was copied into the
+webroot as-is, so `/.git/` 404'd and only the raw zip was downloadable. Dockerfile
+now `unzip`s it at build time and deletes the archive, so the `.git` dir is the leak.
+
+The Pwn-6..9 yml flags were shifted by one position (each held the previous
+challenge's flag); binary themes (`return` / NX-off / `plt`) confirm the deployed
+side is correct.
+
+Calc_RSA / 1-/2-Calculate_RSA (227/230/233) went the other way — there the yml was
+right and `build/flag` was a placeholder; fixed by editing `build/flag`.
+
+**Still open (yml ≠ deployed, direction undecided):**
+
+- **web-2 Easy_Robots.txt** (153 `:40032`, 119 `:20028`) — both share yml
+  `BreakALLCTF{alsidfj2fkJF0falkf9rf}`; instance 153 emits `BreakALLCTF{7QtKB2N5TlqAAEzCrzNO}`,
+  instance 119 emits `ACTF{YURXMTYS4C1MiSwjPBZc}`. Neither produces the yml string →
+  likely the yml is the true checker value and both files are decoy/stale.
+- **CSAW Networking-2** (203) — pcap has `flag{d316759c281bf925d600be698a4973d5}`,
+  yml `flag{f9b43c9e9c05be5e08ea163007af5144}`.
+- **THY Crypto Playground** (1-ASCII etc.) — client JS flag is `FLAG{sha256(input)}`,
+  yml is a static string the service never emits.

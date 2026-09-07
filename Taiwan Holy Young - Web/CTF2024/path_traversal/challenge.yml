@@ -5,7 +5,7 @@ description: ''
 value: 100
 type: standard
 flags:
-- flag{path_traversal}
+- flag{read_my_server_qwq}
 tags:
 - Taiwan Holy Young CTF
 - easy

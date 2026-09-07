@@ -5,7 +5,7 @@ description: ''
 value: 100
 type: standard
 flags:
-- BreakAllCTF{NX_pr0t4ct10n_d1sab1e_1s_h4cker_fr1endly}
+- BreakAllCTF{Return_to_plt_is_p0werful:D}
 tags:
 - BreakALL CTF
 - easy

@@ -5,7 +5,7 @@ description: ''
 value: 100
 type: standard
 flags:
-- BreakAllCTF{G00d_j0000000000b:)}
+- BreakAllCTF{NX_pr0t4ct10n_d1sab1e_1s_h4cker_fr1endly}
 tags:
 - BreakALL CTF
 - easy

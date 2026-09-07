@@ -5,7 +5,7 @@ description: ''
 value: 100
 type: standard
 flags:
-- flag{information_leakage}
+- flag{git_commit_m_meow}
 tags:
 - Taiwan Holy Young CTF
 - easy
