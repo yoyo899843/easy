@@ -1,11 +1,10 @@
 version: '2.2'
 services:
   calculator:
-    image: oalieno/ctf-python:sage
+    build: .
     network_mode: bridge
     volumes:
     - ./share:/home/ctf/
-    - ./xinetd:/etc/xinetd.d/xinetd:ro
     ports:
     - 40029:9999
     expose:

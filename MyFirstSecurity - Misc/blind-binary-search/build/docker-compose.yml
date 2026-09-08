@@ -1,11 +1,10 @@
 version: '2.2'
 services:
   blind-binary-search:
-    image: oalieno/ctf-python:sage
+    build: .
     network_mode: bridge
     volumes:
     - ./share:/home/ctf/
-    - ./xinetd:/etc/xinetd.d/xinetd:ro
     ports:
     - 40030:9999
     expose:
