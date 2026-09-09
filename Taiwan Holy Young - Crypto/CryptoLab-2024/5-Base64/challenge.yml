@@ -1,7 +1,10 @@
 name: 5-Base64
 author: ''
 category: Taiwan Holy Young - Crypto
-description: ''
+description: |
+  把以下的字串拿去做 base64 解碼
+
+  `RkxBR3tCYXNlNjRfaXNfbW9yZV9vZnRlbl91c2VkX2luX3JlYWxpdHl9`
 value: 100
 type: standard
 flags:
@@ -11,7 +14,3 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: nc {{NC_HOST}} 30014
-extra:
-  port: 30014
-  docker_group: 5-Base64

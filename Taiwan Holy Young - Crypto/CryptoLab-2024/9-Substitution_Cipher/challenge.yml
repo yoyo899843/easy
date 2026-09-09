@@ -1,7 +1,11 @@
 name: 9-Substitution_Cipher
 author: ''
 category: Taiwan Holy Young - Crypto
-description: ''
+description: |
+  `cipher.txt` 裡面是一段被替換式加密後的數據，把這段數據解密後（不需要分析這段數據解密後在講什麼，理論上解密後會拿到一段是全大寫的數據）直接丟到 Crypto Playground 的 Get Flag 裡拿 flag
+
+  flag 是「解密後那段全大寫、無空白的字串」的 SHA-256，格式為 `FLAG{<sha256 hex>}`。
+  可用 https://www.guballa.de/substitution-solver 之類的工具破解替換式密碼。
 value: 100
 type: standard
 flags:
@@ -9,9 +13,6 @@ flags:
 tags:
 - Taiwan Holy Young CTF
 - easy
-files: []
+files:
+- dist/cipher.txt
 hints: []
-connection_info: nc {{NC_HOST}} 30018
-extra:
-  port: 30018
-  docker_group: 9-Substitution_Cipher

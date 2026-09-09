@@ -1,7 +1,7 @@
 # 有問題的題目 (Problematic Challenges)
 
 ISIP-CTF.Easy — challenges that are **blocked by a defect or a missing resource**, not
-merely unsolved-because-hard. Current progress: **246/287**.
+merely unsolved-because-hard. Current progress: **261/287**.
 
 Categories below, most actionable first.
 
@@ -20,8 +20,7 @@ Categories below, most actionable first.
 
 | ID | Challenge | What the evidence gives |
 |----|-----------|-------------------------|
-| 184 / 207 | PicoCTF_2017: Special Agent User | User-Agent = `Chrome/36.0.1985.125` (OpenBSD); every browser/version wrapper rejected |
-| 215 | picoCTF2017: digital-camouflage-50 | POST `pswrd=S04xWjZQWFZ5OQ==` → `KN1Z6PXVy9`; description (GPS/image.jpg) also mismatches the pcap |
+| 215 | picoCTF2017: digital-camouflage-50 | POST `pswrd=S04xWjZQWFZ5OQ==` → `KN1Z6PXVy9`; description (GPS/image.jpg) also mismatches the pcap. yml wants `8PFEo0ttHQ` — no derivation from the provided `data.pcap`. |
 | 203 | CSAW Quals 2013: Networking 2 | pcap shows the captured user typing `flag{d316759c281bf925d600be698a4973d5}` as a password → **"Login incorrect"** (it's the *Networking 1* flag, shown failing on purpose). Real answer `flag{f9b43c9e9c05be5e08ea163007af5144}` (yml) is correct but only known from a CSAW writeup — not derivable from the single stream. |
 
 ---
@@ -45,15 +44,7 @@ the flags. All **BreakAll - Reverse** unless noted.
 
 ---
 
-## D. challenge.yml 內容缺失 (self-contained puzzles wired to a dead service)
-
-| ID | Challenge | Port | Note |
-|----|-----------|------|------|
-| 228-241 | THY-Crypto 1-AES…9-Substitution (14 challenges) | 30011-30023 | **not server challenges** — each is a self-contained "decode this data" puzzle. The data lives in `build/task.yml` but `challenge.yml` `description` is empty and points at a dead `nc` service. Verified: every flag = the decode result. Fix: move `task.yml` text into `challenge.yml` description, drop `connection_info`; attach `9-Substitution/dist/cipher.txt`. |
-
----
-
-## E. Blind pwn — 有 service 沒 binary (live service, no binary)
+## D. Blind pwn — 有 service 沒 binary (live service, no binary)
 
 | ID | Challenge | Port | Banner |
 |----|-----------|------|--------|
@@ -62,15 +53,7 @@ the flags. All **BreakAll - Reverse** unless noted.
 
 ---
 
-## F. 加密變體未確定 (crypto variant undetermined)
-
-| ID | Challenge | Note |
-|----|-----------|------|
-| 23 | b85 (`:30003`) | 53-char base85 on the RFC1924 charset; no standard variant (ascii85 / base85 / z85 / RFC1924, either endianness) decodes to a readable flag — needs the exact custom alphabet |
-
----
-
-## G. 一般困難的 Web (hard, not confirmed broken — revisit)
+## E. 一般困難的 Web (hard, not confirmed broken — revisit)
 
 | ID | Challenge | Port | Where it stands |
 |----|-----------|------|-----------------|
@@ -84,15 +67,15 @@ the flags. All **BreakAll - Reverse** unless noted.
 ## Summary
 
 - **A. Missing source / DB-only:** 123, 273
-- **B. picoCTF/CSAW custom flag:** 184, 207, 215, 203
+- **B. picoCTF/CSAW custom flag:** 215, 203
 - **C. Need Windows/wine:** 89, 90, 92, 96, 97, 108, 109, 110, 247
-- **D. challenge.yml content missing:** 228-241 (14, need `description` filled from `task.yml`)
-- **E. Blind pwn:** 244, 10005
-- **F. Crypto variant:** 23
-- **G. Hard web (revisit):** 111, 271, 272, 277
+- **D. Blind pwn:** 244, 10005
+- **E. Hard web (revisit):** 111, 271, 272, 277
 
 Highest-value follow-up: a **Windows/wine** environment unlocks all of section **C** (9).
-The rest need the organiser (missing challenge source, DB-only flag) or more work (G).
+The rest need the organiser (missing challenge source, DB-only flag) or more work (E).
+No fixable-defect challenges remain — everything left needs an environment, a missing
+file/binary, or genuine solving effort.
 
 ---
 
@@ -105,4 +88,15 @@ Dockerfile + socat + flag; both solved end-to-end), 227/230/233 Calc_RSA, 265
 information_leakage, 251 Shop (`flag()` was an empty stub; recompiled `shop.c` with a
 real `puts()`, replaced `dist/shop` — inflate balance with a negative `amount`, then
 buy item 3 → flag), 278 find-method, 279 my-new-router, 張元_Pwn-6~9, THY
-path_traversal — fixed via `challenge.yml` flag, `build/flag`, or Dockerfile/build changes.*
+path_traversal, **THY-Crypto CryptoLab-2024 ×12** (1/2-ASCII, 3-Hex, 4-Chinese,
+5-Base64, 6-Base64_Hex, 9-Substitution, 1/2-AES, 3/4-AES_ECB, 9-AES_CBC — puzzle text
+was stranded in `build/task.yml`; moved into `challenge.yml` `description`, dropped the
+dead `nc` `connection_info`, attached `cipher.txt`; all 12 flags re-verified by decoding)
+— fixed via `challenge.yml` flag, `build/flag`, or Dockerfile/build changes.*
+
+*Not actually broken (misdiagnosed in earlier surveys, no change needed): 23 b85 —
+it's standard Python `base64.b85encode` with a junk char from `!@#$%^&*` inserted after
+every 3rd char (`random.seed(2024)`); strip every 4th char, then `b85decode` →
+`breakall{u_such_encoding_master}` (verified). 184/207 Special Agent User — pcap UA is
+`Chrome/36.0.1985.125`; the description says give 3 subversion levels and drop trailing
+`.0`s, so the answer is exactly `Chrome 36.0.1985`, which is what the yml holds (verified).*

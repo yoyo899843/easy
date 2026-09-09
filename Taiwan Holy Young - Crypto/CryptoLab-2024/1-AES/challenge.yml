@@ -1,7 +1,13 @@
 name: 1-AES
 author: ''
 category: Taiwan Holy Young - Crypto
-description: ''
+description: |
+  `cipher` 是一段被 AES 加密後的密文，加密的金鑰是 `key`，解密 `cipher` 並嘗試不同的 `key`、`cipher` 對解密有什麼影響（同樣也可以試試看不同的 `key` 和 `plain` 對加密有什麼影響）
+
+  - `cipher` : `beb500cb0298d5a427d3c6532fa0d88e`
+  - `key` : `e4cb2aa8ff51a7209a923d59932b5841`
+
+  （AES 直接解密就會得到 flag，記得去掉尾端的 null padding）
 value: 100
 type: standard
 flags:
@@ -11,7 +17,3 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: nc {{NC_HOST}} 30019
-extra:
-  port: 30019
-  docker_group: 1-AES

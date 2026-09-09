@@ -1,7 +1,15 @@
 name: 1-ASCII
 author: ''
 category: Taiwan Holy Young - Crypto
-description: ''
+description: |
+  把以下三段數字轉成 ASCII 編碼後的字串
+
+  `70 76 65 71 123 74 117 115 116 95`
+
+  `1110011 1101111 1101101 1100101 1011111 1100011 1101111`
+
+  `6e 76 65 72 73 69 6f 6e 7e 7e 7e 7d`
+  （把三段數字分別當十進位 / 二進位 / 十六進位轉成整數，接起來再轉成 ASCII 字串就是 flag）
 value: 100
 type: standard
 flags:
@@ -11,7 +19,3 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: nc {{NC_HOST}} 30010
-extra:
-  port: 30010
-  docker_group: 1-ASCII

@@ -1,7 +1,15 @@
 name: 2-ASCII
 author: ''
 category: Taiwan Holy Young - Crypto
-description: ''
+description: |
+  寫 Python 來把以下的數字轉成 ASCII 編碼後的字串
+
+  `46 4c 41 47 7b 4a 75 73 74 5f 61 5f 73 69 6d 70 6c 65 5f 50 79 74 68 6f 6e 5f 73 63 72 69 70 74 21 7d`
+
+  ## 提示
+
+  - `int(num, 16)` : 可以把 `num` 從 16 進位的字串轉成十進位數字，這個十進位數字的型別是 `int`
+  - `chr(num)` : 可以把 `num` 這個 `int` 換成他對應的 ASCII 字元
 value: 100
 type: standard
 flags:
@@ -11,7 +19,3 @@ tags:
 - easy
 files: []
 hints: []
-connection_info: nc {{NC_HOST}} 30011
-extra:
-  port: 30011
-  docker_group: 2-ASCII
