@@ -13,6 +13,7 @@ files:
 - dist/registration
 - dist/registration.c
 hints: []
-connection_info: ''
+connection_info: nc {{NC_HOST}} 10027
 extra:
-  docker_group: docker_MyfirstCTF_pwn
+  port: 10027
+  docker_group: registration

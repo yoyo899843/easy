@@ -1,12 +1,13 @@
+version: '3'
 services:
-  pwn-6:
+  registration:
     build: .
     platform: linux/amd64
     ports:
-      - 10002:2117
+    - 10027:9999
     restart: unless-stopped
     networks:
-      - ctf_chals_network
+    - ctf_chals_network
 networks:
   ctf_chals_network:
     external: true

@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset=utf-8>
@@ -7,41 +7,41 @@
 body {
     background-image:url( ' https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS8Jg5bPNsf3LwhNlfdnBNR1NcHA-7l9CRWO89QNIzbKykW8CnP ' );
     }
-    
-#input { 
-  z-index: 2; 
-  position: absolute; 
-  width:30%; 
-  height:5%; 
-  top:35%; 
-  left:33%; 
-  border: 1px solid #FFF; 
-  background-color: #82FFFF; 
+
+#input {
+  z-index: 2;
+  position: absolute;
+  width:30%;
+  height:5%;
+  top:35%;
+  left:33%;
+  border: 1px solid #FFF;
+  background-color: #82FFFF;
 }
-#buttom { 
-  z-index: 2; 
-  position: absolute; 
-  width:15%; 
-  height:5%; 
-  top:50%; 
-  left:40%; 
-  border: 1px solid #FFF;  
-  
+#buttom {
+  z-index: 2;
+  position: absolute;
+  width:15%;
+  height:5%;
+  top:50%;
+  left:40%;
+  border: 1px solid #FFF;
+
   }
-  
+
 #title {
     font-size:3cm;
 }
 
-.pinkblock { 
-  z-index: 2; 
-  position: absolute; 
-  width:30%; 
-  height:20%; 
-  top:60%; 
-  left:33%; 
-  border: 1px solid #FFF; 
-  background-color: #82FFFF; 
+.pinkblock {
+  z-index: 2;
+  position: absolute;
+  width:30%;
+  height:20%;
+  top:60%;
+  left:33%;
+  border: 1px solid #FFF;
+  background-color: #82FFFF;
 }
 
     </style>
@@ -53,11 +53,10 @@ body {
         <input type="hidden" name="aa" />
         <input id="buttom" type="submit" />
     </form>
-    
+
 <?php
-$link=mysql_connect("localhost","admin","securitylab") or die ("³s½u¥¢±Ñ");
-mysql_select_db("test");
-mysql_set_charset('utf8',$link);
+$db = new PDO('sqlite:' . __DIR__ . '/app.db');
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
 if(isset($_POST["aa"])){
 $ID = $_POST["acc"];
 //$password = $_POST["pass"];
@@ -65,23 +64,17 @@ $ID = $_POST["acc"];
 //$pass = preg_replace("/[\'\"]+/" , '' ,$password);
 //$sql="SELECT * from user WHERE account='".$username."'&& password='".$password."'";
 $sql="SELECT account from user WHERE ID='".$ID."'";
-$result=mysql_query($sql);
+$result=$db->query($sql);
  echo "<div class='pinkblock' align='center' >";
-while($row = mysql_fetch_array($result)){
+if($result){
+while($row = $result->fetch(PDO::FETCH_ASSOC)){
     echo "Account:".$row['account'];
     echo "</br>";
+}
 }
 echo "</div>";
 //echo $sql;
 }
-
-/*$row = mysql_num_rows($result);
-//echo $row['account'];
-if($row==0) echo "no data!";
-elseif($row==1) echo "one";
-else echo "two";
-echo "</br>";*/
-
 ?>
 </body>
-</html> 
+</html>

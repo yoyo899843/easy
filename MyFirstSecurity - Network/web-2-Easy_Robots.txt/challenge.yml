@@ -6,7 +6,7 @@ description: "robots.txt是一種文字檔案，它告訴網路搜尋引擎此�
 value: 100
 type: standard
 flags:
-- BreakALLCTF{alsidfj2fkJF0falkf9rf}
+- BreakALLCTF{7QtKB2N5TlqAAEzCrzNO}
 tags:
 - BreakALL CTF
 - easy
